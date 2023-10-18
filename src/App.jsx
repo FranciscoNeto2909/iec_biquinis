@@ -1,4 +1,4 @@
-import logo from "./assets/logo.jpeg"
+import logo from "./assets/logo.png"
 import Card from "./components/card/Card"
 import { bikinis } from "./data/bikinis"
 import "./app.css"
@@ -25,7 +25,6 @@ export default function App() {
     <div className="app">
       <header className="app_header">
         <img src={logo} alt="logo" className="app_logo" />
-        <h1 className="app_title">Catalogo de Peças</h1>
       </header>
       <section className="app_container">
         {

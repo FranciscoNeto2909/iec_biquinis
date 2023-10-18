@@ -29,7 +29,7 @@ export default function Modal({ item, handleCloseModal }) {
 
     function handleBuy() {
         console.log({
-            name:item.name,
+            name: item.name,
             size,
             color,
             price
@@ -45,30 +45,45 @@ export default function Modal({ item, handleCloseModal }) {
                 <div className="modal_image">
                     <img src={item.image} alt="" />
                 </div>
-                <div className="modal_info">
-                    <h2 className="modal_info_name">{item.name}</h2>
-                    <div className="modal_info_quant">
-                        <span>Quantidade: </span>
-                        <button className="modal_info_quant-btn1" onClick={handleDecreaseQuant}>-</button>
-                        <span>{itemQuant}</span>
-                        <button className="modal_info_quant-btn2" onClick={handleIncreaseQuant}>+</button>
-                    </div>
-                    <div className="modal_info_selects">
-                        <div className="modal_info_colors">
-                            <Select ops={item.colors} text={"Cores disponiveis"} onClick={handleSetColor} />
+                {item.inStock ?
+                    <div className="modal_info">
+                        <h2 className="modal_info_name">{item.name}</h2>
+                        <div className="modal_info_quant">
+                            <span>Quantidade: </span>
+                            <button className="modal_info_quant-btn1" onClick={handleDecreaseQuant}>-</button>
+                            <span>{itemQuant}</span>
+                            <button className="modal_info_quant-btn2" onClick={handleIncreaseQuant}>+</button>
                         </div>
-                        <div className="modal_info_sizes">
-                            <Select ops={item.sizes} text={"Tamanhos disponiveis"} onClick={handleSetSize} />
+                        <div className="modal_info_selects">
+                            <div className="modal_info_colors">
+                                <Select ops={item.colors} text={"Cores disponiveis"} onClick={handleSetColor} />
+                            </div>
+                            <div className="modal_info_sizes">
+                                <Select ops={item.sizes} text={"Tamanhos disponiveis"} onClick={handleSetSize} />
+                            </div>
+                        </div>
+                        <div className="modal_info_value">
+                            <span className="modal_info_value_text">Valor total:</span> <span className="modal_info_value_price">R$ {(price * itemQuant) - 1},99</span>
+                        </div>
+                        <div className="modal_info_buttons">
+                            <button type="button" className="modal_info_button modal_info_button_cart">Adicionar ao carrinho</button>
+                            <button type="button" className="modal_info_button" onClick={handleBuy}>Finalizar pedido</button>
+                        </div>
+                    </div> :
+                    <div className="modal_info">
+                        <h2 className="modal_info_name">{item.name}</h2>
+                        <div className="modal_soldOff">
+                            <div className="modal_soldOff_card">
+                                <div>
+                                    <p className="modal_soldOff_card_text ">Ops! Acabou o estoque</p>
+                                </div>
+                                <div>
+                                    <button className="modal_soldOff_card_button" type="button">Avise-me quando chegar</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="modal_info_value">
-                        <span className="modal_info_value_text">Valor total:</span> <span className="modal_info_value_price">R$ {(price * itemQuant) - 1},99</span>
-                    </div>
-                    <div className="modal_info_buttons">
-                        <button type="button" className="modal_info_button modal_info_button_cart">Adicionar ao carrinho</button>
-                        <button type="button" className="modal_info_button" onClick={handleBuy}>Finalizar pedido</button>
-                    </div>
-                </div>
+                }
             </div>
         </div>
     )
