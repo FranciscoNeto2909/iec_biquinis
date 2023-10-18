@@ -1,0 +1,74 @@
+.card {
+    width: 220px;
+    height: auto;
+    padding-bottom: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card_img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card_info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+select {
+    border: 1px solid #fff;
+    background-color: transparent;
+    width: 90%;
+    outline: none;
+    padding: 8px 4px;
+    border-radius: 25px;
+}
+
+option {
+    display: inline-block;
+    padding: 8px 4px;
+}
+
+.card_title {
+    text-transform: capitalize;
+    font-size: 17px;
+}
+
+.card_price {
+    font-weight: bold;
+}
+
+.card_portion {
+    font-size: 12px;
+    color: #888;
+}
+
+.card_button {
+    cursor: pointer;
+    width: 100%;
+    padding: 6px 0;
+    border-radius: 25px;
+    background-color: transparent;
+    border: 1px solid #0077ff;
+    font-weight: 600;
+    color: #0077ff;
+}
+
+@media (max-width : 425px) {
+    .card {
+        min-width: 47%;
+    }
+
+    .card_title {
+        font-size: 16px;
+    }
+
+    .card_portion {
+        font-size: 10px;
+    }
+}
