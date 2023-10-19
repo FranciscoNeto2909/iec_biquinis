@@ -12,7 +12,7 @@ export default function Modal({ item, handleCloseModal }) {
     const [price, setPrice] = useState(item.prices[0])
 
     const text = `Olá%20gostaria%20de%20fazer%20um%20pedido:%0A•%20${item.name},%20cor:%20${color},%20tam:%20${size.toString().toUpperCase()},%20qnt:${itemQuant}`
-    
+
     function handleIncreaseQuant() {
         if (itemQuant < 100) {
             setItemQuant(itemQuant + 1)
@@ -73,7 +73,7 @@ export default function Modal({ item, handleCloseModal }) {
                         </div>
                         <div className="modal_info_buttons">
                             <button type="button" className="modal_info_button modal_info_button_cart">Adicionar ao carrinho</button>
-                            <a className="modal_info_button" href={`https://wa.me/5585997844445?text=${text}`}>Finalizar pedido</a>
+                            <a className="modal_info_button" href={`https://wa.me/5585996585581?text=${text}`}>Finalizar pedido</a>
                         </div>
                     </div> :
                     <div className="modal_info">
