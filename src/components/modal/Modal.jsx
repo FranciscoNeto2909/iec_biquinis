@@ -7,9 +7,12 @@ import "./modal.css"
 
 export default function Modal({ item, handleCloseModal }) {
     const [itemQuant, setItemQuant] = useState(1)
-    const [size, setSize] = useState(item.sizes[0])
+    const [size, setSize] = useState(item.sizes[0] || "")
     const [color, setColor] = useState(item.colors[0])
     const [price, setPrice] = useState(item.prices[0])
+
+    const text = `Olá%20gostaria%20de%20fazer%20um%20pedido:%0A•%20${item.name},%20cor:%20${color},%20tam:%20${size.toString().toUpperCase()},%20qnt:${itemQuant}`
+    
     function handleIncreaseQuant() {
         if (itemQuant < 100) {
             setItemQuant(itemQuant + 1)
@@ -31,21 +34,12 @@ export default function Modal({ item, handleCloseModal }) {
         setSize(op)
     }
 
-    function handleBuy() {
-        console.log({
-            name: item.name,
-            size,
-            color,
-            price
-        })
-    }
-
     return (
         <div className="modal_container">
             <div className="modal">
                 <div className="modal_close">
                     <button type="button" onClick={handleCloseModal}>
-                    <AiOutlineClose size={20} />
+                        <AiOutlineClose size={20} />
                     </button>
                 </div>
                 <div className="modal_image">
@@ -79,7 +73,7 @@ export default function Modal({ item, handleCloseModal }) {
                         </div>
                         <div className="modal_info_buttons">
                             <button type="button" className="modal_info_button modal_info_button_cart">Adicionar ao carrinho</button>
-                            <button type="button" className="modal_info_button" onClick={handleBuy}>Finalizar pedido</button>
+                            <a className="modal_info_button" href={`https://wa.me/5585997844445?text=${text}`}>Finalizar pedido</a>
                         </div>
                     </div> :
                     <div className="modal_info">
