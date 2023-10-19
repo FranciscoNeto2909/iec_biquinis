@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { AiOutlinePlus, AiOutlineMinus, AiOutlineClose } from "react-icons/ai"
 import Select from "../Select/Select"
 import Carousel from "../carousel/Carousel"
@@ -33,6 +33,19 @@ export default function Modal({ item, handleCloseModal }) {
         setPrice(item.prices[i])
         setSize(op)
     }
+
+    useEffect(() => {
+        const handlePopState = (e) => {
+            e.preventDefault()
+            handleCloseModal()
+        };
+    
+        window.addEventListener('popstate', handlePopState);
+    
+        return () => {
+          window.removeEventListener('popstate', handlePopState);
+        };
+      }, []);
 
     return (
         <div className="modal_container">
