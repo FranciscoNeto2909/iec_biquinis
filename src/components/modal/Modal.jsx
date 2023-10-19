@@ -2,6 +2,7 @@
 import { useState } from "react"
 import Select from "../Select/Select"
 import "./modal.css"
+import Carousel from "../carousel/Carousel"
 
 export default function Modal({ item, handleCloseModal }) {
     const [itemQuant, setItemQuant] = useState(1)
@@ -40,10 +41,10 @@ export default function Modal({ item, handleCloseModal }) {
         <div className="modal_container">
             <div className="modal">
                 <div className="modal_close">
-                    <button onClick={handleCloseModal}>x</button>
+                    <button type="button" onClick={handleCloseModal}>x</button>
                 </div>
                 <div className="modal_image">
-                    <img src={item.image} alt="" />
+                    <Carousel images={item.images} />
                 </div>
                 {item.inStock ?
                     <div className="modal_info">
@@ -56,14 +57,14 @@ export default function Modal({ item, handleCloseModal }) {
                         </div>
                         <div className="modal_info_selects">
                             <div className="modal_info_colors">
-                                <Select ops={item.colors} text={"Cores disponiveis"} onClick={handleSetColor} />
+                                <Select ops={item.colors} text={"Cores"} onClick={handleSetColor} />
                             </div>
                             <div className="modal_info_sizes">
-                                <Select ops={item.sizes} text={"Tamanhos disponiveis"} onClick={handleSetSize} />
+                                <Select ops={item.sizes} text={"Tamanhos"} onClick={handleSetSize} />
                             </div>
                         </div>
                         <div className="modal_info_value">
-                            <span className="modal_info_value_text">Valor total:</span> <span className="modal_info_value_price">R$ {(price * itemQuant) - 1},99</span>
+                            <span className="modal_info_value_text">Valor total: </span><span className="modal_info_value_price">R$ {(price * itemQuant) - 1},99</span>
                         </div>
                         <div className="modal_info_buttons">
                             <button type="button" className="modal_info_button modal_info_button_cart">Adicionar ao carrinho</button>

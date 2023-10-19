@@ -7,7 +7,7 @@ export default function Card({ bik, handleOpenModal }) {
     return (
         <div className="card">
             <div className="card_image">
-                <img src={bik.image} alt="biquini" className="card_img" />
+                <img src={bik.images[0]} alt="biquini" className="card_img" />
             </div>
             <div className="card_info">
                 <h2 className="card_title">{bik.name}</h2>

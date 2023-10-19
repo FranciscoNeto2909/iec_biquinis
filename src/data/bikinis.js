@@ -1,10 +1,45 @@
+import sunga from "../assets/sunga/sunga.jpeg"
+import prainha1 from "../assets/prainha/prainha1.jpeg"
+import prainha2 from "../assets/prainha/prainha2.jpeg"
+import viseira1 from "../assets/viseira/viseira1.jpeg"
+import viseira2 from "../assets/viseira/viseira2.jpeg"
+import viseira3 from "../assets/viseira/viseira3.jpeg"
+import jeri1 from "../assets/jeri/jeri1.jpeg"
+import jeri2 from "../assets/jeri/jeri2.jpeg"
+import jeri3 from "../assets/jeri/jeri3.jpeg"
+import jeri4 from "../assets/jeri/jeri4.jpeg"
+import canoa from "../assets/canoa/canoa.jpeg"
+import maragogi1 from "../assets/maragogi/maragogi1.jpeg"
+import maragogi2 from "../assets/maragogi/maragogi2.jpeg"
+import noronha1 from "../assets/noronha/noronha1.jpeg"
+import noronha2 from "../assets/noronha/noronha2.jpeg"
+import mb1 from "../assets/morro_branco/morro_branco1.jpg"
+import mb2 from "../assets/morro_branco/morro_branco2.jpg"
+import mb3 from "../assets/morro_branco/morro_branco3.jpg"
+import mb4 from "../assets/morro_branco/morro_branco4.jpg"
+import mb5 from "../assets/morro_branco/morro_branco5.jpg"
+import maio from "../assets/maio/maio.jpg"
+import canga1 from "../assets/canga/canga1.jpg"
+import canga2 from "../assets/canga/canga2.jpeg"
+import canga3 from "../assets/canga/canga3.jpeg"
+import canga4 from "../assets/canga/canga4.jpeg"
+import aguas1 from "../assets/aguas_belas/aguas_belas1.jpg"
+import aguas2 from "../assets/aguas_belas/aguas_belas2.jpg"
+import aguas3 from "../assets/aguas_belas/aguas_belas3.jpg"
+import uruau1 from "../assets/uruau/uruau1.jpg"
+import uruau2 from "../assets/uruau/uruau2.jpg"
+import uruau3 from "../assets/uruau/uruau3.jpg"
+import uruau4 from "../assets/uruau/uruau4.jpg"
+import uruau5 from "../assets/uruau/uruau5.jpg"
+import uruau6 from "../assets/uruau/uruau6.jpg"
+
 export const bikinis = [
     {
         name: "sunga uruaú",
         colors: ["azul marinho"],
         sizes: ['m'],
         prices: [60],
-        image: "https://acdn.mitiendanube.com/stores/001/247/863/products/20210331_1402401-3ead3349159d9f634f16178001810223-1024-1024.jpg",
+        images: [sunga],
         inStock: true
     },
     {
@@ -12,7 +47,7 @@ export const bikinis = [
         colors: ["verde bebê"],
         sizes: ['m'],
         prices: [76],
-        image: "https://acdn.mitiendanube.com/stores/001/247/863/products/20210331_1402401-3ead3349159d9f634f16178001810223-1024-1024.jpg",
+        images: [prainha1, prainha2],
         inStock: true
     },
     {
@@ -20,7 +55,7 @@ export const bikinis = [
         colors: ["preto", "azul celeste"],
         sizes: ['u'],
         prices: [45],
-        image: "https://acdn.mitiendanube.com/stores/001/247/863/products/20210331_1402401-3ead3349159d9f634f16178001810223-1024-1024.jpg",
+        images: [viseira1, viseira2, viseira3],
         inStock: true
     },
     {
@@ -28,7 +63,7 @@ export const bikinis = [
         colors: ["fucsia com laranja"],
         sizes: ['p'],
         prices: [90],
-        image: "https://acdn.mitiendanube.com/stores/001/247/863/products/20210331_1402401-3ead3349159d9f634f16178001810223-1024-1024.jpg",
+        images: [jeri1, jeri2, jeri3, jeri4],
         inStock: true
     },
     {
@@ -36,7 +71,7 @@ export const bikinis = [
         colors: ["rosa neon"],
         sizes: ['g'],
         prices: [100],
-        image: "https://acdn.mitiendanube.com/stores/001/247/863/products/20210331_1402401-3ead3349159d9f634f16178001810223-1024-1024.jpg",
+        images: [canoa],
         inStock: true
     },
     {
@@ -44,7 +79,7 @@ export const bikinis = [
         colors: ["vermelho"],
         sizes: ['p'],
         prices: [76],
-        image: "https://acdn.mitiendanube.com/stores/001/247/863/products/20210331_1402401-3ead3349159d9f634f16178001810223-1024-1024.jpg",
+        images: [maragogi1, maragogi2],
         inStock: true
     },
     {
@@ -52,7 +87,7 @@ export const bikinis = [
         colors: ["lilás"],
         sizes: ['g'],
         prices: [100],
-        image: "https://acdn.mitiendanube.com/stores/001/247/863/products/20210331_1402401-3ead3349159d9f634f16178001810223-1024-1024.jpg",
+        images: [noronha1, noronha2],
         inStock: true
     },
     {
@@ -60,7 +95,7 @@ export const bikinis = [
         colors: ["vermelho"],
         sizes: ['m'],
         prices: [80],
-        image: "https://acdn.mitiendanube.com/stores/001/247/863/products/20210331_1402401-3ead3349159d9f634f16178001810223-1024-1024.jpg",
+        images: [mb1, mb2, mb3, mb4, mb5],
         inStock: true
     },
     {
@@ -68,7 +103,7 @@ export const bikinis = [
         colors: ["geometrica"],
         sizes: ['m'],
         prices: [130],
-        image: "https://acdn.mitiendanube.com/stores/001/247/863/products/20210331_1402401-3ead3349159d9f634f16178001810223-1024-1024.jpg",
+        images: [maio],
         inStock: true
     },
     {
@@ -76,7 +111,7 @@ export const bikinis = [
         colors: ["preto"],
         sizes: ['u'],
         prices: [70],
-        image: "https://acdn.mitiendanube.com/stores/001/247/863/products/20210331_1402401-3ead3349159d9f634f16178001810223-1024-1024.jpg",
+        images: [canga1, canga2, canga3, canga4],
         inStock: true
     },
     {
@@ -84,7 +119,7 @@ export const bikinis = [
         colors: ["azul celete"],
         sizes: ['m'],
         prices: [80],
-        image: "https://acdn.mitiendanube.com/stores/001/247/863/products/20210331_1402401-3ead3349159d9f634f16178001810223-1024-1024.jpg",
+        images: [aguas1, aguas2, aguas3],
         inStock: true
     },
     {
@@ -92,7 +127,7 @@ export const bikinis = [
         colors: ["preto", "lavanda"],
         sizes: ['p', 'm'],
         prices: [80, 80],
-        image: "https://acdn.mitiendanube.com/stores/001/247/863/products/20210331_1402401-3ead3349159d9f634f16178001810223-1024-1024.jpg",
+        images: [uruau1, uruau2, uruau3, uruau4, uruau5, uruau6],
         inStock: true
     },
 ]
