@@ -35,17 +35,17 @@ export default function Modal({ item, handleCloseModal }) {
     }
 
     useEffect(() => {
-        const handlePopState = (e) => {
-            e.preventDefault()
+        const handlePopState = () => {
             handleCloseModal()
         };
-    
-        window.addEventListener('popstate', handlePopState);
-    
+
+        window.onpopstate = handlePopState;
+
         return () => {
-          window.removeEventListener('popstate', handlePopState);
+            window.onpopstate = null;
         };
-      }, []);
+    }, []);
+
 
     return (
         <div className="modal_container">
