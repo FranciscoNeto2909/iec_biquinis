@@ -91,14 +91,6 @@ export const bikinis = [
         inStock: true
     },
     {
-        name: "biquini morro branco",
-        colors: ["vermelho"],
-        sizes: ['m'],
-        prices: [80],
-        images: [mb1, mb2, mb3, mb4, mb5],
-        inStock: true
-    },
-    {
         name: "maiô paraiso",
         colors: ["geometrica"],
         sizes: ['m'],
@@ -115,6 +107,14 @@ export const bikinis = [
         inStock: true
     },
     {
+        name: "biquini uruaú",
+        colors: ["preto", "lavanda"],
+        sizes: ['p', 'm'],
+        prices: [80, 80],
+        images: [uruau1, uruau2, uruau3, uruau4, uruau5, uruau6],
+        inStock: true
+    },
+    {
         name: "biquini águas belas",
         colors: ["azul celete"],
         sizes: ['m'],
@@ -123,11 +123,11 @@ export const bikinis = [
         inStock: true
     },
     {
-        name: "biquini uruaú",
-        colors: ["preto", "lavanda"],
-        sizes: ['p', 'm'],
-        prices: [80, 80],
-        images: [uruau1, uruau2, uruau3, uruau4, uruau5, uruau6],
+        name: "biquini morro branco",
+        colors: ["vermelho"],
+        sizes: ['m'],
+        prices: [80],
+        images: [mb1, mb2, mb3, mb4, mb5],
         inStock: true
     },
 ]

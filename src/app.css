@@ -22,10 +22,12 @@
 }
 
 .app_container {
+    margin: 0 auto;
+    max-width: 1030px;
     overflow-x: hidden;
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap:24px 32px;
     flex-wrap: wrap;
     padding: 24px;
 }
@@ -43,5 +45,12 @@
     .app_container {
         gap: 16px;
         padding: 12px;
+    }
+}
+
+@media (max-width : 340px) {
+    .app_container {
+        gap: 8px;
+        padding: 4px;
     }
 }

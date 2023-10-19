@@ -5,7 +5,7 @@ export default function Card({ bik, handleOpenModal }) {
     }
 
     return (
-        <div className="card">
+        <div className="card" onClick={handleSetItem}>
             <div className="card_image">
                 <img src={bik.images[0]} alt="biquini" className="card_img" />
             </div>
@@ -15,7 +15,7 @@ export default function Card({ bik, handleOpenModal }) {
                     <span className="card_price">R$ {bik.prices[0] - 1},99</span>
                 </div>
                 <p className="card_portion">2x de R$ {(bik.prices[0] / 2).toFixed(2)} sem juros</p>
-                <button className="card_button" onClick={handleSetItem}>Adicionar pedido</button>
+                <button className="card_button">Adicionar pedido</button>
             </div>
         </div>
     )
