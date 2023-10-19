@@ -26,6 +26,9 @@ export default function App() {
       <header className="app_header">
         <img src={logo} alt="logo" className="app_logo" />
       </header>
+      <section className="app_banner">
+        <p>10% de desconto no pix</p>
+      </section>
       <section className="app_container">
         {
           bikinis.map((bik, i) => (

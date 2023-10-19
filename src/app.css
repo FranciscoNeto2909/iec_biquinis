@@ -21,13 +21,28 @@
     font-size: 28px;
 }
 
+.app_banner {
+    height: 70px;
+    margin: 24px auto 6px;
+    background-color: #009474;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    max-width: 930px;
+    border-radius: 4px;
+}
+
 .app_container {
     margin: 0 auto;
     max-width: 1030px;
     overflow-x: hidden;
     display: flex;
     justify-content: center;
-    gap:24px 32px;
+    gap: 24px 32px;
     flex-wrap: wrap;
     padding: 24px;
 }
@@ -42,11 +57,18 @@
         font-size: 24px;
     }
 
+    .app_banner {
+        width: auto;
+        margin: 24px 12px;
+        font-size: 18px;
+    }
+
     .app_container {
         gap: 16px;
         padding: 12px;
     }
 }
+
 
 @media (max-width : 340px) {
     .app_container {

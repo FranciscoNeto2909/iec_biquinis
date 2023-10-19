@@ -75,7 +75,7 @@ export const bikinis = [
         inStock: true
     },
     {
-        name: "biquini maragoji",
+        name: "biquini maragogi",
         colors: ["vermelho"],
         sizes: ['p'],
         prices: [76],
