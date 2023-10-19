@@ -32,7 +32,7 @@
     font-size: 24px;
     font-weight: bold;
     color: #fff;
-    max-width: 930px;
+    max-width: 975px;
     border-radius: 4px;
 }
 
@@ -41,7 +41,7 @@
     max-width: 1030px;
     overflow-x: hidden;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 24px 32px;
     flex-wrap: wrap;
     padding: 24px;
@@ -59,12 +59,12 @@
 
     .app_banner {
         width: auto;
-        margin: 24px 12px 12px 24px;
+        margin: 24px 12px 12px 12px;
         font-size: 18px;
     }
 
     .app_container {
-        gap: 16px;
+        gap: 16px 0;
         padding: 12px;
     }
 }
