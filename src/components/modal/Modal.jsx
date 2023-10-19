@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react"
+import { AiOutlinePlus, AiOutlineMinus, AiOutlineClose } from "react-icons/ai"
 import Select from "../Select/Select"
-import "./modal.css"
 import Carousel from "../carousel/Carousel"
+import "./modal.css"
 
 export default function Modal({ item, handleCloseModal }) {
     const [itemQuant, setItemQuant] = useState(1)
@@ -10,7 +11,9 @@ export default function Modal({ item, handleCloseModal }) {
     const [color, setColor] = useState(item.colors[0])
     const [price, setPrice] = useState(item.prices[0])
     function handleIncreaseQuant() {
-        setItemQuant(itemQuant + 1)
+        if (itemQuant < 100) {
+            setItemQuant(itemQuant + 1)
+        }
     }
 
     function handleDecreaseQuant() {
@@ -41,7 +44,9 @@ export default function Modal({ item, handleCloseModal }) {
         <div className="modal_container">
             <div className="modal">
                 <div className="modal_close">
-                    <button type="button" onClick={handleCloseModal}>x</button>
+                    <button type="button" onClick={handleCloseModal}>
+                    <AiOutlineClose size={20} />
+                    </button>
                 </div>
                 <div className="modal_image">
                     <Carousel images={item.images} />
@@ -51,9 +56,15 @@ export default function Modal({ item, handleCloseModal }) {
                         <h2 className="modal_info_name">{item.name}</h2>
                         <div className="modal_info_quant">
                             <span>Quantidade: </span>
-                            <button className="modal_info_quant-btn1" onClick={handleDecreaseQuant}>-</button>
-                            <span>{itemQuant}</span>
-                            <button className="modal_info_quant-btn2" onClick={handleIncreaseQuant}>+</button>
+                            <div className="modal_info_quant_buttons">
+                                <button className="modal_info_quant-btn1" onClick={handleDecreaseQuant}>
+                                    <AiOutlineMinus size={20} />
+                                </button>
+                                <span className="modal_info_quant_num">{itemQuant}</span>
+                                <button className="modal_info_quant-btn2" onClick={handleIncreaseQuant}>
+                                    <AiOutlinePlus size={20} />
+                                </button>
+                            </div>
                         </div>
                         <div className="modal_info_selects">
                             <div className="modal_info_colors">
