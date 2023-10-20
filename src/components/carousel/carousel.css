@@ -21,3 +21,11 @@
         max-height: 340px;
     }
 }
+
+
+@media (max-width : 375px) {
+    .carousel_img {
+        max-height: 320px;
+    }
+}
+
