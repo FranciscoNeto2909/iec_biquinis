@@ -63,6 +63,7 @@
 
 .card_cart_buttons {
     display: flex;
+    align-items: center;
     gap: 8px;
     border: 1px solid #000;
     width: fit-content;
