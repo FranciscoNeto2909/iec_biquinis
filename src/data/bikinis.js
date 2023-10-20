@@ -80,7 +80,7 @@ export const bikinis = [
         sizes: ['p'],
         prices: [76],
         images: [maragogi1, maragogi2],
-        inStock: true
+        inStock: false
     },
     {
         name: "biquíni noronha",
