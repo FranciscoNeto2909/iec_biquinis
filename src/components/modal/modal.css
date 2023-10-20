@@ -88,7 +88,7 @@
 }
 
 .modal_info_quant-btn1:active,
-.modal_info_quant-btn2:active{
+.modal_info_quant-btn2:active {
     border: 1px inset #009474;
 }
 
@@ -190,15 +190,16 @@
 
     .modal {
         height: auto;
-        max-height: 98%;
+        max-height: 100%;
+        max-width: 100%;
         width: 100%;
         padding: 16px 16px 24px 16px;
         gap: 4px;
         flex-direction: column;
     }
-    
-    .modal_image{
-        max-height:350px;
+
+    .modal_image {
+        max-height: 350px;
     }
 
     .modal_info,
@@ -209,7 +210,7 @@
         display: flex;
     }
 
-    .modal_info{
+    .modal_info {
         padding-top: 8px;
     }
 
@@ -251,7 +252,7 @@
         max-width: 100%;
     }
 
-    .modal_image{
-        max-height:370px;
+    .modal_image {
+        max-height: 370px;
     }
 }
