@@ -10,6 +10,7 @@ export default function Modal({ item, handleCloseModal }) {
     const [size, setSize] = useState(item.sizes[0] || "")
     const [color, setColor] = useState(item.colors[0])
     const [price, setPrice] = useState(item.prices[0])
+    const [closing, setClosing] = useState(false)
 
     const text = `Olá%20gostaria%20de%20fazer%20um%20pedido:%0A•%20${item.name},%20cor:%20${color},%20tam:%20${size.toString().toUpperCase()},%20qnt:${itemQuant}`
 
@@ -54,10 +55,16 @@ export default function Modal({ item, handleCloseModal }) {
         }
     }
 
+    function handleCloseBtn() {
+        handleCloseModal()
+        setClosing(true)
+    }
+
     useEffect(() => {
         const handleBackButton = (event) => {
             event.preventDefault();
             handleCloseModal();
+            setClosing(true)
         };
 
         window.history.pushState(null, null, window.location.href);
@@ -70,9 +77,9 @@ export default function Modal({ item, handleCloseModal }) {
 
     return (
         <div className="modal_container">
-            <div className="modal">
+            <div className={`modal ${closing && "close_modal"}`}>
                 <div className="modal_close">
-                    <button type="button" onClick={handleCloseModal}>
+                    <button type="button" onClick={handleCloseBtn}>
                         <AiOutlineClose size={20} />
                     </button>
                 </div>

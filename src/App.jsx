@@ -21,9 +21,11 @@ export default function App() {
 
 
   function handleCloseModal() {
-    setIsModalOpened(false)
-    setModalItem([])
-    document.body.style.overflow = 'auto';
+    setTimeout(() => {
+      setIsModalOpened(false)
+      setModalItem([])
+      document.body.style.overflow = 'auto';
+    }, 850);
   }
 
   function handleOpenCart() {
