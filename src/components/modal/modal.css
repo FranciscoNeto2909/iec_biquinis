@@ -190,7 +190,7 @@
 
     .modal {
         height: auto;
-        max-height: 90%;
+        max-height: 98%;
         width: 100%;
         padding: 16px 16px 24px 16px;
         gap: 4px;
@@ -249,5 +249,9 @@
     .modal {
         width: 100%;
         max-width: 100%;
+    }
+
+    .modal_image{
+        height:320px;
     }
 }
