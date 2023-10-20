@@ -99,7 +99,8 @@
 
 .modal_info_value {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 20px;
+    margin: 4px 0;
 }
 
 .modal_info_value_price {
@@ -179,6 +180,7 @@
 @media (max-width : 525px) {
     .modal_container {
         align-items: flex-end;
+        bottom: -5px;
     }
 
     .modal_close {
@@ -187,8 +189,8 @@
     }
 
     .modal {
-        height: 98%;
-        width: 90%;
+        height: 90%;
+        width: 100%;
         padding: 16px;
         gap: 4px;
         flex-direction: column;
@@ -204,10 +206,6 @@
 
     .modal_info{
         padding-top: 8px;
-    }
-
-    .modal_info_name {
-        font-size: 19px;
     }
 
     .modal_info_quant {
@@ -233,7 +231,7 @@
 
     .modal_info_button {
         padding: 12px 10px;
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .modal_soldOff_card {
