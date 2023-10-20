@@ -11,7 +11,6 @@ export default function App() {
   const [isModalOpened, setIsModalOpened] = useState(false)
   const [isCartOpened, setIsCartOpened] = useState(false)
   const [modalItem, setModalItem] = useState([])
-  const [cartItems, setCartItems] = useState([])
 
 
   function handleOpenModal(item) {
@@ -39,9 +38,6 @@ export default function App() {
     }, 1600);
   }
 
-  function handleSetItemToCart(item) {
-    setCartItems([...cartItems, item])
-  }
 
   return (
     <div className="app">
@@ -65,9 +61,9 @@ export default function App() {
           ))
         }
       </section>
-      {isModalOpened && <Modal item={modalItem} handleCloseModal={handleCloseModal} handleSetItemToCart={handleSetItemToCart} />}
+      {isModalOpened && <Modal item={modalItem} handleCloseModal={handleCloseModal} />}
       {isCartOpened &&
-        <Cart handleCloseCart={handleCloseCart} items={cartItems} />
+        <Cart handleCloseCart={handleCloseCart} />
       }
     </div>
   )

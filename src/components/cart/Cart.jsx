@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
 
-import { AiOutlineClose } from "react-icons/ai"
+import { AiOutlineArrowRight } from "react-icons/ai"
 import "./cart.css"
 import { useEffect, useState } from "react";
+import CartCard from "../cartCard/CartCard";
 
-export default function Cart({ handleCloseCart, items }) {
+export default function Cart({ handleCloseCart }) {
     const [closing, setClosing] = useState(false)
+    const cart = localStorage.getItem('cart') || []
 
     function handleCloseBtn() {
         setClosing(true)
@@ -25,20 +27,25 @@ export default function Cart({ handleCloseCart, items }) {
             window.removeEventListener('popstate', handleBackButton);
         };
     }, [handleCloseCart]);
-    
+
     return (
         <div className="cart_container">
             <div className={`cart ${closing && "cart_close"}`}>
                 <div className="cart_header">
                     <button className="cart_header_btn" onClick={handleCloseBtn}>
-                        <AiOutlineClose size={20} />
+                        <AiOutlineArrowRight size={20} />
                     </button>
                 </div>
                 <div className="cart_body">
                     {
-                        items.length > 0 ?
+                        cart.length > 0 ?
                             <>
-                                cart
+                                <div className="cart_body_cards">
+                                    {JSON.parse(cart).map((item, i) => (
+                                        <CartCard item={item} key={i} />
+                                    ))}
+                                </div>
+                                <button className="cart_body_button">Finalizar compra</button>
                             </> :
                             <>
                                 <div>

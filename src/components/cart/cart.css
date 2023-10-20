@@ -14,7 +14,7 @@
     width: 0;
     box-shadow: -2px 0 4px #0003;
     width: 400px;
-    max-width: 75%;
+    max-width: 85%;
     position: relative;
     animation: openCart 1.5s ease-in-out normal;
     animation-fill-mode: forwards;
@@ -27,6 +27,7 @@
 
 .cart_header {
     padding: 8px;
+    border-bottom: 1px solid #ddd;
 }
 
 .cart_header_btn {
@@ -38,6 +39,27 @@
 .cart_body {
     padding: 8px;
     text-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 42px);
+    overflow: hidden;
+}
+
+.cart_body_cards {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cart_body_button {
+    background-color: #009474;
+    padding: 8px 0;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 @keyframes openCart {
@@ -63,7 +85,7 @@
 @media (max-width:525px) {
     @keyframes closeCart {
         from {
-            width: 75%;
+            width: 85%;
         }
 
         to {
