@@ -12,6 +12,15 @@
     position: relative;
 }
 
+.app_header_cartbtn{
+    position: absolute;
+    right: 24px;
+    background-color: transparent;
+    border: none;
+    color: #009474;
+    cursor: pointer;
+}
+
 .app_logo {
     height: 90%;
 }

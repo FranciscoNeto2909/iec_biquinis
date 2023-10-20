@@ -5,7 +5,7 @@ import Select from "../Select/Select"
 import Carousel from "../carousel/Carousel"
 import "./modal.css"
 
-export default function Modal({ item, handleCloseModal }) {
+export default function Modal({ item, handleCloseModal, handleSetItemToCart }) {
     const [itemQuant, setItemQuant] = useState(1)
     const [size, setSize] = useState(item.sizes[0] || "")
     const [color, setColor] = useState(item.colors[0])
@@ -86,7 +86,7 @@ export default function Modal({ item, handleCloseModal }) {
                             <span className="modal_info_value_text">Valor total: </span><span className="modal_info_value_price">R$ {(price * itemQuant) - 1},99</span>
                         </div>
                         <div className="modal_info_buttons">
-                            <button type="button" className="modal_info_button modal_info_button_cart">Adicionar ao carrinho</button>
+                            <button type="button" className="modal_info_button modal_info_button_cart" onClick={() => handleSetItemToCart(item)}>Adicionar ao carrinho</button>
                             <a className="modal_info_button" href={`https://wa.me/5585996585581?text=${text}`}>Finalizar pedido</a>
                         </div>
                     </div> :
