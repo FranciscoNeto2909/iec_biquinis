@@ -190,6 +190,7 @@
 
     .modal {
         height: auto;
+        max-height: 90%;
         width: 100%;
         padding: 16px 16px 24px 16px;
         gap: 4px;
