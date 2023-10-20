@@ -195,6 +195,10 @@
         gap: 4px;
         flex-direction: column;
     }
+    
+    .modal_image{
+        max-height:350px;
+    }
 
     .modal_info,
     .modal_soldOff {
