@@ -4,7 +4,7 @@ import "./cartCard.css"
 import { useState } from "react"
 
 export default function CartCard({ item, handleRemoveItem }) {
-    const [price, setPrice] = useState(item.price)
+    const [price, setPrice] = useState(item.price * item.quant)
     const [quant, setQuant] = useState(item.quant)
 
     function handleIncreasePrice() {
@@ -47,7 +47,7 @@ export default function CartCard({ item, handleRemoveItem }) {
                             </button>
                         </div>
                         <div className="card_cart_price">
-                            <span className="card_cart_price_value">R$: {price - 1},99</span>
+                            <span className="card_cart_price_value">R$: {(price) - 1},99</span>
                         </div>
                     </div>
                 </div>

@@ -49,7 +49,7 @@ export default function Modal({ item, handleCloseModal }) {
                 color,
                 image: item.images[0],
                 quant: itemQuant,
-                price
+                price:item.prices[0]
             });
 
             localStorage.setItem('cart', JSON.stringify(cart));
