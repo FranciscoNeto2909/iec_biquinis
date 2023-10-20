@@ -12,7 +12,6 @@ export default function App() {
   const [isCartOpened, setIsCartOpened] = useState(false)
   const [modalItem, setModalItem] = useState([])
 
-
   function handleOpenModal(item) {
     setIsModalOpened(true)
     setModalItem(item)

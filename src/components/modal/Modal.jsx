@@ -37,6 +37,7 @@ export default function Modal({ item, handleCloseModal }) {
 
     function handleCartBtn() {
         handleCloseModal()
+        setClosing(true)
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         const hasItem = cart.filter(i => i.name === item.name).length > 0
         if (hasItem) {
