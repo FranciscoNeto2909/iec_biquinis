@@ -5,7 +5,7 @@ import Select from "../Select/Select"
 import Carousel from "../carousel/Carousel"
 import "./modal.css"
 
-export default function Modal({ item, handleCloseModal}) {
+export default function Modal({ item, handleCloseModal }) {
     const [itemQuant, setItemQuant] = useState(1)
     const [size, setSize] = useState(item.sizes[0] || "")
     const [color, setColor] = useState(item.colors[0])
@@ -35,18 +35,23 @@ export default function Modal({ item, handleCloseModal}) {
     }
 
     function handleCartBtn() {
+        handleCloseModal()
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const hasItem = cart.filter(i => i.name === item.name).length > 0
+        if (hasItem) {
+            console.log("Item ja adicionado")
+        } else {
+            cart.push({
+                name: item.name,
+                size,
+                color,
+                image: item.images[0],
+                quant: itemQuant,
+                price
+            });
 
-        cart.push({
-            name:item.name,
-            size,
-            color,
-            image:item.images[0],
-            quant:itemQuant,
-            price
-        });
-
-        localStorage.setItem('cart', JSON.stringify(cart));
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
     }
 
     useEffect(() => {

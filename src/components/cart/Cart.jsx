@@ -7,11 +7,17 @@ import CartCard from "../cartCard/CartCard";
 
 export default function Cart({ handleCloseCart }) {
     const [closing, setClosing] = useState(false)
-    const cart = localStorage.getItem('cart') || []
+    const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || [])
 
     function handleCloseBtn() {
         setClosing(true)
         handleCloseCart()
+    }
+
+    function handleRemoveItem(name) {
+        const newCart = cart.filter(i => i.name !== name)
+        localStorage.setItem('cart', JSON.stringify(newCart));
+        setCart(newCart)
     }
 
     useEffect(() => {
@@ -41,14 +47,14 @@ export default function Cart({ handleCloseCart }) {
                         cart.length > 0 ?
                             <>
                                 <div className="cart_body_cards">
-                                    {JSON.parse(cart).map((item, i) => (
-                                        <CartCard item={item} key={i} />
+                                    {cart.map((item, i) => (
+                                        <CartCard item={item} handleRemoveItem={handleRemoveItem} key={i} />
                                     ))}
                                 </div>
                                 <button className="cart_body_button">Finalizar compra</button>
                             </> :
                             <>
-                                <div>
+                                <div className="card_body_notice">
                                     Nenhum item adicionado ainda
                                 </div>
                             </>
