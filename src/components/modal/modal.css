@@ -316,4 +316,24 @@
     .modal_image {
         max-height: 370px;
     }
+
+    @keyframes openModal {
+        from {
+            height: 0%;
+        }
+
+        to {
+            height: 95%;
+        }
+    }
+
+    @keyframes closeModal {
+        from {
+            height: 95%;
+        }
+
+        to {
+            height: 0%;
+        }
+    }
 }
