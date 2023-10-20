@@ -206,7 +206,7 @@
         animation-fill-mode: forwards;
     }
 
-    .modal_image {
+    .modal_image img {
         max-height: 350px;
     }
 
@@ -279,7 +279,7 @@
         max-width: 100%;
     }
 
-    .modal_image {
-        max-height: 370px;
+    .modal_image img {
+        max-height: 288px;
     }
 }
