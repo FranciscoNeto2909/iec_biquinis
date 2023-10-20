@@ -27,7 +27,9 @@ export default function App() {
         <img src={logo} alt="logo" className="app_logo" />
       </header>
       <section className="app_banner">
-        <p>10% de desconto no pix</p>
+        <p className="app_banner_text">
+          <span className="app_banner_num">10% </span>
+          de desconto no pix !</p>
       </section>
       <section className="app_container">
         {

@@ -43,7 +43,7 @@ export const bikinis = [
         inStock: true
     },
     {
-        name: "biquini prainha",
+        name: "biquíni prainha",
         colors: ["verde bebê"],
         sizes: ['m'],
         prices: [76],
@@ -59,7 +59,7 @@ export const bikinis = [
         inStock: true
     },
     {
-        name: "biquini jeri",
+        name: "biquíni jeri",
         colors: ["fucsia com laranja"],
         sizes: ['p'],
         prices: [90],
@@ -67,7 +67,7 @@ export const bikinis = [
         inStock: true
     },
     {
-        name: "biquini canoa",
+        name: "biquíni canoa",
         colors: ["rosa neon"],
         sizes: ['g'],
         prices: [100],
@@ -75,7 +75,7 @@ export const bikinis = [
         inStock: true
     },
     {
-        name: "biquini maragogi",
+        name: "biquíni maragogi",
         colors: ["vermelho"],
         sizes: ['p'],
         prices: [76],
@@ -83,7 +83,7 @@ export const bikinis = [
         inStock: true
     },
     {
-        name: "biquini noronha",
+        name: "biquíni noronha",
         colors: ["lilás"],
         sizes: ['g'],
         prices: [100],
@@ -91,7 +91,7 @@ export const bikinis = [
         inStock: true
     },
     {
-        name: "maiô paraiso",
+        name: "maiô paraíso",
         colors: ["geometrica"],
         sizes: ['m'],
         prices: [130],
@@ -107,7 +107,7 @@ export const bikinis = [
         inStock: true
     },
     {
-        name: "biquini uruaú",
+        name: "biquíni uruaú",
         colors: ["preto", "lavanda"],
         sizes: ['p', 'm'],
         prices: [80, 80],
@@ -115,7 +115,7 @@ export const bikinis = [
         inStock: true
     },
     {
-        name: "biquini águas belas",
+        name: "biquíni águas belas",
         colors: ["azul celete"],
         sizes: ['m'],
         prices: [80],
@@ -123,7 +123,7 @@ export const bikinis = [
         inStock: true
     },
     {
-        name: "biquini morro branco",
+        name: "biquíni morro branco",
         colors: ["vermelho"],
         sizes: ['m'],
         prices: [80],

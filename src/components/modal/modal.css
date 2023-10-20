@@ -232,6 +232,7 @@
     .modal_info_button {
         padding: 12px 10px;
         font-size: 16px;
+        text-align: center;
     }
 
     .modal_soldOff_card {
