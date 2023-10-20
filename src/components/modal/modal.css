@@ -8,6 +8,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: openModal 1s ease-in-out normal;
+    animation-fill-mode: forwards;
+    backdrop-filter: blur(0.8px);
+}
+
+.close_modal {
+    animation: closeModal 1s ease-in-out normal;
+    animation-fill-mode: forwards;
 }
 
 .modal {
@@ -159,6 +167,26 @@
     color: #fff;
 }
 
+@keyframes openModal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes closeModal {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
 @media (max-width : 768px) {
     .modal_image {
         flex: 1.5;
@@ -182,6 +210,7 @@
     .modal_container {
         align-items: flex-end;
         bottom: -5px;
+        top: 100%;
     }
 
     .modal_close {
@@ -190,23 +219,16 @@
     }
 
     .modal {
-        height: 0;
+        height: auto;
         max-height: 100%;
         max-width: 100%;
         width: 100%;
         padding: 16px 16px 24px 16px;
         gap: 4px;
         flex-direction: column;
-        animation: openModal 1s ease-in-out normal;
-        animation-fill-mode: forwards;
     }
 
-    .close_modal{
-        animation: closeModal 1s ease-in-out normal;
-        animation-fill-mode: forwards;
-    }
-
-    .modal_image img {
+    .modal_image {
         max-height: 350px;
     }
 
@@ -254,21 +276,21 @@
 
     @keyframes openModal {
         from {
-            height: 0%;
+            top: 100%;
         }
-    
+
         to {
-            height: 85vh;
+            top: 0%;
         }
     }
-    
+
     @keyframes closeModal {
         from {
-            height: 85vh;
+            top: 0%;
         }
-    
+
         to {
-            height: 0;
+            top: 100%;
         }
     }
 }
@@ -279,7 +301,7 @@
         max-width: 100%;
     }
 
-    .modal_image img {
-        max-height: 288px;
+    .modal_image {
+        max-height: 370px;
     }
 }

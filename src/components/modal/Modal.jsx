@@ -76,8 +76,8 @@ export default function Modal({ item, handleCloseModal }) {
     }, [handleCloseModal]);
 
     return (
-        <div className="modal_container">
-            <div className={`modal ${closing && "close_modal"}`}>
+        <div className={`modal_container ${closing && "close_modal"}`}>
+            <div className={`modal`}>
                 <div className="modal_close">
                     <button type="button" onClick={handleCloseBtn}>
                         <AiOutlineClose size={20} />
