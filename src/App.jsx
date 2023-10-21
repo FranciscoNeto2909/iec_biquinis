@@ -46,7 +46,7 @@ export default function App() {
     setTimeout(() => {
       setMsgVisib(false)
       setMsg("")
-    }, 1400);
+    }, 1200);
   }
 
   return (
