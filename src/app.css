@@ -18,13 +18,13 @@
 
 .app_notice_text {
     width: fit-content;
-    background-color: #005994;
+    background-color: #01b46a;
     box-shadow: 0 0 2px #0008;
     padding: 8px 32px;
     border-radius: 12px;
     font-size: 17px;
     font-weight: 500;
-    text-shadow: 0 0 2px #000;
+    text-shadow: 0 0 2px #0008;
 }
 
 .app_header {

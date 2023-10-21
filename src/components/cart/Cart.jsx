@@ -19,6 +19,10 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
         localStorage.setItem('cart', JSON.stringify(newCart));
         setCart(newCart)
         handleSetMsg("Item removido")
+        if (cart.length == 1 ) {
+            setClosing(true)
+            handleCloseCart()
+        }
     }
 
     useEffect(() => {
