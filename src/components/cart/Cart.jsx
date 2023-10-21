@@ -28,12 +28,6 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
         }
     }
 
-    function handleClick() {
-        // `Olá%20gostaria%20de%20fazer%20um%20pedido:%0A•%20${item.name},%20cor:%20${color},%20tam:%20${size.toString().toUpperCase()},%20qnt:${itemQuant}%0A`
-
-        console.log(text)
-    }
-
     useEffect(() => {
         const handleBackButton = (event) => {
             event.preventDefault();
