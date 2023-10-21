@@ -13,7 +13,7 @@ export default function App() {
   const [modalItem, setModalItem] = useState([])
   const [msg, setMsg] = useState("Adicionado ao carrinho")
   const [msgVisib, setMsgVisib] = useState(false)
-  // const cartLength = JSON.parse(localStorage.getItem('cart')).length || 0
+  const cart = JSON.parse(localStorage.getItem('cart')) || []
 
   function handleOpenModal(item) {
     setIsModalOpened(true)
@@ -69,7 +69,7 @@ export default function App() {
         {!isCartOpened &&
           <div className="app_header_cartbtn" >
             <button onClick={handleOpenCart}>
-              {/* {cartLength > 0 && <span>{cartLength}</span>} */}
+              {cart.length > 0 && <span>{cart.length}</span>}
               <BiShoppingBag size={32} />
             </button>
           </div>
