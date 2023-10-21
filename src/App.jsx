@@ -12,7 +12,7 @@ export default function App() {
   const [isCartOpened, setIsCartOpened] = useState(false)
   const [modalItem, setModalItem] = useState([])
   const [msg, setMsg] = useState("Adicionado ao carrinho")
-  const [msgVisib, setMsgVisib] = useState(true)
+  const [msgVisib, setMsgVisib] = useState(false)
   const cartLength = JSON.parse(localStorage.getItem('cart')).length
   function handleOpenModal(item) {
     setIsModalOpened(true)
