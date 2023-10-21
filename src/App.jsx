@@ -4,7 +4,7 @@ import Cart from "./components/cart/Cart"
 import { bikinis } from "./data/bikinis"
 import "./app.css"
 import Modal from "./components/modal/Modal"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { BiShoppingBag } from "react-icons/bi"
 
 export default function App() {
@@ -14,6 +14,7 @@ export default function App() {
   const [msg, setMsg] = useState("Adicionado ao carrinho")
   const [msgVisib, setMsgVisib] = useState(false)
   const cartLength = JSON.parse(localStorage.getItem('cart')).length || 0
+
   function handleOpenModal(item) {
     setIsModalOpened(true)
     setModalItem(item)
@@ -48,6 +49,13 @@ export default function App() {
       setMsg("")
     }, 1200);
   }
+
+  useEffect(() => {
+    const cart = localStorage.getItem('cart')
+    if (cart === null) {
+      localStorage.setItem('cart', JSON.stringify([]))
+    }
+  },[])
 
   return (
     <div className="app">
