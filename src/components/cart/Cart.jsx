@@ -9,7 +9,7 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
     const [closing, setClosing] = useState(false)
     const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || [])
     const text = cart.map(item => (
-        `Olá%20gostaria%20de%20fazer%20um%20pedido:%0A•%20${item.name},%20cor:%20${item.color},%20tam:%20${item.size.toString().toUpperCase()},%20qnt:${item.quant}`
+        `•%20${item.name},%20cor:%20${item.color},%20tam:%20${item.size.toString().toUpperCase()},%20qnt:${item.quant}%0A`
     )).toString()
 
     function handleCloseBtn() {
@@ -59,7 +59,7 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
                                         <CartCard item={item} handleRemoveItem={handleRemoveItem} key={i} />
                                     ))}
                                 </div>
-                                <a href={`https://wa.me/5585996585581?text=${text}`} className="cart_body_button">Finalizar compra</a>
+                                <a href={`https://wa.me/5585996585581?text=Olá%20gostaria%20de%20fazer%20um%20pedido:%0A${text}`} className="cart_body_button">Finalizar compra</a>
                             </> :
                             <>
                                 <div className="card_body_notice">

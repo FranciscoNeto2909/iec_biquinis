@@ -53,6 +53,7 @@
 }
 
 .cart_body_button {
+    display: block;
     background-color: #009474;
     padding: 16px 0;
     border: none;
@@ -60,6 +61,7 @@
     color: #fff;
     font-size: 16px;
     font-weight: bold;
+    text-align: center;
 }
 
 .card_body_notice{
