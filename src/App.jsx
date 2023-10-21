@@ -11,13 +11,14 @@ export default function App() {
   const [isModalOpened, setIsModalOpened] = useState(false)
   const [isCartOpened, setIsCartOpened] = useState(false)
   const [modalItem, setModalItem] = useState([])
-
+  const [msg, setMsg] = useState("Adicionado ao carrinho")
+  const [msgVisib, setMsgVisib] = useState(false)
+  const cartLength = JSON.parse(localStorage.getItem('cart')).length
   function handleOpenModal(item) {
     setIsModalOpened(true)
     setModalItem(item)
     document.body.style.overflow = 'hidden';
   }
-
 
   function handleCloseModal() {
     setTimeout(() => {
@@ -39,15 +40,31 @@ export default function App() {
     }, 1600);
   }
 
+  function handleSetMsg(text) {
+    setMsgVisib(true)
+    setMsg(text)
+    setTimeout(() => {
+      setMsgVisib(false)
+      setMsg("")
+    }, 1400);
+  }
 
   return (
     <div className="app">
+      {msgVisib &&
+        <div className="app_notice">
+          <p className="app_notice_text">{msg}</p>
+        </div>
+      }
       <header className="app_header">
         <img src={logo} alt="logo" className="app_logo" />
         {!isCartOpened &&
-          <button className="app_header_cartbtn" onClick={handleOpenCart}>
-            <BiShoppingBag size={32} />
-          </button>
+          <div className="app_header_cartbtn" >
+            <button onClick={handleOpenCart}>
+              {cartLength > 0 && <span>{cartLength}</span>}
+              <BiShoppingBag size={32} />
+            </button>
+          </div>
         }
       </header>
       <section className="app_banner">
@@ -62,9 +79,9 @@ export default function App() {
           ))
         }
       </section>
-      {isModalOpened && <Modal item={modalItem} handleCloseModal={handleCloseModal} />}
+        {isModalOpened && <Modal item={modalItem} handleCloseModal={handleCloseModal} handleSetMsg={handleSetMsg} />}
       {isCartOpened &&
-        <Cart handleCloseCart={handleCloseCart} />
+        <Cart handleCloseCart={handleCloseCart} handleSetMsg={handleSetMsg} />
       }
     </div>
   )

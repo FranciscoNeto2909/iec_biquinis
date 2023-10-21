@@ -5,7 +5,7 @@ import "./cart.css"
 import { useEffect, useState } from "react";
 import CartCard from "../cartCard/CartCard";
 
-export default function Cart({ handleCloseCart }) {
+export default function Cart({ handleCloseCart, handleSetMsg }) {
     const [closing, setClosing] = useState(false)
     const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || [])
 
@@ -18,6 +18,7 @@ export default function Cart({ handleCloseCart }) {
         const newCart = cart.filter(i => i.name !== name)
         localStorage.setItem('cart', JSON.stringify(newCart));
         setCart(newCart)
+        handleSetMsg("Item removido")
     }
 
     useEffect(() => {
