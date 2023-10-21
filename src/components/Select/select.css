@@ -13,7 +13,7 @@
 .select {
     width: 100%;
     background-color: transparent;
-    border-radius: 12px;
+    border-radius: 8px;
     font-size: 16px;
     padding: 8px;
     border: 1px solid #018B6A;
@@ -27,16 +27,18 @@
     cursor: pointer;
     position: absolute;
     width: 100%;
-    border-radius: 12px;
+    border-radius: 8px;
     box-shadow: 0 0 4px #018B6A;
     background-color: #fff;
     overflow: hidden;
     z-index: 2;
 }
 
-.select_notice{
+.select_notice {
+    position: absolute;
+    bottom: -14px;
     margin-top: 2px;
-    font-size: 13px;
+    font-size: 12px;
     color: #f00;
 }
 
@@ -61,11 +63,6 @@
 @media (max-width:425px) {
     .select {
         padding: 6px 8px;
-        border-radius: 8px;
-    }
-
-    .select_dropdown {
-        border-radius: 8px;
     }
 
     .select_option {

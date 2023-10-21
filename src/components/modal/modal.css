@@ -108,13 +108,12 @@
 .modal_info_selects {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 18px;
 }
 
 .modal_info_value {
     font-weight: 500;
     font-size: 20px;
-    margin: 4px 0;
 }
 
 .modal_info_value_price {
@@ -156,7 +155,8 @@
     gap: 8px;
     align-items: center;
     border: 2px solid #f00;
-    padding: 24px;
+    padding: 12px;
+    border-radius: 6px;
 }
 
 .modal_soldOff_card_text {
@@ -165,10 +165,11 @@
 }
 
 .modal_soldOff_card_button {
+    display: block;
     padding: 12px;
     border: none;
-    font-size: 15px;
-    border-radius: 25px;
+    font-size: 16px;
+    border-radius: 8px;
     background-color: #009474;
     color: #fff;
 }
@@ -258,6 +259,7 @@
         display: flex;
         flex-direction: row;
         gap: 8px;
+        margin-bottom: 8px;
     }
 
     .modal_info_colors {
@@ -310,5 +312,13 @@
 
     .modal_image {
         max-height: 370px;
+    }
+
+    .modal_soldOff_card {
+        padding: 8px;
+    }
+
+    .modal_soldOff_card_text {
+        font-size: 18px;
     }
 }
