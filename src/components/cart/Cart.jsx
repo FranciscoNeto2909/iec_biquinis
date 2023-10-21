@@ -16,7 +16,7 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
         setClosing(true)
         handleCloseCart()
     }
-    console.log(text)
+
     function handleRemoveItem(name) {
         const newCart = cart.filter(i => i.name !== name)
         localStorage.setItem('cart', JSON.stringify(newCart));
