@@ -5,7 +5,7 @@ import Select from "../Select/Select"
 import Carousel from "../carousel/Carousel"
 import "./modal.css"
 
-export default function Modal({ item, handleCloseModal, handleSetMsg, handleSetMsg }) {
+export default function Modal({ item, handleCloseModal, handleSetMsg }) {
     const [itemQuant, setItemQuant] = useState(1)
     const [size, setSize] = useState(item.sizes[0] || "")
     const [color, setColor] = useState(item.colors[0])
