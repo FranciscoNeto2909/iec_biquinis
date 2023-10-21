@@ -15,7 +15,7 @@ export default function Select({ ops, onClick, text }) {
     function handleOptionClick(op, i) {
         setShowOptions(!showOptions)
         setSelected(op)
-        onClick(i,op)
+        onClick(i, op)
     }
 
     const handleClickOutside = (e) => {
@@ -36,13 +36,16 @@ export default function Select({ ops, onClick, text }) {
     return (
         <div className="select_container">
             <label className="select_title" htmlFor="sel">{text}</label>
-            <div className="select" id="sel" onClick={handleShowOptions}>{selected}</div>
+            <div className="select" id="sel" onClick={handleShowOptions}>{selected.name}</div>
+            {selected.inStock === false && <div className="select_notice">Item esgotado</div>}
             {showOptions &&
                 <div className="select_dropdown" ref={dropdownRef}>
                     {
-                        ops.map((op, i) => (
-                            <div className={`select_option ${selected === op && "select_option_selected"}`} onClick={() => handleOptionClick(op, i)} key={i}>{op}</div>
-                        ))
+                        ops.map((op, i) => {
+                            return (
+                                <div className={`select_option ${selected.name === op.name && "select_option_selected"}`} onClick={() => handleOptionClick(op, i)} key={i}>{op.name}</div>
+                            )
+                        })
                     }
                 </div>
             }

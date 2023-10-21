@@ -34,6 +34,12 @@
     z-index: 2;
 }
 
+.select_notice{
+    margin-top: 2px;
+    font-size: 13px;
+    color: #f00;
+}
+
 .select_option {
     color: #018B6A;
     border-bottom: 1px solid #018B6A;

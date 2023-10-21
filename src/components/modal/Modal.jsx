@@ -7,12 +7,12 @@ import "./modal.css"
 
 export default function Modal({ item, handleCloseModal, handleSetMsg }) {
     const [itemQuant, setItemQuant] = useState(1)
-    const [size, setSize] = useState(item.sizes[0] || "")
+    const [size, setSize] = useState(item.sizes[0] || {})
     const [color, setColor] = useState(item.colors[0])
-    const [price, setPrice] = useState(item.prices[0])
+    const [price, setPrice] = useState(item.sizes[0].price)
     const [closing, setClosing] = useState(false)
 
-    const text = `Olá%20gostaria%20de%20fazer%20um%20pedido:%0A•%20${item.name},%20cor:%20${color},%20tam:%20${size.toString().toUpperCase()},%20qnt:${itemQuant}`
+    const text = `Olá%20gostaria%20de%20fazer%20um%20pedido:%0A•%20${item.name},%20cor:%20${color.name},%20tam:%20${size.name.toString().toUpperCase()},%20qnt:${itemQuant}`
 
     function handleIncreaseQuant() {
         if (itemQuant < 100) {
@@ -31,26 +31,29 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
     }
 
     function handleSetSize(i, op) {
-        setPrice(item.prices[i])
+        setPrice(item.sizes[i].price)
         setSize(op)
     }
 
     function handleCartBtn() {
-        handleCloseModal()
-        setClosing(true)
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         const hasItem = cart.filter(i => i.name === item.name).length > 0
-        if (hasItem) {
+
+        if ((hasItem && color.inStock === true) && (hasItem && size.inStock === true)) {
             handleSetMsg("Item já adicionado!")
+        } else if (color.inStock === false || size.inStock === false) {
+            handleSetMsg("Item esgotado!")
         } else {
+            setClosing(true)
+            handleCloseModal()
             handleSetMsg("Adicionado ao carrinho")
             cart.push({
                 name: item.name,
-                size,
-                color,
+                size: size.name,
+                color: color.name,
                 image: item.images[0],
                 quant: itemQuant,
-                price: item.prices[0]
+                price: item.sizes[0].price
             });
 
             localStorage.setItem('cart', JSON.stringify(cart));

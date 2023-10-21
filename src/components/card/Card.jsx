@@ -12,7 +12,7 @@ export default function Card({ bik, handleOpenModal }) {
             <div className="card_info">
                 <h2 className="card_title">{bik.name}</h2>
                 <div className="card_info_price">
-                    <span className="card_price">R$ {bik.prices[0] - 1},99</span>
+                    <span className="card_price">R$ {bik.sizes[0].price - 1},99</span>
                 </div>
                 <p className="card_portion">Em até 6x  sem juros</p>
                 <button className="card_button">Adicionar pedido</button>
