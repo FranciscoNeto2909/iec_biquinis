@@ -51,8 +51,7 @@
     max-width: 50%;
 }
 
-.modal_info,
-.modal_soldOff {
+.modal_info {
     flex: 1;
     height: 100%;
     padding-top: 14px;
@@ -143,28 +142,8 @@
     background-color: #4A8996;
 }
 
-.modal_soldOff {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.modal_soldOff_card {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: center;
-    border: 2px solid #f00;
-    padding: 12px;
-    border-radius: 6px;
-}
-
-.modal_soldOff_card_text {
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.modal_soldOff_card_button {
+.modal_soldOff_button {
+    text-align: center;
     display: block;
     padding: 12px;
     border: none;
@@ -178,7 +157,6 @@
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
@@ -188,23 +166,24 @@
     from {
         opacity: 1;
     }
-
     to {
         opacity: 0;
     }
 }
 
-@media (max-width : 768px) {
+@media (max-width: 768px) {
     .modal_image {
         flex: 1.5;
     }
 }
 
-@media (max-width : 625px) {
+@media (max-width: 625px) {
     .modal_info {
         display: flex;
         flex-direction: column;
         gap: 12px;
+        width: 100%;
+        padding: 0 24px;
     }
 
     .modal_image {
@@ -213,7 +192,7 @@
     }
 }
 
-@media (max-width : 525px) {
+@media (max-width: 525px) {
     .modal_container {
         align-items: flex-end;
         bottom: -5px;
@@ -239,15 +218,10 @@
         max-height: 350px;
     }
 
-    .modal_info,
-    .modal_soldOff {
+    .modal_info {
         flex: 1;
         padding: 0;
         gap: 10px;
-        display: flex;
-    }
-
-    .modal_info {
         padding-top: 8px;
     }
 
@@ -287,7 +261,6 @@
         from {
             top: 100%;
         }
-
         to {
             top: 0%;
         }
@@ -297,14 +270,13 @@
         from {
             top: 0%;
         }
-
         to {
             top: 100%;
         }
     }
 }
 
-@media (max-width : 360px) {
+@media (max-width: 360px) {
     .modal {
         width: 100%;
         max-width: 100%;

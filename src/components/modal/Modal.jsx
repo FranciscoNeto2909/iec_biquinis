@@ -123,13 +123,8 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                             <button type="button" className="modal_info_button modal_info_button_cart" onClick={handleCartBtn}>Adicionar ao carrinho</button>
                             <a className="modal_info_button" href={`https://wa.me/5585996585581?text=${text}`}>Finalizar pedido</a>
                         </div> :
-                        <div className="modal_soldOff_card">
-                            <div>
-                                <p className="modal_soldOff_card_text ">Ops! Acabou o estoque</p>
-                            </div>
-                            <div>
-                            <a className="modal_soldOff_card_button" href={`https://wa.me/5585996585581?text=${soldOfftext}`}>Avise-me quando chegar</a>
-                            </div>
+                        <div>
+                            <a className="modal_soldOff_button" href={`https://wa.me/5585996585581?text=${soldOfftext}`}>Avise-me quando chegar</a>
                         </div>
                     }
                 </div>
