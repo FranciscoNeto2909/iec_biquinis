@@ -8,6 +8,9 @@ import CartCard from "../cartCard/CartCard";
 export default function Cart({ handleCloseCart, handleSetMsg }) {
     const [closing, setClosing] = useState(false)
     const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || [])
+    const text = cart.map(item => (
+        `Olá%20gostaria%20de%20fazer%20um%20pedido:%0A•%20${item.name},%20cor:%20${item.color},%20tam:%20${item.size.toString().toUpperCase()},%20qnt:${item.quant}`
+    )).toString()
 
     function handleCloseBtn() {
         setClosing(true)
@@ -19,10 +22,16 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
         localStorage.setItem('cart', JSON.stringify(newCart));
         setCart(newCart)
         handleSetMsg("Item removido")
-        if (cart.length == 1 ) {
+        if (cart.length == 1) {
             setClosing(true)
             handleCloseCart()
         }
+    }
+
+    function handleClick() {
+        // `Olá%20gostaria%20de%20fazer%20um%20pedido:%0A•%20${item.name},%20cor:%20${color},%20tam:%20${size.toString().toUpperCase()},%20qnt:${itemQuant}%0A`
+
+        console.log(text)
     }
 
     useEffect(() => {
@@ -56,7 +65,7 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
                                         <CartCard item={item} handleRemoveItem={handleRemoveItem} key={i} />
                                     ))}
                                 </div>
-                                <button className="cart_body_button">Finalizar compra</button>
+                                <a href={`https://wa.me/5585996585581?text=${text}`} className="cart_body_button">Finalizar compra</a>
                             </> :
                             <>
                                 <div className="card_body_notice">
