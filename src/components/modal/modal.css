@@ -157,6 +157,7 @@
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -166,6 +167,7 @@
     from {
         opacity: 1;
     }
+
     to {
         opacity: 0;
     }
@@ -249,6 +251,7 @@
     }
 
     .modal_info_button {
+        width: 100%;
         padding: 12px 10px;
         font-size: 16px;
     }
@@ -261,6 +264,7 @@
         from {
             top: 100%;
         }
+
         to {
             top: 0%;
         }
@@ -270,6 +274,7 @@
         from {
             top: 0%;
         }
+
         to {
             top: 100%;
         }
