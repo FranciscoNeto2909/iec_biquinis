@@ -6,16 +6,31 @@ import { useState } from "react"
 export default function CartCard({ item, handleRemoveItem }) {
     const [price, setPrice] = useState(item.price * item.quant)
     const [quant, setQuant] = useState(item.quant)
+    const cart = JSON.parse(localStorage.getItem('cart'))
 
     function handleIncreasePrice() {
         setQuant(quant + 1)
         setPrice(price + item.price)
+        const updatedCart = cart.map((it) => {
+            if (it.name === item.name) {
+                return { ...it, quant: quant + 1 };
+            }
+            return it;
+        })
+        localStorage.setItem('cart', JSON.stringify(updatedCart))
     }
 
     function handleDecreasePrice() {
         if (quant > 1) {
             setQuant(quant - 1)
             setPrice(price - item.price)
+            const updatedCart = cart.map((it) => {
+                if (it.name === item.name) {
+                    return { ...it, quant: quant - 1 };
+                }
+                return it;
+            })
+            localStorage.setItem('cart', JSON.stringify(updatedCart))
         }
     }
 
@@ -27,7 +42,7 @@ export default function CartCard({ item, handleRemoveItem }) {
             <div className="card_cart_info">
                 <div className="card_cart_titleAndBtn">
                     <h3 className="card_cart_title">{item.name}</h3>
-                    <button className="card_cart_removeBtn" onClick={()=> handleRemoveItem(item.name)}>
+                    <button className="card_cart_removeBtn" onClick={() => handleRemoveItem(item.name)}>
                         <AiOutlineClose size={18} />
                     </button>
                 </div>
