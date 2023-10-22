@@ -1,37 +1,42 @@
-import sunga from "../assets/sunga/sunga.jpeg"
-import prainha1 from "../assets/prainha/prainha1.jpeg"
-import prainha2 from "../assets/prainha/prainha2.jpeg"
-import viseira1 from "../assets/viseira/viseira1.jpeg"
-import viseira2 from "../assets/viseira/viseira2.jpeg"
-import viseira3 from "../assets/viseira/viseira3.jpeg"
-import jeri1 from "../assets/jeri/jeri1.jpeg"
-import jeri2 from "../assets/jeri/jeri2.jpeg"
+import sunga1 from "../assets/sunga/sunga1.jpg"
+import sunga2 from "../assets/sunga/sunga2.jpeg"
+import prainha1 from "../assets/prainha/prainha1.jpg"
+import prainha2 from "../assets/prainha/prainha2.jpg"
+import prainha3 from "../assets/prainha/prainha3.jpeg"
+import viseira1 from "../assets/viseira/viseira1.jpg"
+import viseira2 from "../assets/viseira/viseira2.jpg"
+import viseira3 from "../assets/viseira/viseira3.jpg"
+import viseira4 from "../assets/viseira/viseira4.jpg"
+import viseira5 from "../assets/viseira/viseira5.jpeg"
+import jeri1 from "../assets/jeri/jeri1.jpg"
+import jeri2 from "../assets/jeri/jeri2.jpg"
 import jeri3 from "../assets/jeri/jeri3.jpeg"
 import jeri4 from "../assets/jeri/jeri4.jpeg"
-import canoa from "../assets/canoa/canoa.jpeg"
-import maragogi1 from "../assets/maragogi/maragogi1.jpeg"
+import jeri5 from "../assets/jeri/jeri5.jpeg"
+import canoa1 from "../assets/canoa/canoa1.jpg"
+import canoa2 from "../assets/canoa/canoa2.jpeg"
+import maragogi1 from "../assets/maragogi/maragogi1.jpg"
 import maragogi2 from "../assets/maragogi/maragogi2.jpeg"
-import noronha1 from "../assets/noronha/noronha1.jpeg"
+import maragogi3 from "../assets/maragogi/maragogi3.jpeg"
+import noronha1 from "../assets/noronha/noronha1.jpg"
 import noronha2 from "../assets/noronha/noronha2.jpeg"
-import mb1 from "../assets/morro_branco/morro_branco1.jpg"
-import mb2 from "../assets/morro_branco/morro_branco2.jpg"
-import mb3 from "../assets/morro_branco/morro_branco3.jpg"
-import mb4 from "../assets/morro_branco/morro_branco4.jpg"
-import mb5 from "../assets/morro_branco/morro_branco5.jpg"
-import maio from "../assets/maio/maio.jpg"
+import noronha3 from "../assets/noronha/noronha3.jpeg"
+import mb1 from "../assets/morro_branco/morro1.jpg"
+import mb2 from "../assets/morro_branco/morro2.jpg"
+import mb3 from "../assets/morro_branco/morro3.jpg"
+import mb4 from "../assets/morro_branco/morro4.jpg"
+import maio1 from "../assets/maio/maio1.jpg"
+import maio2 from "../assets/maio/maio2.jpg"
 import canga1 from "../assets/canga/canga1.jpg"
 import canga2 from "../assets/canga/canga2.jpeg"
 import canga3 from "../assets/canga/canga3.jpeg"
 import canga4 from "../assets/canga/canga4.jpeg"
-import aguas1 from "../assets/aguas_belas/aguas_belas1.jpg"
-import aguas2 from "../assets/aguas_belas/aguas_belas2.jpg"
-import aguas3 from "../assets/aguas_belas/aguas_belas3.jpg"
+import aguas1 from "../assets/aguas_belas/aguas1.jpg"
+import aguas2 from "../assets/aguas_belas/aguas2.jpg"
+import aguas3 from "../assets/aguas_belas/aguas3.jpg"
 import uruau1 from "../assets/uruau/uruau1.jpg"
 import uruau2 from "../assets/uruau/uruau2.jpg"
 import uruau3 from "../assets/uruau/uruau3.jpg"
-import uruau4 from "../assets/uruau/uruau4.jpg"
-import uruau5 from "../assets/uruau/uruau5.jpg"
-import uruau6 from "../assets/uruau/uruau6.jpg"
 
 
 export const bikinis = [
@@ -42,7 +47,7 @@ export const bikinis = [
             inStock: false,
             sizes: [{ name: 'm', price: 60, inStock: true }]
         }],
-        images: [sunga],
+        images: [sunga1, sunga2],
     },
     {
         name: "biquíni prainha",
@@ -51,7 +56,7 @@ export const bikinis = [
             inStock: true,
             sizes: [{ name: 'm', price: 76, inStock: true }]
         }],
-        images: [prainha1, prainha2],
+        images: [prainha1, prainha2, prainha3],
     },
     {
         name: "viseira falésias",
@@ -65,7 +70,7 @@ export const bikinis = [
             inStock: false,
             sizes: [{ name: 'u', price: 45, inStock: true }]
         }],
-        images: [viseira1, viseira2, viseira3],
+        images: [viseira1, viseira2, viseira3, viseira4, viseira5],
     },
     {
         name: "biquíni jeri",
@@ -74,7 +79,7 @@ export const bikinis = [
             inStock: true,
             sizes: [{ name: 'p', price: 90, inStock: true }]
         }],
-        images: [jeri1, jeri2, jeri3, jeri4],
+        images: [jeri1, jeri2, jeri3, jeri4, jeri5],
     },
     {
         name: "biquíni canoa",
@@ -83,7 +88,7 @@ export const bikinis = [
             inStock: true,
             sizes: [{ name: 'g', price: 100, inStock: true }]
         }],
-        images: [canoa],
+        images: [canoa1, canoa2],
     },
     {
         name: "biquíni maragogi",
@@ -92,7 +97,7 @@ export const bikinis = [
             inStock: false,
             sizes: [{ name: 'p', price: 76, inStock: true }]
         }],
-        images: [maragogi1, maragogi2],
+        images: [maragogi1, maragogi2, maragogi3],
     },
     {
         name: "biquíni noronha",
@@ -101,7 +106,7 @@ export const bikinis = [
             inStock: true,
             sizes: [{ name: 'g', price: 110, inStock: true }]
         }],
-        images: [noronha1, noronha2],
+        images: [noronha1, noronha2, noronha3],
     },
     {
         name: "maiô paraíso",
@@ -109,7 +114,7 @@ export const bikinis = [
             name: "geométrica",
             inStock: false, sizes: [{ name: 'm', price: 130, inStock: true }],
         }],
-        images: [maio],
+        images: [maio1, maio2],
     },
     {
         name: "canga",
@@ -138,7 +143,7 @@ export const bikinis = [
                 { name: 'm', price: 80, inStock: true }
             ]
         }],
-        images: [uruau1, uruau2, uruau3, uruau4, uruau5, uruau6],
+        images: [uruau1, uruau2, uruau3],
     },
     {
         name: "biquíni águas belas",
@@ -156,6 +161,6 @@ export const bikinis = [
             inStock: true,
             sizes: [{ name: 'm', price: 80, inStock: true }]
         }],
-        images: [mb1, mb2, mb3, mb4, mb5],
+        images: [mb1, mb2, mb3, mb4],
     },
 ]
