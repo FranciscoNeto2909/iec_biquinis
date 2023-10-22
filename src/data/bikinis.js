@@ -2,25 +2,24 @@ import sunga1 from "../assets/sunga/sunga1.jpg"
 import sunga2 from "../assets/sunga/sunga2.jpg"
 import prainha1 from "../assets/prainha/prainha1.jpg"
 import prainha2 from "../assets/prainha/prainha2.jpg"
-import prainha3 from "../assets/prainha/prainha3.jpeg"
+import prainha3 from "../assets/prainha/prainha3.jpg"
 import viseira1 from "../assets/viseira/viseira1.jpg"
 import viseira2 from "../assets/viseira/viseira2.jpg"
 import viseira3 from "../assets/viseira/viseira3.jpg"
 import viseira4 from "../assets/viseira/viseira4.jpg"
-import viseira5 from "../assets/viseira/viseira5.jpeg"
+import viseira5 from "../assets/viseira/viseira5.jpg"
 import jeri1 from "../assets/jeri/jeri1.jpg"
 import jeri2 from "../assets/jeri/jeri2.jpg"
-import jeri3 from "../assets/jeri/jeri3.jpeg"
-import jeri4 from "../assets/jeri/jeri4.jpeg"
-import jeri5 from "../assets/jeri/jeri5.jpg"
+import jeri3 from "../assets/jeri/jeri3.jpg"
 import canoa1 from "../assets/canoa/canoa1.jpg"
 import canoa2 from "../assets/canoa/canoa2.jpg"
+import canoa3 from "../assets/canoa/canoa3.jpg"
 import maragogi1 from "../assets/maragogi/maragogi1.jpg"
-import maragogi2 from "../assets/maragogi/maragogi2.jpeg"
-import maragogi3 from "../assets/maragogi/maragogi3.jpeg"
+import maragogi2 from "../assets/maragogi/maragogi2.jpg"
+import maragogi3 from "../assets/maragogi/maragogi3.jpg"
 import noronha1 from "../assets/noronha/noronha1.jpg"
-import noronha2 from "../assets/noronha/noronha2.jpeg"
-import noronha3 from "../assets/noronha/noronha3.jpeg"
+import noronha2 from "../assets/noronha/noronha2.jpg"
+import noronha3 from "../assets/noronha/noronha3.jpg"
 import mb1 from "../assets/morro_branco/morro1.jpg"
 import mb2 from "../assets/morro_branco/morro2.jpg"
 import mb3 from "../assets/morro_branco/morro3.jpg"
@@ -28,9 +27,9 @@ import mb4 from "../assets/morro_branco/morro4.jpg"
 import maio1 from "../assets/maio/maio1.jpg"
 import maio2 from "../assets/maio/maio2.jpg"
 import canga1 from "../assets/canga/canga1.jpg"
-import canga2 from "../assets/canga/canga2.jpeg"
-import canga3 from "../assets/canga/canga3.jpeg"
-import canga4 from "../assets/canga/canga4.jpeg"
+import canga2 from "../assets/canga/canga2.jpg"
+import canga3 from "../assets/canga/canga3.jpg"
+import canga4 from "../assets/canga/canga4.jpg"
 import aguas1 from "../assets/aguas_belas/aguas1.jpg"
 import aguas2 from "../assets/aguas_belas/aguas2.jpg"
 import aguas3 from "../assets/aguas_belas/aguas3.jpg"
@@ -79,7 +78,7 @@ export const bikinis = [
             inStock: true,
             sizes: [{ name: 'p', price: 90, inStock: true }]
         }],
-        images: [jeri1, jeri2, jeri3, jeri4, jeri5],
+        images: [jeri1, jeri2, jeri3],
     },
     {
         name: "biquíni canoa",
@@ -88,7 +87,7 @@ export const bikinis = [
             inStock: true,
             sizes: [{ name: 'g', price: 100, inStock: true }]
         }],
-        images: [canoa1, canoa2],
+        images: [canoa1, canoa2, canoa3],
     },
     {
         name: "biquíni maragogi",
