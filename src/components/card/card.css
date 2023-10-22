@@ -28,7 +28,14 @@
 }
 
 .card_price {
+    display: flex;
     font-weight: bold;
+}
+
+.card_price_decimal {
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 1px;
 }
 
 .card_portion {

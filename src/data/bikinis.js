@@ -33,78 +33,129 @@ import uruau4 from "../assets/uruau/uruau4.jpg"
 import uruau5 from "../assets/uruau/uruau5.jpg"
 import uruau6 from "../assets/uruau/uruau6.jpg"
 
+
 export const bikinis = [
     {
         name: "sunga uruaú",
-        colors: [{ name: "azul marinho", inStock: false }],
-        sizes: [{ name: 'm', price: 60, inStock: true }],
+        colors: [{
+            name: "azul marinho",
+            inStock: false,
+            sizes: [{ name: 'm', price: 60, inStock: true }]
+        }],
         images: [sunga],
     },
     {
         name: "biquíni prainha",
-        colors: [{ name: "verde bebê", inStock: true }],
-        sizes: [{ name: 'm', price: 76, inStock: true }],
+        colors: [{
+            name: "verde bebê",
+            inStock: true,
+            sizes: [{ name: 'm', price: 76, inStock: true }]
+        }],
         images: [prainha1, prainha2],
     },
     {
         name: "viseira falésias",
-        colors: [{ name: "preto", inStock: true }, { name: "Azul celeste", inStock: false }],
-        sizes: [{ name: 'u', price: 45, inStock: true }],
+        colors: [{
+            name: "preto",
+            inStock: true,
+            sizes: [{ name: 'u', price: 45, inStock: true }]
+        },
+        {
+            name: "Azul celeste",
+            inStock: false,
+            sizes: [{ name: 'u', price: 45, inStock: true }]
+        }],
         images: [viseira1, viseira2, viseira3],
     },
     {
         name: "biquíni jeri",
-        colors: [{ name: "fucsia com laranja", inStock: true }],
-        sizes: [{ name: 'p', price: 90, inStock: true }],
+        colors: [{
+            name: "fucsia com laranja",
+            inStock: true,
+            sizes: [{ name: 'p', price: 90, inStock: true }]
+        }],
         images: [jeri1, jeri2, jeri3, jeri4],
     },
     {
         name: "biquíni canoa",
-        colors: [{ name: "rosa neon", inStock: true }],
-        sizes: [{ name: 'g', price: 100, inStock: true }],
+        colors: [{
+            name: "rosa neon",
+            inStock: true,
+            sizes: [{ name: 'g', price: 100, inStock: true }]
+        }],
         images: [canoa],
     },
     {
         name: "biquíni maragogi",
-        colors: [{ name: "vermelho", inStock: false }],
-        sizes: [{ name: 'p', price: 76, inStock: true }],
+        colors: [{
+            name: "vermelho",
+            inStock: false,
+            sizes: [{ name: 'p', price: 76, inStock: true }]
+        }],
         images: [maragogi1, maragogi2],
     },
     {
         name: "biquíni noronha",
-        colors: [{ name: "lilás", inStock: true }],
-        sizes: [{ name: 'g', price: 100, inStock: true }],
-        prices: [100],
+        colors: [{
+            name: "lilás",
+            inStock: true,
+            sizes: [{ name: 'g', price: 110, inStock: true }]
+        }],
         images: [noronha1, noronha2],
     },
     {
         name: "maiô paraíso",
-        colors: [{ name: "geométrica", inStock: false }],
-        sizes: [{ name: 'm', price: 130, inStock: true }],
+        colors: [{
+            name: "geométrica",
+            inStock: false, sizes: [{ name: 'm', price: 130, inStock: true }],
+        }],
         images: [maio],
     },
     {
         name: "canga",
-        colors: [{ name: "preto", inStock: true }],
-        sizes: [{ name: 'u', price: 70, inStock: true }],
+        colors: [{
+            name: "preto",
+            inStock: true,
+            sizes: [{ name: 'u', price: 70, inStock: true }]
+        }],
         images: [canga1, canga2, canga3, canga4],
     },
     {
         name: "biquíni uruaú",
-        colors: [{ name: "preto", inStock: true }, { name: "lavanda", inStock:false }],
-        sizes: [{ name: 'p', price: 80, inStock: true }, { name: 'm', price: 80, inStock: true }],
+        colors: [{
+            name: "preto",
+            inStock: true,
+            sizes: [
+                { name: 'p', price: 80, inStock: true },
+                { name: 'm', price: 80, inStock: true }
+            ]
+        },
+        {
+            name: "lavanda",
+            inStock: false,
+            sizes: [
+                { name: 'p', price: 80, inStock: true },
+                { name: 'm', price: 80, inStock: true }
+            ]
+        }],
         images: [uruau1, uruau2, uruau3, uruau4, uruau5, uruau6],
     },
     {
         name: "biquíni águas belas",
-        colors: [{ name: "azul celete", inStock: true }],
-        sizes: [{ name: 'm', price: 80, inStock: true }],
+        colors: [{
+            name: "azul celete",
+            inStock: true,
+            sizes: [{ name: 'm', price: 80, inStock: true }]
+        }],
         images: [aguas1, aguas2, aguas3],
     },
     {
         name: "biquíni morro branco",
-        colors: [{ name: "vermelho", inStock: true }],
-        sizes: [{ name: 'm', price: 80, inStock: true }],
+        colors: [{
+            name: "vermelho",
+            inStock: true,
+            sizes: [{ name: 'm', price: 80, inStock: true }]
+        }],
         images: [mb1, mb2, mb3, mb4, mb5],
     },
 ]

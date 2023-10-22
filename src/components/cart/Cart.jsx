@@ -8,6 +8,7 @@ import CartCard from "../cartCard/CartCard";
 export default function Cart({ handleCloseCart, handleSetMsg }) {
     const [closing, setClosing] = useState(false)
     const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || [])
+    
     const text = cart.map(item => (
         `•%20${item.name},%20cor:%20${item.color},%20tam:%20${item.size.toString().toUpperCase()},%20qnt:${item.quant}`
     )).join("%0A");

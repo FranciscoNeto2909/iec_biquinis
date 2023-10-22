@@ -7,14 +7,14 @@ import "./modal.css"
 
 export default function Modal({ item, handleCloseModal, handleSetMsg }) {
     const [itemQuant, setItemQuant] = useState(1)
-    const [size, setSize] = useState(item.sizes[0] || {})
-    const [color, setColor] = useState(item.colors[0])
-    const [price, setPrice] = useState(item.sizes[0].price)
+    const [size, setSize] = useState(item.colors[0].sizes[0] || [])
+    const [color, setColor] = useState(item.colors[0] || [])
+    const [price, setPrice] = useState(item.colors[0].sizes[0].price || 0)
     const [closing, setClosing] = useState(false)
 
     const text = `Olá%20gostaria%20de%20fazer%20um%20pedido:%0A•%20${item.name},%20cor:%20${color.name},%20tam:%20${size.name.toString().toUpperCase()},%20qnt:${itemQuant}`
 
-    const soldOfftext = `Olá%20gostei%20do%20item%20${item.name}%20vocês%20poderiam%20me%20notificar%20quando%20ele%20chegar%20no%20estoque?`
+    const soldOfftext = `Olá%20gostei%20do%20item%20${item.name}%20vocês%20poderiam%20me%20notificar%20quando%20ele%20chegar%20no%20estoque%20?`
 
     function handleIncreaseQuant() {
         if (itemQuant < 100) {
@@ -28,12 +28,12 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
         }
     }
 
-    function handleSetColor(i, op) {
+    function handleSetColor(op) {
         setColor(op)
     }
 
-    function handleSetSize(i, op) {
-        setPrice(item.sizes[i].price)
+    function handleSetSize(op) {
+        setPrice(op.price)
         setSize(op)
     }
 
@@ -41,7 +41,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         const hasItem = cart.filter(i => i.name === item.name).length > 0
 
-        if ((hasItem && color.inStock === true) && (hasItem && size.inStock === true)) {
+        if (hasItem && (size.inStock === true || color.inStock === true)) {
             handleSetMsg("Item já adicionado!")
         } else if (color.inStock === false || size.inStock === false) {
             handleSetMsg("Item esgotado!")
@@ -51,11 +51,11 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
             handleSetMsg("Adicionado ao carrinho")
             cart.push({
                 name: item.name,
-                size: size.name,
+                size:size.name,
                 color: color.name,
                 image: item.images[0],
                 quant: itemQuant,
-                price: item.sizes[0].price
+                price
             });
 
             localStorage.setItem('cart', JSON.stringify(cart));
@@ -109,10 +109,10 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                     </div>
                     <div className="modal_info_selects">
                         <div className="modal_info_colors">
-                            <Select ops={item.colors} text={"Cores"} onClick={handleSetColor} />
+                            <Select ops={item.colors} text={"Cores Disponiveis"} onClick={handleSetColor} />
                         </div>
                         <div className="modal_info_sizes">
-                            <Select ops={item.sizes} text={"Tamanhos"} onClick={handleSetSize} />
+                            <Select ops={color.sizes} text={"Tamanhos"} onClick={handleSetSize} />
                         </div>
                     </div>
                     <div className="modal_info_value">
