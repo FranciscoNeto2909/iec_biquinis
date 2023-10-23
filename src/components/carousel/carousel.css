@@ -29,7 +29,7 @@
     }
 }
 
-@media (max-height : 1200px) {
+@media (max-height : 1300px) {
     .carousel_img {
         max-height: 300px;
     }
