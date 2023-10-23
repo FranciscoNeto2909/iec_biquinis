@@ -122,18 +122,6 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                 </div>
                 <div className="modal_info">
                     <h2 className="modal_info_name">{item.name}</h2>
-                    <div className="modal_info_quant">
-                        <span>Quantidade: </span>
-                        <div className="modal_info_quant_buttons">
-                            <button type="button" title="decrease_btn" className="modal_info_quant-btn1" onClick={handleDecreaseQuant}>
-                                <AiOutlineMinus size={20} />
-                            </button>
-                            <span className="modal_info_quant_num">{itemQuant}</span>
-                            <button type="button" title="increase_btn" className="modal_info_quant-btn2" onClick={handleIncreaseQuant}>
-                                <AiOutlinePlus size={20} />
-                            </button>
-                        </div>
-                    </div>
                     <div className="modal_info_selects">
                         <div className="modal_info_colors">
                             <Select ops={item.colors} text={"Cores Disponiveis"} onClick={handleSetColor} />
@@ -142,7 +130,19 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                             <Select ops={color.sizes} text={"Tamanho"} onClick={handleSetSize} />
                         </div>
                     </div>
-                    <div className="modal_info_address_container">
+                    <div className="modal_info_quantAndAddress">
+                        <div className="modal_info_quant">
+                            <span className="modal_info_quant_title">Quantidade </span>
+                            <div className="modal_info_quant_buttons">
+                                <button type="button" title="decrease_btn" className="modal_info_quant-btn1" onClick={handleDecreaseQuant}>
+                                    <AiOutlineMinus size={20} />
+                                </button>
+                                <span className="modal_info_quant_num">{itemQuant}</span>
+                                <button type="button" title="increase_btn" className="modal_info_quant-btn2" onClick={handleIncreaseQuant}>
+                                    <AiOutlinePlus size={20} />
+                                </button>
+                            </div>
+                        </div>
                         <div className="modal_info_address">
                             <Select ops={addressAvailables} text={"Endereço"} onClick={handleSetAddress} />
                         </div>
