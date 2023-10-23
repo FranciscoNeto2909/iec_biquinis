@@ -150,7 +150,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                             <Select ops={addressAvailables} text={"Endereço"} onClick={handleSetAddress} />
                         </div>
                         <div className="modal_info_cupom">
-                            <label htmlFor="cupom" className="modal_info_cupom_lbl">Cupom</label>
+                            <label htmlFor="cupom" className="modal_info_cupom_lbl">Cupom de desconto</label>
                             <input type="text" value={cupom} onChange={e => setCupom(e.target.value.toUpperCase())} className="modal_info_cupom_inpt" name="cupom_input" id="cupom" placeholder="CUPOM" />
                         </div>
                     </div>
