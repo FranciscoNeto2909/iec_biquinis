@@ -51,7 +51,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
             handleSetMsg("Adicionado ao carrinho")
             cart.push({
                 name: item.name,
-                size:size.name,
+                size: size.name,
                 color: color.name,
                 image: item.images[0],
                 quant: itemQuant,
@@ -86,8 +86,8 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
         <div className={`modal_container ${closing && "close_modal"}`}>
             <div className={`modal`}>
                 <div className="modal_close">
-                    <button type="button" onClick={handleCloseBtn}>
-                        <AiOutlineClose size={20} />
+                    <button type="button" title="close_btn" onClick={handleCloseBtn}>
+                        <AiOutlineClose size={22} />
                     </button>
                 </div>
                 <div className="modal_image">
@@ -98,11 +98,11 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                     <div className="modal_info_quant">
                         <span>Quantidade: </span>
                         <div className="modal_info_quant_buttons">
-                            <button className="modal_info_quant-btn1" onClick={handleDecreaseQuant}>
+                            <button type="button" title="decrease_btn"  className="modal_info_quant-btn1" onClick={handleDecreaseQuant}>
                                 <AiOutlineMinus size={20} />
                             </button>
                             <span className="modal_info_quant_num">{itemQuant}</span>
-                            <button className="modal_info_quant-btn2" onClick={handleIncreaseQuant}>
+                            <button type="button" title="increase_btn"  className="modal_info_quant-btn2" onClick={handleIncreaseQuant}>
                                 <AiOutlinePlus size={20} />
                             </button>
                         </div>
@@ -120,7 +120,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                     </div>
                     {color.inStock === true ?
                         <div className="modal_info_buttons">
-                            <button type="button" className="modal_info_button modal_info_button_cart" onClick={handleCartBtn}>Adicionar ao carrinho</button>
+                            <button type="button" title="addCart_btn"  className="modal_info_button modal_info_button_cart" onClick={handleCartBtn}>Adicionar ao carrinho</button>
                             <a className="modal_info_button" href={`https://wa.me/5585996585581?text=${text}`}>Finalizar pedido</a>
                         </div> :
                         <div>

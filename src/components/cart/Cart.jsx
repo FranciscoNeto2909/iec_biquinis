@@ -47,7 +47,7 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
         <div className="cart_container">
             <div className={`cart ${closing && "cart_close"}`}>
                 <div className="cart_header">
-                    <button className="cart_header_btn" onClick={handleCloseBtn}>
+                    <button title="header_btn" type="button" className="cart_header_btn" onClick={handleCloseBtn}>
                         <AiOutlineArrowRight size={20} />
                     </button>
                 </div>
