@@ -65,15 +65,8 @@
 
 .cart_body_cupom input {
     width: 100%;
-    padding: 4px;
-}
-
-.cart_body_cupom button{
-    background-color: #009474;
-    border: none;
-    color: #fff;
-    padding: 2px 6px;
-    border-radius: 0 4px 4px 0;
+    padding: 6px;
+    outline: none;
 }
 
 .cart_body_button {

@@ -50,6 +50,7 @@ export default function CartCard({ item, handleRemoveItem }) {
                     <div className="card_cart_texts">
                         <span className="card_cart_size">Tam: {item.size}</span>
                         <span className="card_cart_color">Cor: {item.color}</span>
+                        <span>End: {item.address}</span>
                     </div>
                     <div className="card_cart_buttonsAndPrice">
                         <div className="card_cart_buttons">

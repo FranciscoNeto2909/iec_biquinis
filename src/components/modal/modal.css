@@ -9,18 +9,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: openModal 1s ease-in-out normal;
+    animation: openModal 500ms ease-in-out normal;
     animation-fill-mode: forwards;
     backdrop-filter: blur(0.8px);
 }
 
 .close_modal {
-    animation: closeModal 1s ease-in-out normal;
+    animation: closeModal 500ms ease-in-out normal;
     animation-fill-mode: forwards;
 }
 
 .modal {
-    height: auto;
+    height: 485px;
     width: 900px;
     max-width: 95%;
     position: relative;
@@ -170,6 +170,11 @@
     display: block;
 }
 
+.modal_info_value_portion {
+    font-size: 12px;
+    color: #0009;
+}
+
 .modal_info_buttons {
     display: flex;
     flex-direction: column;
@@ -191,6 +196,13 @@
 
 .modal_info_button_cart {
     background-color: #4A8996;
+}
+
+.modal_soldOff {
+    height: 86px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .modal_soldOff_button {
@@ -231,8 +243,35 @@
 }
 
 @media (max-width: 625px) {
+    .modal_container {
+        top: 100%;
+        bottom: -5px;
+        align-items: flex-end;
+        animation: openModal 1s ease-in-out normal;
+        animation-fill-mode: forwards;
+    }
+
+    .close_modal {
+        animation: closeModal 1s ease-in-out normal;
+    }
+
     .modal_close {
         right: 18px;
+    }
+
+    .modal {
+        height: auto;
+        max-height: 100%;
+        max-width: 100%;
+        width: 100%;
+        padding: 16px 16px 8px 16px;
+        gap: 4px;
+        flex-direction: column;
+    }
+
+    .modal_image {
+        padding-top: 10px;
+        max-width: 100%;
     }
 
     .modal_info {
@@ -243,85 +282,12 @@
         padding: 0 24px;
     }
 
-    .modal_image {
-        padding-top: 10px;
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 525px) {
-    .modal_container {
-        align-items: flex-end;
-        bottom: -5px;
-        top: 100%;
-    }
-
-    .modal_close {
-        top: 8px;
-        right: 12px;
-    }
-
-    .modal {
-        height: auto;
-        max-height: 100%;
-        max-width: 100%;
-        width: 100%;
-        padding: 16px 16px 24px 16px;
-        gap: 4px;
-        flex-direction: column;
-    }
-
-    .modal_image {
-        max-height: 350px;
-    }
-
-    .modal_info {
-        flex: 1;
-        padding: 0;
-        gap: 8px;
-        padding-top: 8px;
-    }
-
-    .modal_info_selects {
-        display: flex;
-        flex-direction: row;
-        gap: 12px;
-    }
-
-    .modal_info_quantAndAddress {
-        margin-bottom: 4px;
-    }
-
-    .modal_info_quant_buttons {
-        padding: 6px 0;
-    }
-
-    .modal_info_colors {
-        flex: 2;
-    }
-
-    .modal_info_sizes {
-        flex: 1;
-    }
-
-    .modal_info_cupom{
-        max-width: 140px;
-    }
-    
-
     .modal_info_buttons {
         flex-direction: row;
     }
 
     .modal_info_button {
-        text-wrap: nowrap;
-        flex: 1;
-        padding: 12px 10px;
-        font-size: 16px;
-    }
-
-    .modal_soldOff_card {
-        width: 288px;
+        width: 100%;
     }
 
     @keyframes openModal {
@@ -342,6 +308,66 @@
         to {
             top: 100%;
         }
+    }
+}
+
+@media (max-width: 525px) {
+    .modal_close {
+        top: 8px;
+        right: 12px;
+    }
+
+    .modal_image {
+        max-height: 350px;
+    }
+
+    .modal_info {
+        flex: 1;
+        padding: 0;
+        gap: 8px;
+        padding-top: 8px;
+    }
+
+    .modal_info_selects {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .modal_info_quantAndAddress {
+        margin-top: 4px;
+    }
+
+    .modal_info_quant_buttons {
+        padding: 6px 0;
+    }
+
+    .modal_info_colors {
+        flex: 2;
+    }
+
+    .modal_info_sizes {
+        flex: 1;
+    }
+
+    .modal_info_cupom {
+        max-width: 140px;
+    }
+
+    .modal_info_button {
+        text-wrap: nowrap;
+        flex: 1;
+        padding: 12px 10px;
+        font-size: 16px;
+    }
+
+    .modal_soldOff_card {
+        width: 288px;
+    }
+
+    .modal_soldOff {
+        margin-top: 4px;
+        height: auto;
     }
 }
 

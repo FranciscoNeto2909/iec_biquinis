@@ -8,6 +8,8 @@ import CartCard from "../cartCard/CartCard";
 export default function Cart({ handleCloseCart, handleSetMsg }) {
     const [closing, setClosing] = useState(false)
     const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || [])
+    const [cupom, setCupom] = useState("")
+    const validCupom = "INDICAÇÃO5";
 
     const text = cart.map(item => (
         `•%20${item.name},%20cor:%20${item.color},%20tam:%20${item.size.toString().toUpperCase()},%20qnt:${item.quant}`
@@ -62,10 +64,9 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
                                 </div>
                                 <div className="cart_body_footer">
                                     <div className="cart_body_cupom">
-                                        <input type="text" placeholder="cupom de desconto" />
-                                        <button>Utilizar</button>
+                                        <input value={cupom} onChange={e => setCupom(e.target.value.toUpperCase())} type="text" placeholder="cupom de desconto" autoComplete="none" />
                                     </div>
-                                    <a href={`https://wa.me/5585996585581?text=Olá%20gostaria%20de%20fazer%20um%20pedido:%0A${text}`} className="cart_body_button">Finalizar compra</a>
+                                    <a href={`https://wa.me/5585996585581?text=Olá%20gostaria%20de%20fazer%20um%20pedido:%0A${text}%0A%0ACupom:${cupom === validCupom && cupom}`} className="cart_body_button">Finalizar compra</a>
                                 </div>
                             </> :
                             <>
