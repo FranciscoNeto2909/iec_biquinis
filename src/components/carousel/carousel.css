@@ -29,3 +29,9 @@
     }
 }
 
+@media (max-height : 1200px) {
+    .carousel_img {
+        max-height: 300px;
+    }
+}
+

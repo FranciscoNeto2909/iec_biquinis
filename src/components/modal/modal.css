@@ -1,4 +1,5 @@
 .modal_container {
+    max-height: 100vh;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -236,7 +237,7 @@
 
     .modal_close {
         top: 8px;
-        right: 8px;
+        right: 12px;
     }
 
     .modal {
