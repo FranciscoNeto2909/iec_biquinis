@@ -59,14 +59,14 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
                             <>
                                 <div className="cart_body_cards">
                                     {cart.map((item, i) => (
-                                        <CartCard item={item} handleRemoveItem={handleRemoveItem} key={i} />
+                                        <CartCard cart={cart} setCart={setCart} item={item} handleRemoveItem={handleRemoveItem} key={i} />
                                     ))}
                                 </div>
                                 <div className="cart_body_footer">
                                     <div className="cart_body_cupom">
                                         <input value={cupom} onChange={e => setCupom(e.target.value.toUpperCase())} type="text" placeholder="cupom de desconto" autoComplete="none" />
                                     </div>
-                                    <a href={`https://wa.me/5585996585581?text=Olá%20gostaria%20de%20fazer%20um%20pedido:%0A${text}%0A%0ACupom:${cupom === validCupom && cupom}`} className="cart_body_button">Finalizar compra</a>
+                                    <a href={`https://wa.me/5585996585581?text=Olá%20gostaria%20de%20fazer%20um%20pedido:%0A${text}%0A%0ACupom:${cupom === validCupom ? cupom : ""}`} className="cart_body_button">Finalizar compra</a>
                                 </div>
                             </> :
                             <>

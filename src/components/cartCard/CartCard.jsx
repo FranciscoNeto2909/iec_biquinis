@@ -3,34 +3,33 @@ import { AiOutlinePlus, AiOutlineMinus, AiOutlineClose } from "react-icons/ai"
 import "./cartCard.css"
 import { useState } from "react"
 
-export default function CartCard({ item, handleRemoveItem }) {
+export default function CartCard({ item, handleRemoveItem, cart, setCart }) {
     const [price, setPrice] = useState(item.price * item.quant)
     const [quant, setQuant] = useState(item.quant)
-    const cart = JSON.parse(localStorage.getItem('cart'))
 
     function handleIncreasePrice() {
         setQuant(quant + 1)
         setPrice(price + item.price)
-        const updatedCart = cart.map((it) => {
+        setCart(cart.map((it) => {
             if (it.name === item.name) {
                 return { ...it, quant: quant + 1 };
             }
             return it;
-        })
-        localStorage.setItem('cart', JSON.stringify(updatedCart))
+        }))
+        localStorage.setItem('cart', JSON.stringify(cart))
     }
 
     function handleDecreasePrice() {
         if (quant > 1) {
             setQuant(quant - 1)
             setPrice(price - item.price)
-            const updatedCart = cart.map((it) => {
+            setCart(cart.map((it) => {
                 if (it.name === item.name) {
                     return { ...it, quant: quant - 1 };
                 }
                 return it;
-            })
-            localStorage.setItem('cart', JSON.stringify(updatedCart))
+            }))
+            localStorage.setItem('cart', JSON.stringify(cart))
         }
     }
 
@@ -54,11 +53,11 @@ export default function CartCard({ item, handleRemoveItem }) {
                     </div>
                     <div className="card_cart_buttonsAndPrice">
                         <div className="card_cart_buttons">
-                            <button type="button" title="button_minus"  className="card_cart_btn" onClick={handleDecreasePrice}>
+                            <button type="button" title="button_minus" className="card_cart_btn" onClick={handleDecreasePrice}>
                                 <AiOutlineMinus size={18} />
                             </button>
                             <span className="card_cart_quant">{quant}</span>
-                            <button type="button" title="button_plus"  className="card_cart_btn" onClick={handleIncreasePrice}>
+                            <button type="button" title="button_plus" className="card_cart_btn" onClick={handleIncreasePrice}>
                                 <AiOutlinePlus size={18} />
                             </button>
                         </div>
