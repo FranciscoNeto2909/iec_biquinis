@@ -74,7 +74,7 @@
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    gap: 8px;
+    gap: 12px;
 }
 
 .modal_info_quant {
@@ -87,11 +87,11 @@
 }
 
 .modal_info_quant_buttons {
-    padding: 6px 0;
+    padding: 8px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 4px;
+    gap: 2px;
 }
 
 .modal_info_quant-btn1,
@@ -260,18 +260,18 @@
         padding-top: 8px;
     }
 
-    .modal_info_quant {
-        margin-top: 0;
-    }
-
     .modal_info_selects {
         display: flex;
         flex-direction: row;
-        gap: 8px;
+        gap: 12px;
     }
 
     .modal_info_quantAndAddress {
         margin-bottom: 4px;
+    }
+
+    .modal_info_quant_buttons {
+        padding: 6px 0;
     }
 
     .modal_info_colors {
