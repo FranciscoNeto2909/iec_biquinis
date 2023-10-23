@@ -52,6 +52,30 @@
     gap: 8px;
 }
 
+.cart_body_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cart_body_cupom {
+    display: flex;
+    width: 100%;
+}
+
+.cart_body_cupom input {
+    width: 100%;
+    padding: 4px;
+}
+
+.cart_body_cupom button{
+    background-color: #009474;
+    border: none;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 0 4px 4px 0;
+}
+
 .cart_body_button {
     display: block;
     background-color: #009474;
@@ -64,7 +88,7 @@
     text-align: center;
 }
 
-.card_body_notice{
+.card_body_notice {
     padding-top: 24px;
     text-align: center;
 }

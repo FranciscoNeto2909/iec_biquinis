@@ -8,7 +8,7 @@ import CartCard from "../cartCard/CartCard";
 export default function Cart({ handleCloseCart, handleSetMsg }) {
     const [closing, setClosing] = useState(false)
     const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || [])
-    
+
     const text = cart.map(item => (
         `•%20${item.name},%20cor:%20${item.color},%20tam:%20${item.size.toString().toUpperCase()},%20qnt:${item.quant}`
     )).join("%0A");
@@ -60,7 +60,13 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
                                         <CartCard item={item} handleRemoveItem={handleRemoveItem} key={i} />
                                     ))}
                                 </div>
-                                <a href={`https://wa.me/5585996585581?text=Olá%20gostaria%20de%20fazer%20um%20pedido:%0A${text}`} className="cart_body_button">Finalizar compra</a>
+                                <div className="cart_body_footer">
+                                    <div className="cart_body_cupom">
+                                        <input type="text" placeholder="cupom de desconto" />
+                                        <button>Utilizar</button>
+                                    </div>
+                                    <a href={`https://wa.me/5585996585581?text=Olá%20gostaria%20de%20fazer%20um%20pedido:%0A${text}`} className="cart_body_button">Finalizar compra</a>
+                                </div>
                             </> :
                             <>
                                 <div className="card_body_notice">

@@ -62,7 +62,7 @@ export default function CartCard({ item, handleRemoveItem }) {
                             </button>
                         </div>
                         <div className="card_cart_price">
-                            <span className="card_cart_price_value">R$: {(price) - 1},99</span>
+                            <span className="card_cart_price_value">R$: {(price) - 1},90</span>
                         </div>
                     </div>
                 </div>

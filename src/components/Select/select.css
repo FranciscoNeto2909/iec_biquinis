@@ -36,9 +36,8 @@
 
 .select_notice {
     position: absolute;
-    bottom: -14px;
-    margin-top: 2px;
-    font-size: 12px;
+    bottom: -12px;
+    font-size: 11px;
     color: #f00;
 }
 
@@ -65,10 +64,20 @@
         padding: 6px 8px;
     }
 
+    .select_dropdown {
+        max-height: 96px;
+        overflow-y: scroll;
+    }
+
     .select_option {
         padding: 6px;
         padding-left: 12px;
         text-transform: capitalize;
         font-weight: 500;
+    }
+
+    .select_notice {
+        bottom: -13px;
+        font-size: 12px;
     }
 }
