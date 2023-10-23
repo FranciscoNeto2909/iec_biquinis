@@ -4,9 +4,9 @@ import { AiOutlinePlus, AiOutlineMinus, AiOutlineClose } from "react-icons/ai"
 import Select from "../Select/Select"
 import Carousel from "../carousel/Carousel"
 import "./modal.css"
+import { addressAvailables } from "../../data/address"
 
 export default function Modal({ item, handleCloseModal, handleSetMsg }) {
-    const addressAvailables = [{ name: "Uruaú", price: 0 }, { name: "Sucatinga", price: 10 }, { name: "Beberibe", price: 15 }, { name: "Outros", price: undefined }]
 
     const [itemQuant, setItemQuant] = useState(1)
     const [size, setSize] = useState(item.colors[0].sizes[0] || [])
@@ -85,7 +85,6 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                 color: color.name,
                 image: item.images[0],
                 quant: itemQuant,
-                address: address.name,
                 price
             });
 

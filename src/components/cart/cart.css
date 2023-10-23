@@ -81,9 +81,25 @@
     text-align: center;
 }
 
-.card_body_notice {
+.cart_body_notice {
     padding-top: 24px;
     text-align: center;
+}
+
+.cart_body_footer_address{
+ margin-bottom: 6px;
+}
+
+.cart_body_footer_freight{
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.cart_body_footer_portion{
+    display: inline-block;
+    margin-left: 4px;
+    color: #000a;
+    font-size: 12px;
 }
 
 @keyframes openCart {

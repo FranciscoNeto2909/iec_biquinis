@@ -65,15 +65,17 @@ export default function App() {
         </div>
       }
       <header className="app_header">
-        <img src={logo} alt="logo" className="app_logo" />
-        {!isCartOpened &&
-          <div className="app_header_cartbtn" >
-            <button onClick={handleOpenCart} name="cart_btn" title="cart_btn">
-              {cart.length > 0 && <span>{cart.length}</span>}
-              <BiShoppingBag size={32} />
-            </button>
-          </div>
-        }
+        <div className="app_header_container">
+          <img src={logo} alt="logo" className="app_logo" />
+          {!isCartOpened &&
+            <div className="app_header_cartbtn" >
+              <button onClick={handleOpenCart} name="cart_btn" title="cart_btn">
+                {cart.length > 0 && <span>{cart.length}</span>}
+                <BiShoppingBag size={32} />
+              </button>
+            </div>
+          }
+        </div>
       </header>
       <section className="app_banner">
         <p className="app_banner_text">
