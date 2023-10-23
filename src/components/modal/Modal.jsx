@@ -46,7 +46,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
 
     function handleFreight() {
         if (address.price === 0) {
-            return "gratis"
+            return "grátis!"
         } else if (address.price === undefined) {
             return "A consultar"
         } else {
@@ -139,8 +139,10 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                             <Select ops={item.colors} text={"Cores Disponiveis"} onClick={handleSetColor} />
                         </div>
                         <div className="modal_info_sizes">
-                            <Select ops={color.sizes} text={"Tamanhos"} onClick={handleSetSize} />
+                            <Select ops={color.sizes} text={"Tamanho"} onClick={handleSetSize} />
                         </div>
+                    </div>
+                    <div className="modal_info_address_container">
                         <div className="modal_info_address">
                             <Select ops={addressAvailables} text={"Endereço"} onClick={handleSetAddress} />
                         </div>
@@ -152,7 +154,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                                 <span className="modal_info_value_price"> R$ {(price * itemQuant) - 1},90</span>
                             </p>
                             <p className="modal_info_value_text">
-                                frete:
+                                Frete:
                                 <span className="modal_info_value_price"> {handleFreight()}</span>
                             </p>
                         </div>
