@@ -12,7 +12,7 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
     const validCupom = "INDICAÇÃO5";
 
     const text = cart.map(item => (
-        `•%20${item.name},%20cor:%20${item.color},%20tam:%20${item.size.toString().toUpperCase()},%20qnt:${item.quant}`
+        `•%20${item.name},%20cor:%20${item.color},%20tam:%20${item.size.toString().toUpperCase()},%20qnt:${item.quant}%0A${item.address}`
     )).join("%0A");
 
     function handleCloseBtn() {

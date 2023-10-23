@@ -56,7 +56,8 @@
 }
 
 .card_cart_size,
-.card_cart_color {
+.card_cart_color,
+.card_cart_address {
     text-transform: capitalize;
     font-weight: 500;
 }
@@ -112,7 +113,8 @@
     }
 
     .card_cart_size,
-    .card_cart_color {
+    .card_cart_color,
+    .card_cart_address {
         font-size: 14px;
     }
 }
