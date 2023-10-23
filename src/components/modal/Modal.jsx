@@ -6,7 +6,7 @@ import Carousel from "../carousel/Carousel"
 import "./modal.css"
 
 export default function Modal({ item, handleCloseModal, handleSetMsg }) {
-    const addressAvailables = [{ name: "Uruaú", price: 0 }, { name: "Sucatinga", price: 10 }, { name: "Beberibe", price: 12 }, { name: "Outros", price: undefined }]
+    const addressAvailables = [{ name: "Uruaú", price: 0 }, { name: "Sucatinga", price: 10 }, { name: "Beberibe", price: 15 }, { name: "Outros", price: undefined }]
 
     const [itemQuant, setItemQuant] = useState(1)
     const [size, setSize] = useState(item.colors[0].sizes[0] || [])
