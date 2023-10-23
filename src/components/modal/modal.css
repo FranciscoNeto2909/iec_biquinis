@@ -47,12 +47,14 @@
 
 .modal_image {
     flex: 1;
+    flex-shrink: 2;
     justify-content: center;
     align-items: center;
     max-width: 50%;
 }
 
 .modal_info {
+    flex-shrink: 1;
     flex: 1;
     height: 100%;
     padding-top: 14px;

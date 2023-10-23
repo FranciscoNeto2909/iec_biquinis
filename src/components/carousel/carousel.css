@@ -22,9 +22,16 @@
     }
 }
 
+
 @media (max-width : 375px) {
     .carousel_img {
         max-height: 320px;
+    }
+}
+
+@media (max-height : 1280px) {
+    .carousel_img {
+        max-height: 300px;
     }
 }
 
