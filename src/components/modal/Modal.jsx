@@ -14,7 +14,10 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
     const [price, setPrice] = useState(item.colors[0].sizes[0].price || 0)
     const [closing, setClosing] = useState(false)
     const [address, setAddress] = useState(addressAvailables[0])
-    const text = `Olá%20gostaria%20de%20fazer%20um%20pedido:%0A•%20${item.name},%20cor:%20${color.name},%20tam:%20${size.name.toString().toUpperCase()},%20qnt:${itemQuant}`
+    const [cupom, setCupom] = useState("")
+    const validCupom = "INDICAÇÃO5";
+
+    const text = `Olá%20gostaria%20de%20fazer%20um%20pedido:%0A•%20${item.name},%20cor:%20${color.name},%20tam:%20${size.name.toString().toUpperCase()},%20qnt:${itemQuant}%0A%0AEntrega:%20${address.name}%0ACupom:%20${cupom === validCupom && cupom }`
 
     const soldOfftext = `Olá%20gostei%20do%20item%20${item.name}%20vocês%20poderiam%20me%20notificar%20quando%20ele%20chegar%20no%20estoque%20?`
 
@@ -82,6 +85,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                 color: color.name,
                 image: item.images[0],
                 quant: itemQuant,
+                address: address.name,
                 price
             });
 
@@ -145,6 +149,10 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                         </div>
                         <div className="modal_info_address">
                             <Select ops={addressAvailables} text={"Endereço"} onClick={handleSetAddress} />
+                        </div>
+                        <div className="modal_info_cupom">
+                            <label htmlFor="cupom" className="modal_info_cupom_lbl">Cupom</label>
+                            <input type="text" value={cupom} onChange={e => setCupom(e.target.value.toUpperCase())} className="modal_info_cupom_inpt" name="cupom_input" id="cupom" placeholder="CUPOM" />
                         </div>
                     </div>
                     <div className="modal_info_value">

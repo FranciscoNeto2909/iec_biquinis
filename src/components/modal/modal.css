@@ -123,7 +123,26 @@
 }
 
 .modal_info_address {
+    flex: 2;
+}
+
+.modal_info_cupom {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.modal_info_cupom_lbl {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.modal_info_cupom_inpt {
+    padding: 9px;
+    border: 1px solid #018B6A;
+    border-radius: 6px;
+    outline: none;
 }
 
 .modal_info_values {
@@ -278,16 +297,17 @@
     }
 
     .modal_info_colors {
-        flex: 3;
+        flex: 2;
     }
 
     .modal_info_sizes {
         flex: 1;
     }
 
-    .modal_info_address {
-        flex: 2;
+    .modal_info_cupom{
+        max-width: 140px;
     }
+    
 
     .modal_info_buttons {
         flex-direction: row;
