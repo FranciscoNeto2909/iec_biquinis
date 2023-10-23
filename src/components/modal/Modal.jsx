@@ -141,9 +141,9 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                         <div className="modal_info_sizes">
                             <Select ops={color.sizes} text={"Tamanhos"} onClick={handleSetSize} />
                         </div>
-                    </div>
-                    <div className="modal_info_address">
-                        <Select ops={addressAvailables} text={"Endereço"} onClick={handleSetAddress} />
+                        <div className="modal_info_address">
+                            <Select ops={addressAvailables} text={"Endereço"} onClick={handleSetAddress} />
+                        </div>
                     </div>
                     <div className="modal_info_value">
                         <div className="modal_info_value_prod">
