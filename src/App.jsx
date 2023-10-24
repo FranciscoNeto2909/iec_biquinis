@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import logo from "./assets/logo1.png"
+import logo from "./assets/logo.png"
 import Card from "./components/card/Card"
 import Cart from "./components/cart/Cart"
 import { bikinis } from "./data/bikinis"
