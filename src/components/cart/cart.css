@@ -6,7 +6,8 @@
     right: 0;
     display: flex;
     justify-content: flex-end;
-    background-color: #c0ff7273;
+    background-color: #00CED153;
+    backdrop-filter: blur(0.8px);
 }
 
 .cart {

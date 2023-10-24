@@ -29,7 +29,7 @@
 
 .app_header {
     height: 70px;
-    background-color: #C0FF72;
+    background-color: #00CED1;
     display: flex;
     justify-content: center;
 }
@@ -51,7 +51,7 @@
     position: relative;
     background-color: transparent;
     border: none;
-    color: #009474;
+    color: #00644f;
     cursor: pointer;
 }
 
@@ -79,7 +79,7 @@
 .app_banner {
     height: 70px;
     margin: 18px auto 0;
-    background-color: #009474;
+    background-color: #249091;
     box-shadow: 0 0 4px #0003;
     width: 80%;
     display: flex;
