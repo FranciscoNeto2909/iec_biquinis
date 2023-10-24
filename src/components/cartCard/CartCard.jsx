@@ -46,7 +46,7 @@ export default function CartCard({ item, handleRemoveItem, cart, setCart }) {
             <div className="card_cart_info">
                 <div className="card_cart_titleAndBtn">
                     <h3 className="card_cart_title">{item.name}</h3>
-                    <button type="button" title="remove_btn" className="card_cart_removeBtn" onClick={() => handleRemoveItem(item.name)}>
+                    <button type="button" title="Apagar" className="card_cart_removeBtn" onClick={() => handleRemoveItem(item.name)}>
                         <AiOutlineClose size={18} />
                     </button>
                 </div>
@@ -57,11 +57,11 @@ export default function CartCard({ item, handleRemoveItem, cart, setCart }) {
                     </div>
                     <div className="card_cart_buttonsAndPrice">
                         <div className="card_cart_buttons">
-                            <button type="button" title="button_minus" className="card_cart_btn" onClick={handleDecreasePrice}>
+                            <button type="button" title="Diminuir" className="card_cart_btn" onClick={handleDecreasePrice}>
                                 <AiOutlineMinus size={18} />
                             </button>
                             <span className="card_cart_quant">{item.quant}</span>
-                            <button type="button" title="button_plus" className="card_cart_btn" onClick={handleIncreasePrice}>
+                            <button type="button" title="Adicionar" className="card_cart_btn" onClick={handleIncreasePrice}>
                                 <AiOutlinePlus size={18} />
                             </button>
                         </div>

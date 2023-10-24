@@ -116,7 +116,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
         <div className={`modal_container ${closing && "close_modal"}`}>
             <div className={`modal`}>
                 <div className="modal_close">
-                    <button type="button" title="close_btn" onClick={handleCloseBtn}>
+                    <button type="button" title="fechar" onClick={handleCloseBtn}>
                         <AiOutlineClose size={22} />
                     </button>
                 </div>
@@ -137,11 +137,11 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                         <div className="modal_info_quant">
                             <span className="modal_info_quant_title">Quantidade </span>
                             <div className="modal_info_quant_buttons">
-                                <button type="button" title="decrease_btn" className="modal_info_quant-btn1" onClick={handleDecreaseQuant}>
+                                <button type="button" title="Remover" className="modal_info_quant-btn1" onClick={handleDecreaseQuant}>
                                     <AiOutlineMinus size={20} />
                                 </button>
                                 <span className="modal_info_quant_num">{itemQuant}</span>
-                                <button type="button" title="increase_btn" className="modal_info_quant-btn2" onClick={handleIncreaseQuant}>
+                                <button type="button" title="Adicionar" className="modal_info_quant-btn2" onClick={handleIncreaseQuant}>
                                     <AiOutlinePlus size={20} />
                                 </button>
                             </div>
@@ -174,8 +174,8 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                     </div>
                     {color.inStock === true ?
                         <div className="modal_info_buttons">
-                            <button type="button" title="addCart_btn" className="modal_info_button modal_info_button_cart" onClick={handleCartBtn}>Adicionar ao carrinho</button>
-                            <a className="modal_info_button" href={`https://wa.me/5585996585581?text=${text}`}>Finalizar pedido</a>
+                            <button type="button" title="adicionar ao carrinho" className="modal_info_button modal_info_button_cart" onClick={handleCartBtn}>Adicionar ao carrinho</button>
+                            <a className="modal_info_button" title="finalizar" href={`https://wa.me/5585996585581?text=${text}`}>Finalizar pedido</a>
                         </div> :
                         <div className="modal_soldOff">
                             <a className="modal_soldOff_button" href={`https://wa.me/5585996585581?text=${soldOfftext}`}>Avise-me quando chegar</a>

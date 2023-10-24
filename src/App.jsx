@@ -69,7 +69,7 @@ export default function App() {
           <img src={logo} alt="logo" className="app_logo" />
           {!isCartOpened &&
             <div className="app_header_cartbtn" >
-              <button onClick={handleOpenCart} name="cart_btn" title="cart_btn">
+              <button onClick={handleOpenCart} name="cart_btn" title="carrinho">
                 {cart.length > 0 && <span>{cart.length}</span>}
                 <BiShoppingBag size={32} />
               </button>
