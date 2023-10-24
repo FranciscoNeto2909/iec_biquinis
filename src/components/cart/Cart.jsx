@@ -10,6 +10,7 @@ import Select from "../Select/Select";
 export default function Cart({ handleCloseCart, handleSetMsg }) {
     const [closing, setClosing] = useState(false)
     const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || [])
+
     const [address, setAddress] = useState(addressAvailables[0])
     const [cupom, setCupom] = useState("")
     const [price, setPrice] = useState(0)
@@ -23,13 +24,14 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
         setClosing(true)
         handleCloseCart()
     }
+    
 
     function handleRemoveItem(name) {
         const newCart = cart.filter(i => i.name !== name)
-        localStorage.setItem('cart', JSON.stringify(newCart));
         setCart(newCart)
+        localStorage.setItem('cart', JSON.stringify(newCart));
         handleSetMsg("Item removido")
-        if (cart.length == 1) {
+        if (cart.length === 1) {
             setClosing(true)
             handleCloseCart()
         }

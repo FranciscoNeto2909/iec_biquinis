@@ -1,37 +1,42 @@
 /* eslint-disable react/prop-types */
 import { AiOutlinePlus, AiOutlineMinus, AiOutlineClose } from "react-icons/ai"
 import "./cartCard.css"
-import { useState } from "react"
+import { useEffect } from "react"
 
 export default function CartCard({ item, handleRemoveItem, cart, setCart }) {
-    const [price, setPrice] = useState(item.price * item.quant)
-    const [quant, setQuant] = useState(item.quant)
-
     function handleIncreasePrice() {
-        setQuant(quant + 1)
-        setPrice(price + item.price)
-        setCart(cart.map((it) => {
-            if (it.name === item.name) {
-                return { ...it, quant: quant + 1 };
-            }
-            return it;
-        }))
-        localStorage.setItem('cart', JSON.stringify(cart))
+        const newQuant = item.quant + 1;
+        setCart((prevCart) => {
+            return prevCart.map((it) => {
+                if (it.name === item.name) {
+                    return { ...it, quant: newQuant };
+                }
+                return it;
+            });
+        });
+        localStorage.setItem('cart', JSON.stringify(cart));
     }
 
     function handleDecreasePrice() {
-        if (quant > 1) {
-            setQuant(quant - 1)
-            setPrice(price - item.price)
-            setCart(cart.map((it) => {
-                if (it.name === item.name) {
-                    return { ...it, quant: quant - 1 };
-                }
-                return it;
-            }))
-            localStorage.setItem('cart', JSON.stringify(cart))
+        if (item.quant > 1) {
+            const newQuant = item.quant - 1;
+            setCart((prevCart) => {
+                return prevCart.map((it) => {
+                    if (it.name === item.name) {
+                        return { ...it, quant: newQuant };
+                    }
+                    return it;
+                });
+            });
+            localStorage.setItem('cart', JSON.stringify(cart));
         }
     }
+
+
+    useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }, [cart]);
+
 
     return (
         <div className="card_cart">
@@ -55,13 +60,13 @@ export default function CartCard({ item, handleRemoveItem, cart, setCart }) {
                             <button type="button" title="button_minus" className="card_cart_btn" onClick={handleDecreasePrice}>
                                 <AiOutlineMinus size={18} />
                             </button>
-                            <span className="card_cart_quant">{quant}</span>
+                            <span className="card_cart_quant">{item.quant}</span>
                             <button type="button" title="button_plus" className="card_cart_btn" onClick={handleIncreasePrice}>
                                 <AiOutlinePlus size={18} />
                             </button>
                         </div>
                         <div className="card_cart_price">
-                            <span className="card_cart_price_value">R$: {(price) - 1},90</span>
+                            <span className="card_cart_price_value">R$: {(item.price * item.quant) - 1},90</span>
                         </div>
                     </div>
                 </div>
