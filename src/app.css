@@ -123,13 +123,13 @@
 
     .app_banner {
         width: auto;
-        margin: 24px 12px 12px 12px;
+        margin: 12px;
         font-size: 18px;
     }
 
     .app_container {
         gap: 16px 0;
-        padding: 12px;
+        padding: 0 12px 12px;
     }
 }
 
