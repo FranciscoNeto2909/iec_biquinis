@@ -38,59 +38,59 @@ import uruau2 from "../assets/uruau/uruau2.jpg"
 
 export const bikinis = [
     {
-        name: "sunga uruaú",
+        name: "Sunga Uruaú",
         colors: [{
-            name: "azul marinho",
+            name: "Azul Marinho",
             inStock: false,
             sizes: [{ name: 'm', price: 60, inStock: true }]
         }, {
-            name: "azul claro",
+            name: "Azul Claro",
             inStock: false,
             sizes: [{ name: 'm', price: 60, inStock: true }]
         }, {
-            name: "branco",
+            name: "Branco",
             inStock: false,
             sizes: [{ name: 'm', price: 60, inStock: true }]
         }, {
-            name: "vermelho",
+            name: "Vermelho",
             inStock: false,
             sizes: [{ name: 'm', price: 60, inStock: true }]
         }, {
-            name: "preto",
+            name: "Preto",
             inStock: false,
             sizes: [{ name: 'm', price: 60, inStock: true }]
         }],
         images: [sunga1, sunga2],
     },
     {
-        name: "biquíni prainha",
+        name: "Biquíni Prainha",
         colors: [{
-            name: "verde bebê",
+            name: "Verde Bebê",
             inStock: true,
             sizes: [{ name: 'm', price: 76, inStock: true }]
         }, {
-            name: "vermelho",
+            name: "Vermelho",
             inStock: false,
             sizes: [{ name: 'm', price: 76, inStock: true }]
         }, {
-            name: "azul marinho",
+            name: "Azul Marinho",
             inStock: false,
             sizes: [{ name: 'm', price: 76, inStock: true }]
         }, {
-            name: "vermelho",
+            name: "Vermelho",
             inStock: false,
             sizes: [{ name: 'm', price: 76, inStock: true }]
         }],
         images: [prainha1, prainha2, prainha3],
     },
     {
-        name: "viseira falésias",
+        name: "Viseira Falésias",
         colors: [{
-            name: "preto",
+            name: "Preto",
             inStock: true,
             sizes: [{ name: 'u', price: 45, inStock: true }]
         }, {
-            name: "Azul celeste",
+            name: "Azul Celeste",
             inStock: false,
             sizes: [{ name: 'u', price: 45, inStock: true }]
         }, {
@@ -98,176 +98,176 @@ export const bikinis = [
             inStock: false,
             sizes: [{ name: 'u', price: 45, inStock: true }]
         }, {
-            name: "branca",
+            name: "Branca",
             inStock: false,
             sizes: [{ name: 'u', price: 45, inStock: true }]
         }],
         images: [viseira1, viseira2, viseira3, viseira4, viseira5],
     },
     {
-        name: "biquíni jeri",
+        name: "Biquíni Jeri",
         colors: [{
-            name: "fucsia e laranja",
+            name: "Fucsia e Laranja",
             inStock: true,
             sizes: [{ name: 'p', price: 90, inStock: true }]
         }, {
-            name: "preto com rosa",
+            name: "Preto com Rosa",
             inStock: false,
             sizes: [{ name: 'p', price: 90, inStock: true }]
         }, {
-            name: "rosa com verde bebê",
+            name: "Rosa com Verde Bebê",
             inStock: false,
             sizes: [{ name: 'p', price: 90, inStock: true }]
         }, {
-            name: "verde bebê com preto",
+            name: "Verde Bebê com Preto",
             inStock: false,
             sizes: [{ name: 'p', price: 90, inStock: true }]
         }],
         images: [jeri1, jeri2, jeri3],
     },
     {
-        name: "biquíni canoa",
+        name: "Biquíni Canoa",
         colors: [{
-            name: "rosa neon",
+            name: "Rosa Neon",
             inStock: true,
             sizes: [{ name: 'g', price: 100, inStock: true }]
         }, {
-            name: "laranja",
+            name: "Laranja",
             inStock: false,
             sizes: [{ name: 'g', price: 100, inStock: true }]
         }, {
-            name: "preto",
+            name: "Preto",
             inStock: false,
             sizes: [{ name: 'g', price: 100, inStock: true }]
         }, {
-            name: "vermelho",
+            name: "Vermelho",
             inStock: false,
             sizes: [{ name: 'g', price: 100, inStock: true }]
         }],
         images: [canoa1, canoa2],
     },
     {
-        name: "biquíni maragogi",
+        name: "Biquíni maragogi",
         colors: [{
-            name: "azul",
+            name: "Azul",
             inStock: false,
             sizes: [{ name: 'p', price: 76, inStock: true }]
         }, {
-            name: "vermelho",
+            name: "Vermelho",
             inStock: false,
             sizes: [{ name: 'p', price: 76, inStock: true }]
         }, {
-            name: "rosa",
+            name: "Rosa",
             inStock: false,
             sizes: [{ name: 'p', price: 76, inStock: true }]
         }, {
-            name: "preto",
+            name: "Preto",
             inStock: false,
             sizes: [{ name: 'p', price: 76, inStock: true }]
         }, {
-            name: "verde bandeira",
+            name: "Verde Bandeira",
             inStock: false,
             sizes: [{ name: 'p', price: 76, inStock: true }]
         }, {
-            name: "verde bebê",
+            name: "Verde Bebê",
             inStock: false,
             sizes: [{ name: 'p', price: 76, inStock: true }]
         }],
         images: [maragogi1, maragogi2, maragogi3],
     },
     {
-        name: "biquíni noronha",
+        name: "Biquíni Noronha",
         colors: [{
-            name: "lilás",
+            name: "Lilás",
             inStock: true,
             sizes: [{ name: 'g', price: 110, inStock: true }]
         }, {
-            name: "laranja",
+            name: "Laranja",
             inStock: false,
             sizes: [{ name: 'g', price: 110, inStock: true }]
         }, {
-            name: "rosa neon",
+            name: "Rosa Neon",
             inStock: false,
             sizes: [{ name: 'g', price: 110, inStock: true }]
         }, {
-            name: "verde neon",
+            name: "Verde Neon",
             inStock: false,
             sizes: [{ name: 'g', price: 110, inStock: true }]
         }, {
-            name: "verde bebê",
+            name: "Verde Bebê",
             inStock: false,
             sizes: [{ name: 'g', price: 110, inStock: true }]
         }, {
-            name: "azul marinho",
+            name: "Azul Marinho",
             inStock: false,
             sizes: [{ name: 'g', price: 110, inStock: true }]
         }],
         images: [noronha1, noronha2, noronha3],
     },
     {
-        name: "maiô paraíso",
+        name: "Maiô Paraíso",
         colors: [{
-            name: "geométrica",
+            name: "Geométrica",
             inStock: false, sizes: [{ name: 'm', price: 140, inStock: true }],
         }, {
-            name: "onça azul",
+            name: "Onça Azul",
             inStock: false, sizes: [{ name: 'm', price: 140, inStock: true }],
         }],
         images: [maio1, maio2],
     },
     {
-        name: "canga",
+        name: "Canga",
         colors: [{
-            name: "preto vibrante",
+            name: "Preto Vibrante",
             inStock: true,
             sizes: [{ name: 'u', price: 70, inStock: true }]
         }, {
-            name: "branco paz e amor",
+            name: "Branco Paz e Amor",
             inStock: false,
             sizes: [{ name: 'u', price: 70, inStock: true }]
         }, {
-            name: "branco listrado",
+            name: "Branco Listrado",
             inStock: false,
             sizes: [{ name: 'u', price: 70, inStock: true }]
         }, {
-            name: "rosa onça",
+            name: "Rosa Onça",
             inStock: false,
             sizes: [{ name: 'u', price: 70, inStock: true }]
         }],
         images: [canga1, canga2, canga3, canga4],
     },
     {
-        name: "biquíni uruaú",
+        name: "Biquíni Uruaú",
         colors: [{
-            name: "preto",
+            name: "Preto",
             inStock: true,
             sizes: [
                 { name: 'p', price: 80, inStock: true },
                 { name: 'm', price: 80, inStock: true }
             ]
         }, {
-            name: "lilás",
+            name: "Lilás",
             inStock: false,
             sizes: [
                 { name: 'p', price: 80, inStock: true },
                 { name: 'm', price: 80, inStock: true }
             ]
         }, {
-            name: "vermelho",
+            name: "Vermelho",
             inStock: false,
             sizes: [
                 { name: 'p', price: 80, inStock: true },
                 { name: 'm', price: 80, inStock: true }
             ]
         }, {
-            name: "rosa neon",
+            name: "Rosa Neon",
             inStock: false,
             sizes: [
                 { name: 'p', price: 80, inStock: true },
                 { name: 'm', price: 80, inStock: true }
             ]
         }, {
-            name: "azul celeste",
+            name: "Azul Celeste",
             inStock: false,
             sizes: [
                 { name: 'p', price: 80, inStock: true },
@@ -277,46 +277,46 @@ export const bikinis = [
         images: [uruau1, uruau2],
     },
     {
-        name: "biquíni águas belas",
+        name: "Biquíni Águas Belas",
         colors: [{
-            name: "lilás",
+            name: "Lilás",
             inStock: false,
             sizes: [{ name: 'm', price: 80, inStock: true }]
         }, {
-            name: "azul celete",
+            name: "Azul Celeste",
             inStock: true,
             sizes: [{ name: 'm', price: 80, inStock: true }]
         }, {
-            name: "rosa neon",
+            name: "Rosa Neon",
             inStock: false,
             sizes: [{ name: 'm', price: 80, inStock: true }]
         }, {
-            name: "verde bebê",
+            name: "Verde Bebê",
             inStock: false,
             sizes: [{ name: 'm', price: 80, inStock: true }]
         }, {
-            name: "verde neon",
+            name: "Verde Neon",
             inStock: false,
             sizes: [{ name: 'm', price: 80, inStock: true }]
         }],
         images: [aguas1, aguas2, aguas3],
     },
     {
-        name: "biquíni morro branco",
+        name: "Biquíni Morro Branco",
         colors: [{
-            name: "vermelho",
+            name: "Vermelho",
             inStock: true,
             sizes: [{ name: 'm', price: 80, inStock: true }]
         }, {
-            name: "preto",
+            name: "Preto",
             inStock: false,
             sizes: [{ name: 'm', price: 80, inStock: true }]
         }, {
-            name: "verde neon",
+            name: "Verde Neon",
             inStock: false,
             sizes: [{ name: 'm', price: 80, inStock: true }]
         }, {
-            name: "azul celeste",
+            name: "Azul Celeste",
             inStock: false,
             sizes: [{ name: 'm', price: 80, inStock: true }]
         }],

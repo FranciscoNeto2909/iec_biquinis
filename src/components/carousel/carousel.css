@@ -6,7 +6,7 @@
 
 .carousel_img {
     border-radius: 4px;
-    height: 400px;
+    height: 450px;
 }
 
 @media (max-width : 625px) {

@@ -1,11 +1,11 @@
+import { useEffect, useState } from "react"
 import logo from "./assets/logo.png"
 import Card from "./components/card/Card"
 import Cart from "./components/cart/Cart"
 import { bikinis } from "./data/bikinis"
-import "./app.css"
 import Modal from "./components/modal/Modal"
-import { useEffect, useState } from "react"
 import { BiShoppingBag } from "react-icons/bi"
+import "./app.css"
 
 export default function App() {
   const [isModalOpened, setIsModalOpened] = useState(false)
