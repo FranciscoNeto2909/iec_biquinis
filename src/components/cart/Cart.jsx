@@ -108,7 +108,7 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
                                         <p className="cart_body_footer_freight">Frete: {handleFreight()}</p>
                                         <p>
                                             Total: {finalPrice()}
-                                            <span className="cart_body_footer_portion">Em até 6x sem juros</span>
+                                            <span className="cart_body_footer_portion">Em até 3x sem juros</span>
                                         </p>
                                     </div>
                                     <div className="cart_body_cupom">

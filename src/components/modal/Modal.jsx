@@ -169,7 +169,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                         <p className="modal_info_value_finalPrice">
                             Valor total:
                             <span className="modal_info_value_price">{finalPrice()}</span>
-                            <span className="modal_info_value_portion"> Em até 6x sem juros</span>
+                            <span className="modal_info_value_portion"> Em até 3x sem juros</span>
                         </p>
                     </div>
                     {color.inStock === true ?

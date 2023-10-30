@@ -79,8 +79,8 @@ export default function App() {
       </header>
       <section className="app_banner">
         <p className="app_banner_text">
-          <span className="app_banner_num">10% </span>
-          de desconto no pix !</p>
+          <span className="app_banner_num">5% </span>
+          de desconto a vista!</p>
       </section>
       <section className="app_container">
         {
