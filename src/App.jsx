@@ -80,7 +80,7 @@ export default function App() {
       <section className="app_banner">
         <p className="app_banner_text">
           <span className="app_banner_num">5% </span>
-          de desconto a vista!</p>
+          de desconto à vista!</p>
       </section>
       <section className="app_container">
         {
