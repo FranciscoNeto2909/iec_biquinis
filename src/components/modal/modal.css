@@ -248,12 +248,12 @@
         top: 100%;
         bottom: -5px;
         align-items: flex-end;
-        animation: openModal 1s ease-in-out normal;
+        animation: openModal 700ms ease-in-out normal;
         animation-fill-mode: forwards;
     }
 
     .close_modal {
-        animation: closeModal 1s ease-in-out normal;
+        animation: closeModal 700ms ease-in-out normal;
     }
 
     .modal_close {
