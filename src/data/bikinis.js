@@ -80,11 +80,11 @@ export const bikinis = [
     colors: [{
         name: "Preto",
         inStock: true,
-        sizes: [{ name: 'U', price: 39, inStock: true }]
+        sizes: [{ name: 'U', price: 40, inStock: true }]
     }, {
         name: "Off White",
         inStock: false,
-        sizes: [{ name: 'U', price: 39, inStock: true }]
+        sizes: [{ name: 'U', price: 40, inStock: true }]
     }, ],
     onSale: false,
     images: [dunas1]
@@ -128,17 +128,17 @@ export const bikinis = [
         name: "Preto",
         inStock: false,
         sizes: [
-            { name: 'P', price: 129, inStock: false },
-            { name: 'M', price: 129, inStock: false },
-            { name: 'G', price: 129, inStock: false }
+            { name: 'P', price: 130, inStock: false },
+            { name: 'M', price: 130, inStock: false },
+            { name: 'G', price: 130, inStock: false }
         ]
     }, {
         name: "Azul",
         inStock: false,
         sizes: [
-            { name: 'P', price: 129, inStock: false },
-            { name: 'M', price: 129, inStock: false },
-            { name: 'G', price: 129, inStock: false }
+            { name: 'P', price: 130, inStock: false },
+            { name: 'M', price: 130, inStock: false },
+            { name: 'G', price: 130, inStock: false }
         ]
     }],
     onSale: false,
@@ -149,11 +149,11 @@ export const bikinis = [
     colors: [{
         name: "Rosa e Preto",
         inStock: true,
-        sizes: [{ name: 'M', price: 109, inStock: true }]
+        sizes: [{ name: 'M', price: 110, inStock: true }]
     }, {
         name: "Preto e Branco",
         inStock: false,
-        sizes: [{ name: 'M', price: 109, inStock: true }]
+        sizes: [{ name: 'M', price: 110, inStock: true }]
     }, ],
     onSale: false,
     images: [icarai1, icarai2, icarai3,icarai4]
@@ -404,7 +404,7 @@ export const bikinis = [
     colors: [{
         name: "Vermelho",
         inStock: true,
-        sizes: [{ name: 'P', price: 99, inStock: true }]
+        sizes: [{ name: 'P', price: 100, inStock: true }]
     },],
     onSale: true,
     images: [coqueirinho1, coqueirinho2]
@@ -414,11 +414,11 @@ export const bikinis = [
     colors: [{
         name: "Preto",
         inStock: true,
-        sizes: [{ name: 'G', price: 109, inStock: true }]
+        sizes: [{ name: 'G', price: 110, inStock: true }]
     }, {
         name: "Laranja",
         inStock: false,
-        sizes: [{ name: 'M', price: 109, inStock: true }]
+        sizes: [{ name: 'M', price: 110, inStock: true }]
     }],
     onSale: false,
     images: [iracema1, iracema2, iracema3]
@@ -428,7 +428,7 @@ export const bikinis = [
     colors: [{
         name: "Branco",
         inStock: true,
-        sizes: [{ name: 'P', price: 108, inStock: true }]
+        sizes: [{ name: 'P', price: 110, inStock: true }]
     }],
     onSale: true,
     images: [pipa1, pipa2, pipa3]
