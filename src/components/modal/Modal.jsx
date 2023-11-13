@@ -11,7 +11,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
     const [itemQuant, setItemQuant] = useState(1)
     const [size, setSize] = useState(item.colors[0].sizes[0] || [])
     const [color, setColor] = useState(item.colors[0] || [])
-    const [price, setPrice] = useState(item.colors[0].sizes[0].price || 0)
+    const [price, setPrice] = useState(item.onSale ? item.colors[0].sizes[0].price - 10 : item.colors[0].sizes[0].price || 0)
     const [closing, setClosing] = useState(false)
     const [address, setAddress] = useState(addressAvailables[0])
     const [cupom, setCupom] = useState("")
@@ -178,7 +178,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                             <a className="modal_info_button" title="finalizar" href={`https://wa.me/5585996585581?text=${text}`}>Finalizar pedido</a>
                         </div> :
                         <div className="modal_soldOff">
-                            <a className="modal_soldOff_button" href={`https://wa.me/5585996585581?text=${soldOfftext}`}>Avise-me quando chegar</a>
+                            <a className="modal_soldOff_button" href={`https://wa.me/5585996585581?text=${soldOfftext}`}>Encomendar</a>
                         </div>
                     }
                 </div>

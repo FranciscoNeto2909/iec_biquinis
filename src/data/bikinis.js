@@ -34,29 +34,62 @@ import aguas2 from "../assets/aguas_belas/aguas2.jpg"
 import aguas3 from "../assets/aguas_belas/aguas3.jpg"
 import uruau1 from "../assets/uruau/uruau1.jpg"
 import uruau2 from "../assets/uruau/uruau2.jpg"
+import iracema1 from "../assets/iracema/iracema1.jpg"
+import iracema2 from "../assets/iracema/iracema2.jpg"
+import iracema3 from "../assets/iracema/iracema3.jpg"
+import coqueirinho1 from "../assets/coqueirinho/coqueirinho1.jpg"
+import coqueirinho2 from "../assets/coqueirinho/coqueirinho2.jpg"
+import pipa1 from "../assets/pipa/pipa1.jpg"
+import pipa2 from "../assets/pipa/pipa2.jpg"
+import pipa3 from "../assets/pipa/pipa3.jpg"
+import flecheiras1 from "../assets/flecheiras/flecheiras1.jpg"
+import cauipe1 from "../assets/cauípe/cauipe1.jpg"
+import cauipe2 from "../assets/cauípe/cauipe2.jpg"
+import cauipe3 from "../assets/cauípe/cauipe3.jpg"
+import icarai1 from "../assets/icarai/icarai1.jpg"
+import icarai2 from "../assets/icarai/icarai2.jpg"
+import icarai3 from "../assets/icarai/icarai3.jpg"
+import icarai4 from "../assets/icarai/icarai4.jpg"
+import dunas1 from "../assets/dunas/dunas1.jpg"
 
-
-export const bikinis = [{
+export const bikinis = [
+    {
     name: "Viseira Falésias",
     colors: [{
         name: "Preto",
         inStock: true,
-        sizes: [{ name: 'U', price: 45, inStock: true }]
+        sizes: [{ name: 'U', price: 45, inStock: false }]
     }, {
         name: "Azul Celeste",
         inStock: false,
-        sizes: [{ name: 'U', price: 45, inStock: true }]
+        sizes: [{ name: 'U', price: 45, inStock: false }]
     }, {
         name: "Dourada",
         inStock: false,
-        sizes: [{ name: 'U', price: 45, inStock: true }]
+        sizes: [{ name: 'U', price: 45, inStock: false }]
     }, {
         name: "Branca",
         inStock: false,
-        sizes: [{ name: 'U', price: 45, inStock: true }]
+        sizes: [{ name: 'U', price: 45, inStock: false }]
     }],
-    images: [viseira1, viseira2, viseira3, viseira4, viseira5],
-}, {
+    onSale: false,
+    images: [viseira1, viseira2, viseira3, viseira4, viseira5]
+},
+{
+    name: "Viseira Dunas",
+    colors: [{
+        name: "Preto",
+        inStock: true,
+        sizes: [{ name: 'U', price: 39, inStock: true }]
+    }, {
+        name: "Off White",
+        inStock: false,
+        sizes: [{ name: 'U', price: 39, inStock: true }]
+    }, ],
+    onSale: false,
+    images: [dunas1]
+},
+{
     name: "Canga",
     colors: [{
         name: "Preto Vibrante",
@@ -75,17 +108,55 @@ export const bikinis = [{
         inStock: false,
         sizes: [{ name: 'U', price: 70, inStock: true }]
     }],
-    images: [canga1, canga2, canga3, canga4],
+    onSale: false,
+    images: [canga1, canga2, canga3, canga4]
 }, {
     name: "Maiô Paraíso",
     colors: [{
         name: "Geométrica",
-        inStock: false, sizes: [{ name: 'M', price: 140, inStock: true }],
+        inStock: false, sizes: [{ name: 'M', price: 140, inStock: false }],
     }, {
         name: "Onça Azul",
-        inStock: false, sizes: [{ name: 'M', price: 140, inStock: true }],
+        inStock: false, sizes: [{ name: 'M', price: 140, inStock: false }],
     }],
-    images: [maio1, maio2],
+    onSale: false,
+    images: [maio1, maio2]
+},
+{
+    name: "Maiô Cauípe",
+    colors: [{
+        name: "Preto",
+        inStock: false,
+        sizes: [
+            { name: 'P', price: 129, inStock: false },
+            { name: 'M', price: 129, inStock: false },
+            { name: 'G', price: 129, inStock: false }
+        ]
+    }, {
+        name: "Azul",
+        inStock: false,
+        sizes: [
+            { name: 'P', price: 129, inStock: false },
+            { name: 'M', price: 129, inStock: false },
+            { name: 'G', price: 129, inStock: false }
+        ]
+    }],
+    onSale: false,
+    images: [cauipe1,cauipe2,cauipe3]
+},
+{
+    name: "Maiô Icaraí",
+    colors: [{
+        name: "Rosa e Preto",
+        inStock: true,
+        sizes: [{ name: 'M', price: 109, inStock: true }]
+    }, {
+        name: "Preto e Branco",
+        inStock: false,
+        sizes: [{ name: 'M', price: 109, inStock: true }]
+    }, ],
+    onSale: false,
+    images: [icarai1, icarai2, icarai3,icarai4]
 },
 {
     name: "Sunga Uruaú",
@@ -110,7 +181,8 @@ export const bikinis = [{
         inStock: false,
         sizes: [{ name: 'M', price: 60, inStock: true }]
     }],
-    images: [sunga1, sunga2],
+    onSale: false,
+    images: [sunga1, sunga2]
 },
 {
     name: "Biquíni Prainha",
@@ -131,7 +203,8 @@ export const bikinis = [{
         inStock: false,
         sizes: [{ name: 'M', price: 76, inStock: true }]
     }],
-    images: [prainha1, prainha2, prainha3],
+    onSale: false,
+    images: [prainha1, prainha2, prainha3]
 },
 {
     name: "Biquíni Jeri",
@@ -152,7 +225,8 @@ export const bikinis = [{
         inStock: false,
         sizes: [{ name: 'P', price: 90, inStock: true }]
     }],
-    images: [jeri1, jeri2, jeri3],
+    onSale: false,
+    images: [jeri1, jeri2, jeri3]
 },
 {
     name: "Biquíni Canoa",
@@ -173,7 +247,8 @@ export const bikinis = [{
         inStock: false,
         sizes: [{ name: 'G', price: 100, inStock: true }]
     }],
-    images: [canoa1, canoa2],
+    onSale: false,
+    images: [canoa1, canoa2]
 },
 {
     name: "Biquíni maragogi",
@@ -202,7 +277,8 @@ export const bikinis = [{
         inStock: false,
         sizes: [{ name: 'P', price: 76, inStock: true }]
     }],
-    images: [maragogi1, maragogi2, maragogi3],
+    onSale: false,
+    images: [maragogi1, maragogi2, maragogi3]
 },
 {
     name: "Biquíni Noronha",
@@ -231,7 +307,8 @@ export const bikinis = [{
         inStock: false,
         sizes: [{ name: 'G', price: 110, inStock: true }]
     }],
-    images: [noronha1, noronha2, noronha3],
+    onSale: false,
+    images: [noronha1, noronha2, noronha3]
 },
 {
     name: "Biquíni Uruaú",
@@ -240,38 +317,39 @@ export const bikinis = [{
         inStock: true,
         sizes: [
             { name: 'P', price: 80, inStock: true },
-            { name: 'M', price: 80, inStock: true }
+            { name: 'M', price: 80, inStock: false }
         ]
     }, {
         name: "Lilás",
         inStock: false,
         sizes: [
-            { name: 'P', price: 80, inStock: true },
-            { name: 'M', price: 80, inStock: true }
+            { name: 'P', price: 80, inStock: false },
+            { name: 'M', price: 80, inStock: false }
         ]
     }, {
         name: "Vermelho",
         inStock: false,
         sizes: [
-            { name: 'P', price: 80, inStock: true },
+            { name: 'P', price: 80, inStock: false },
             { name: 'M', price: 80, inStock: true }
         ]
     }, {
         name: "Rosa Neon",
         inStock: false,
         sizes: [
-            { name: 'P', price: 80, inStock: true },
-            { name: 'M', price: 80, inStock: true }
+            { name: 'P', price: 80, inStock: false },
+            { name: 'M', price: 80, inStock: false }
         ]
     }, {
         name: "Azul Celeste",
         inStock: false,
         sizes: [
-            { name: 'P', price: 80, inStock: true },
-            { name: 'M', price: 80, inStock: true }
+            { name: 'P', price: 80, inStock: false },
+            { name: 'M', price: 80, inStock: false }
         ]
     }],
-    images: [uruau1, uruau2],
+    onSale: false,
+    images: [uruau1, uruau2]
 },
 {
     name: "Biquíni Águas Belas",
@@ -296,27 +374,85 @@ export const bikinis = [{
         inStock: false,
         sizes: [{ name: 'M', price: 80, inStock: true }]
     }],
-    images: [aguas1, aguas2, aguas3],
+    onSale: false,
+    images: [aguas1, aguas2, aguas3]
 },
 {
     name: "Biquíni Morro Branco",
     colors: [{
         name: "Vermelho",
         inStock: true,
-        sizes: [{ name: 'M', price: 80, inStock: true }]
+        sizes: [{ name: 'M', price: 80, inStock: false }]
     }, {
         name: "Preto",
         inStock: false,
-        sizes: [{ name: 'M', price: 80, inStock: true }]
+        sizes: [{ name: 'M', price: 80, inStock: false }]
     }, {
         name: "Verde Neon",
         inStock: false,
-        sizes: [{ name: 'M', price: 80, inStock: true }]
+        sizes: [{ name: 'M', price: 80, inStock: false }]
     }, {
         name: "Azul Celeste",
         inStock: false,
-        sizes: [{ name: 'M', price: 80, inStock: true }]
+        sizes: [{ name: 'M', price: 80, inStock: false }]
     }],
-    images: [mb1, mb2, mb3, mb4],
+    onSale: false,
+    images: [mb1, mb2, mb3, mb4]
 },
+{
+    name: "Biquíni Coqueirinho",
+    colors: [{
+        name: "Vermelho",
+        inStock: true,
+        sizes: [{ name: 'P', price: 99, inStock: true }]
+    },],
+    onSale: true,
+    images: [coqueirinho1, coqueirinho2]
+},
+{
+    name: "Biquíni Iracema",
+    colors: [{
+        name: "Preto",
+        inStock: true,
+        sizes: [{ name: 'G', price: 109, inStock: true }]
+    }, {
+        name: "Laranja",
+        inStock: false,
+        sizes: [{ name: 'M', price: 109, inStock: true }]
+    }],
+    onSale: false,
+    images: [iracema1, iracema2, iracema3]
+},
+{
+    name: "Biquíni Pipa",
+    colors: [{
+        name: "Branco",
+        inStock: true,
+        sizes: [{ name: 'P', price: 108, inStock: true }]
+    }],
+    onSale: true,
+    images: [pipa1, pipa2, pipa3]
+},
+{
+    name: "Biquíni Flecheiras",
+    colors: [{
+        name: "Rosa",
+        inStock: true,
+        sizes: [
+            { name: 'P', price: 93, inStock: false },
+            { name: 'M', price: 93, inStock: false },
+            { name: 'G', price: 93, inStock: false }
+        ]
+    }, {
+        name: "Amarelo",
+        inStock: false,
+        sizes: [
+            { name: 'P', price: 93, inStock: false },
+            { name: 'M', price: 93, inStock: false },
+            { name: 'G', price: 93, inStock: false }
+        ]
+    }],
+    onSale: true,
+    images: [flecheiras1]
+}
 ]
