@@ -122,21 +122,26 @@
 
 @media (max-width : 525px) {
     .app_header {
-        height: 164px;
+        height: 210px;
         padding: 12px 0;
     }
-
+    
     .app_header_container {
         height: 100%;
         padding: 0 16px;
         flex-direction: column;
     }
-
+    .app_logo {
+        position: absolute;
+        height: 70px;
+        left: 12px;
+    }
+    
     .app_header_search {
         display: flex;
         align-items: center;
         flex-direction: column;
-        gap: 12px;
+        gap: 10px;
     }
 
     .app_header_cart {
@@ -147,10 +152,25 @@
         justify-content: flex-end;
     }
 
-    .app_logo {
-        position: absolute;
-        height: 70px;
-        left: 12px;
+    .app_header_categories{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .app_header_categories_button{
+        padding: 2px;
+        background-color: transparent;
+        color: #00ced1;
+        border: 1px solid #00ced1;
+        border-radius: 2px;
+        font-size: 12px;
+    }
+
+    .categories_button_selected{
+        background-color: #00ced1;
+        color: #fff;
     }
 
     .app_title {

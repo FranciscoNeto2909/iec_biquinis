@@ -9,16 +9,44 @@ import { BiShoppingBag } from "react-icons/bi"
 import "./app.css"
 
 export default function App() {
+  const categories = ["Todos", "Biquínis e sungas", "maiôs", "cangas e roupas de praia", "Acessórios"]
+
   const [isModalOpened, setIsModalOpened] = useState(false)
   const [isCartOpened, setIsCartOpened] = useState(false)
   const [modalItem, setModalItem] = useState([])
   const [msg, setMsg] = useState("Adicionado ao carrinho")
   const [msgVisib, setMsgVisib] = useState(false)
   const cart = JSON.parse(localStorage.getItem('cart')) || []
-  const [filteredBikinis, setFilteredBikinis] = useState(bikinis)
+  const [bikinisCategorie, setBikinisCategorie] = useState(bikinis)
+  const [selectedCat, setSelectedCat] = useState(0)
+  const [filteredBikinis, setFilteredBikinis] = useState(bikinisCategorie)
 
   function handleSearch(text) {
-    setFilteredBikinis(bikinis.filter(bik => bik.name.toLowerCase().includes(text)))
+    if (text === "") {
+      setFilteredBikinis(bikinisCategorie)
+    } else {
+      setFilteredBikinis(bikinis.filter(bik => bik.name.toLowerCase().includes(text)))
+    }
+  }
+
+  function handleSetCategorie(text, i) {
+    if (selectedCat === i) {
+      setSelectedCat(0)
+      setBikinisCategorie(bikinis)
+    } else {
+      setSelectedCat(i)
+      if (text.toLowerCase() === "todos") {
+        setBikinisCategorie(bikinis.filter(bik => bik.name.toLowerCase().includes("")))
+      } else if (text.toLowerCase() === "biquínis e sungas") {
+        setBikinisCategorie(bikinis.filter(bik => bik.name.toLowerCase().includes("biquíni") || bik.name.toLowerCase().includes("sunga")))
+      } else if (text.toLowerCase() === "maiôs") {
+        setBikinisCategorie(bikinis.filter(bik => bik.name.toLowerCase().includes("maiô")))
+      } else if (text.toLowerCase() === "cangas e roupas de praia") {
+        setBikinisCategorie(bikinis.filter(bik => bik.name.toLowerCase().includes("canga") || bik.name.toLowerCase().includes("saia")))
+      } else if (text.toLowerCase() === "acessórios") {
+        setBikinisCategorie(bikinis.filter(bik => bik.name.toLowerCase().includes("viseira")))
+      }
+    }
   }
 
   function handleOpenModal(item) {
@@ -63,6 +91,11 @@ export default function App() {
     }
   }, [])
 
+  useEffect(() => {
+    setFilteredBikinis(bikinisCategorie)
+  }, [bikinisCategorie])
+
+
   return (
     <div className="app">
       {msgVisib &&
@@ -89,6 +122,12 @@ export default function App() {
               {window.innerWidth < 525 &&
                 <p className="app_header_onSale_txt">5% DE DESCONTO NO PIX</p>
               }
+              <div className="app_header_categories">
+                {categories.map((cat, i) => (
+                  <button className={`app_header_categories_button ${i === selectedCat && "categories_button_selected"}`} onClick={() => handleSetCategorie(cat, i)} key={i}>{cat.toUpperCase()}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>

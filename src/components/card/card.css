@@ -48,10 +48,10 @@
     width: 100%;
     padding: 6px 0;
     border-radius: 25px;
-    background-color: transparent;
-    border: 1px solid #0077ff;
+    background-color: #00ced1;
+    border: none;
     font-weight: 600;
-    color: #0077ff;
+    color: #fff;
 }
 
 @media (max-width : 425px) {
