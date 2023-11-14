@@ -29,7 +29,8 @@
 
 .app_header {
     height: 70px;
-    background-color: #00CED1;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
     display: flex;
     justify-content: center;
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import logo from "./assets/logo.png"
+import logo from "./assets/logo1.png"
 import Card from "./components/card/Card"
 import Cart from "./components/cart/Cart"
 import { bikinis } from "./data/bikinis"
@@ -71,7 +71,7 @@ export default function App() {
             <div className="app_header_cartbtn" >
               <button onClick={handleOpenCart} name="cart_btn" title="carrinho">
                 {cart.length > 0 && <span>{cart.length}</span>}
-                <BiShoppingBag size={32} />
+                <BiShoppingBag size={32} style={{color:"#00CED1"}} />
               </button>
             </div>
           }
