@@ -144,7 +144,7 @@
 
 @media (max-width : 525px) {
     .app_header {
-        height: 210px;
+        height: auto;
         padding: 12px 0;
     }
 

@@ -30,6 +30,7 @@
 .card_price {
     display: flex;
     font-weight: bold;
+    font-size: 15.5px;
 }
 
 .card_onSale {
@@ -37,27 +38,27 @@
     margin-left: 6px;
     margin-top: 3px;
     text-decoration: line-through;
-    font-size: 12px;
+    font-size: 11px;
     color: #0008;
 }
 
 
 .card_price_decimal {
     display: inline-block;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .card_onSale .card_price_decimal {
     display: inline-block;
     text-decoration: line-through;
-    font-size: 9px;
+    font-size: 8px;
 }
 
 .card_price_offer {
     display: inline-block;
     background-color: #f00;
     color: #fff;
-    font-size: 12px;
+    font-size: 10px;
     padding: 4px;
     border-radius: 4px;
     margin-left: 8px;
