@@ -17,9 +17,9 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
     const [cupom, setCupom] = useState("")
     const validCupom = "INDICAÇÃO5";
 
-    const text = `-----------------------%0A
+    const text = `------------------------------%0A
     *Novo%20Pedido*%0A
-    -----------------------%0A%0A
+    ------------------------------%0A%0A
     *${item.name}*%0A
     *Tamanho:*%20${size.name}%0A  
     *Cor:*%20${color.name}%0A
