@@ -17,7 +17,16 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
     const [cupom, setCupom] = useState("")
     const validCupom = "INDICAÇÃO5";
 
-    const text = `Olá%20gostaria%20de%20fazer%20um%20pedido:%0A•%20${item.name},%20cor:%20${color.name},%20tam:%20${size.name},%20qnt:${itemQuant}%0A%0AEntrega:%20${address.name}%0ACupom:%20${cupom === validCupom ? cupom : "nenhum"}`
+    const text = `-------------%0A*Novo%20Pedido*%20-------------%0A%0A
+    *${item.name}*%0A
+    *Tamanho:*%20${size.name}%0A  
+    *Cor:*%20${color.name}%0A
+    *Quantidade:*%20${itemQuant}%0A
+    *Valor:*R$%20${price}%0A%0A
+    *Endereço:*R$%20${address.name}%0A
+    *Frete:*R$%20${address.price}%0A%A0
+    *Cupom:*%20${cupom === validCupom ? cupom : "nenhum"}
+    `
 
     const soldOfftext = `Olá!%20Gostei%20do%20item%20${item.name}%20na%20cor%20${color.name}%20,%20tamanho%20${size.name}.%20Vocês%20poderiam%20me%20avisar%20quando%20tiver%20disponível?`
 
