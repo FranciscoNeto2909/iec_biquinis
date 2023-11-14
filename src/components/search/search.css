@@ -1,0 +1,29 @@
+.search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #00CED1;
+    overflow: hidden;
+    padding: 2px;
+    padding-right: 6px;
+    gap: 4px;
+    border-radius: 8px;
+}
+
+.search_button{
+    padding: 0;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+}
+
+.search_icon{
+    color: #0009;
+}
+
+.search_text {
+    padding: 4px;
+    border: none;
+    border-right: 2px solid #ddd;
+    font-weight: 600;
+    outline: none;
+}

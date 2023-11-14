@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Search from "./components/search/Search"
 import logo from "./assets/logo1.png"
 import Card from "./components/card/Card"
 import Cart from "./components/cart/Cart"
@@ -14,6 +15,11 @@ export default function App() {
   const [msg, setMsg] = useState("Adicionado ao carrinho")
   const [msgVisib, setMsgVisib] = useState(false)
   const cart = JSON.parse(localStorage.getItem('cart')) || []
+  const [filteredBikinis, setFilteredBikinis] = useState(bikinis)
+
+  function handleSearch(text) {
+    setFilteredBikinis(bikinis.filter(bik => bik.name.toLowerCase().includes(text)))
+  }
 
   function handleOpenModal(item) {
     setIsModalOpened(true)
@@ -55,7 +61,7 @@ export default function App() {
     if (cart === null) {
       localStorage.setItem('cart', JSON.stringify([]))
     }
-  },[])
+  }, [])
 
   return (
     <div className="app">
@@ -66,30 +72,38 @@ export default function App() {
       }
       <header className="app_header">
         <div className="app_header_container">
-          <img src={logo} alt="logo" className="app_logo" />
-          {!isCartOpened &&
-            <div className="app_header_cartbtn" >
-              <button onClick={handleOpenCart} name="cart_btn" title="carrinho">
-                {cart.length > 0 && <span>{cart.length}</span>}
-                <BiShoppingBag size={32} style={{color:"#00CED1"}} />
-              </button>
+          <div className="app_header_cart">
+            {!isCartOpened &&
+              <div className="app_header_cartbtn" >
+                <button onClick={handleOpenCart} name="cart_btn" title="carrinho">
+                  {cart.length > 0 && <span>{cart.length}</span>}
+                  <BiShoppingBag size={32} style={{ color: "#00CED1" }} />
+                </button>
+              </div>
+            }
+          </div>
+          <div className="app_header_logoAndSearch">
+            <img src={logo} alt="logo" className="app_logo" />
+            <div className="app_header_search">
+              <Search handleSearch={handleSearch} />
+              {window.innerWidth < 525 &&
+                <p className="app_header_onSale_txt">5% DE DESCONTO NO PIX</p>
+              }
             </div>
-          }
+          </div>
         </div>
       </header>
-      <section className="app_banner">
-        <p className="app_banner_text">
-          <span className="app_banner_num">5% </span>
-          de desconto à vista!</p>
-      </section>
+      {window.innerWidth > 525 && <section className="app_banner">
+        <p>5% DE DESCONTO NO PIX</p>
+      </section>}
       <section className="app_container">
         {
-          bikinis.map((bik, i) => (
+          filteredBikinis.map((bik, i) => (
             <Card bik={bik} key={i} handleOpenModal={handleOpenModal} />
           ))
         }
       </section>
-        {isModalOpened && <Modal item={modalItem} handleCloseModal={handleCloseModal} handleSetMsg={handleSetMsg} />}
+      {isModalOpened && <Modal item={modalItem} handleCloseModal={handleCloseModal} handleSetMsg={handleSetMsg} />}
       {isCartOpened &&
         <Cart handleCloseCart={handleCloseCart} handleSetMsg={handleSetMsg} />
       }

@@ -28,10 +28,11 @@
 }
 
 .app_header {
-    height: 70px;
+    height: 80px;
     background-color: #fff;
-    border-bottom: 1px solid #ddd;
     display: flex;
+    padding-top: 8px;
+    box-shadow: 0 0 4px #ccc;
     justify-content: center;
 }
 
@@ -42,6 +43,25 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.app_header_logoAndSearch {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+}
+
+.app_header_search {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.app_header_onSale_txt {
+    font-weight: bold;
+    color: #000a;
 }
 
 .app_header_cartbtn {
@@ -69,7 +89,7 @@
 }
 
 .app_logo {
-    height: 90%;
+    height: 70px;
 }
 
 .app_title {
@@ -78,25 +98,16 @@
 }
 
 .app_banner {
-    height: 70px;
     margin: 18px auto 0;
-    background-color: #249091;
-    box-shadow: 0 0 4px #0003;
+    color: #000d;
     width: 80%;
     display: flex;
-    align-items: center;
     justify-content: center;
     font-size: 24px;
     font-weight: bold;
-    color: #fff;
     max-width: 975px;
-    border-radius: 4px;
 }
 
-.app_banner_num {
-    font-weight: bolder;
-    font-size: 28px;
-}
 
 .app_container {
     margin: 0 auto;
@@ -110,11 +121,35 @@
 }
 
 @media (max-width : 525px) {
+    .app_header {
+        height: 164px;
+        padding: 12px 0;
+    }
+
     .app_header_container {
+        height: 100%;
         padding: 0 16px;
+        flex-direction: column;
+    }
+
+    .app_header_search {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .app_header_cart {
+        right: 12px;
+        top: 26px;
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
     }
 
     .app_logo {
+        position: absolute;
+        height: 70px;
         left: 12px;
     }
 
@@ -129,8 +164,24 @@
     }
 
     .app_container {
+        margin-top: 16px;
         gap: 16px 0;
-        padding: 0 12px 12px;
+        padding: 12px;
+    }
+
+    .app_header_logoAndSearch {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .app_header_search{
+        margin-top: 80px;
+    }
+
+    .app_header_onSale_txt {
+        text-align: start;
+        font-size: 14px;
     }
 }
 
