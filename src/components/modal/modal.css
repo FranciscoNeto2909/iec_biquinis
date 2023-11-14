@@ -190,13 +190,13 @@
     outline: none;
     font-size: 15px;
     font-weight: 600;
-    background-color: #009474;
+    background-color: #00ced1;
     color: #fff;
     text-align: center;
 }
 
 .modal_info_button_cart {
-    background-color: #4A8996;
+    background-color: #07fd92;
 }
 
 .modal_soldOff {
@@ -213,7 +213,7 @@
     border: none;
     font-size: 16px;
     border-radius: 8px;
-    background-color: #009474;
+    background-color: #00ced1;
     color: #fff;
 }
 
