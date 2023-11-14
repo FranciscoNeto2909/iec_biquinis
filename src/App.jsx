@@ -120,21 +120,35 @@ export default function App() {
             <div className="app_header_search">
               <Search handleSearch={handleSearch} />
               {window.innerWidth < 525 &&
-                <p className="app_header_onSale_txt">5% DE DESCONTO NO PIX</p>
+                <>
+                  <p className="app_header_onSale_txt">5% DE DESCONTO NO PIX</p>
+                  <div className="app_header_categories">
+                    {categories.map((cat, i) => (
+                      <button className={`app_header_categories_button ${i === selectedCat && "categories_button_selected"}`} onClick={() => handleSetCategorie(cat, i)} key={i}>{cat.toUpperCase()}
+                      </button>
+                    ))}
+                  </div>
+                </>
               }
-              <div className="app_header_categories">
-                {categories.map((cat, i) => (
-                  <button className={`app_header_categories_button ${i === selectedCat && "categories_button_selected"}`} onClick={() => handleSetCategorie(cat, i)} key={i}>{cat.toUpperCase()}
-                  </button>
-                ))}
-              </div>
             </div>
           </div>
         </div>
       </header>
-      {window.innerWidth > 525 && <section className="app_banner">
-        <p>5% DE DESCONTO NO PIX</p>
-      </section>}
+      {window.innerWidth > 525 &&
+        <>
+          <section className="app_banner">
+            <p>5% DE DESCONTO NO PIX</p>
+          </section>
+          <section className="app_categories">
+            <div className="app_header_categories">
+              {categories.map((cat, i) => (
+                <button className={`app_header_categories_button ${i === selectedCat && "categories_button_selected"}`} onClick={() => handleSetCategorie(cat, i)} key={i}>{cat.toUpperCase()}
+                </button>
+              ))}
+            </div>
+          </section>
+        </>
+      }
       <section className="app_container">
         {
           filteredBikinis.map((bik, i) => (

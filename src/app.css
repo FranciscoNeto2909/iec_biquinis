@@ -108,6 +108,28 @@
     max-width: 975px;
 }
 
+.app_categories {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.app_header_categories {
+    max-width: 985px;
+    width: 100%;
+    background-color: #F0F0F0;
+}
+
+.app_header_categories_button {
+    padding: 8px;
+    color: #00ced1;
+    border: none;
+}
+
+.categories_button_selected {
+    background-color: #00ced1;
+    color: #fff;
+}
 
 .app_container {
     margin: 0 auto;
@@ -125,18 +147,19 @@
         height: 210px;
         padding: 12px 0;
     }
-    
+
     .app_header_container {
         height: 100%;
         padding: 0 16px;
         flex-direction: column;
     }
+
     .app_logo {
         position: absolute;
         height: 70px;
         left: 12px;
     }
-    
+
     .app_header_search {
         display: flex;
         align-items: center;
@@ -152,14 +175,15 @@
         justify-content: flex-end;
     }
 
-    .app_header_categories{
+    .app_header_categories {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         gap: 4px;
+        background-color: transparent;
     }
 
-    .app_header_categories_button{
+    .app_header_categories_button {
         padding: 2px;
         background-color: transparent;
         color: #00ced1;
@@ -168,7 +192,7 @@
         font-size: 12px;
     }
 
-    .categories_button_selected{
+    .categories_button_selected {
         background-color: #00ced1;
         color: #fff;
     }
@@ -195,7 +219,7 @@
         gap: 16px;
     }
 
-    .app_header_search{
+    .app_header_search {
         margin-top: 80px;
     }
 
