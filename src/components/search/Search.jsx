@@ -1,6 +1,6 @@
 import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai"
 import "./search.css"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 export default function Serach({ handleSearch }) {
     const [search, setSearch] = useState("")
     const [searching, setSearching] = useState(false)
@@ -20,16 +20,16 @@ export default function Serach({ handleSearch }) {
         handleSearch("")
     }
 
-    function handleLengthZero(e) {
-        if (searching && search.length === 1 && e.key === "Backspace") {
+    useEffect(() => {
+        if (searching && search.length === 0) {
             setSearching(false)
             handleSearch("")
         }
-    }
+    },[search, searching])
 
     return (
         <div className="search">
-            <input className="search_text" onKeyDown={e => handleLengthZero(e)} autoComplete="none" type="text" value={search} placeholder="Pesquisar" onChange={e => handleChangeText(e)} />
+            <input className="search_text" autoComplete="none" type="text" value={search} placeholder="Pesquisar" onChange={e => handleChangeText(e)} />
 
             {!searching ?
                 <button className="search_button" onClick={handleSearchBtn}>
