@@ -32,10 +32,35 @@
     font-weight: bold;
 }
 
+.card_onSale {
+    display: inline-block;
+    margin-left: 6px;
+    margin-top: 3px;
+    text-decoration: line-through;
+    font-size: 12px;
+    color: #0008;
+}
+
+
 .card_price_decimal {
     display: inline-block;
     font-size: 12px;
-    margin-top: 1px;
+}
+
+.card_onSale .card_price_decimal {
+    display: inline-block;
+    text-decoration: line-through;
+    font-size: 9px;
+}
+
+.card_price_offer {
+    display: inline-block;
+    background-color: #f00;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px;
+    border-radius: 4px;
+    margin-left: 8px;
 }
 
 .card_portion {

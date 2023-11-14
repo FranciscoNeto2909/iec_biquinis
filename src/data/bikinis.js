@@ -58,19 +58,19 @@ export const bikinis = [
     colors: [{
         name: "Preto",
         inStock: true,
-        sizes: [{ name: 'U', price: 45, inStock: false }]
+        sizes: [{ name: 'U', price: 42, inStock: false }]
     }, {
         name: "Azul Celeste",
         inStock: false,
-        sizes: [{ name: 'U', price: 45, inStock: false }]
+        sizes: [{ name: 'U', price: 42, inStock: false }]
     }, {
         name: "Dourada",
         inStock: false,
-        sizes: [{ name: 'U', price: 45, inStock: false }]
+        sizes: [{ name: 'U', price: 42, inStock: false }]
     }, {
         name: "Branca",
         inStock: false,
-        sizes: [{ name: 'U', price: 45, inStock: false }]
+        sizes: [{ name: 'U', price: 42, inStock: false }]
     }],
     onSale: false,
     images: [viseira1, viseira2, viseira3, viseira4, viseira5]
@@ -114,10 +114,10 @@ export const bikinis = [
     name: "Maiô Paraíso",
     colors: [{
         name: "Geométrica",
-        inStock: false, sizes: [{ name: 'M', price: 140, inStock: false }],
+        inStock: false, sizes: [{ name: 'M', price: 130, inStock: false }],
     }, {
         name: "Onça Azul",
-        inStock: false, sizes: [{ name: 'M', price: 140, inStock: false }],
+        inStock: false, sizes: [{ name: 'M', price: 130, inStock: false }],
     }],
     onSale: false,
     images: [maio1, maio2]

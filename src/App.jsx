@@ -9,16 +9,25 @@ import { BiShoppingBag } from "react-icons/bi"
 import "./app.css"
 
 export default function App() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || []
   const categories = ["Todos", "Biquínis e sungas", "maiôs", "cangas e roupas de praia", "Acessórios"]
+
+  const onSaleBikinis = bikinis.sort((a, b) => {
+    const aHasOffer = a.onSale === true;
+    const bHasOffer = b.onSale === true;
+
+    if (aHasOffer && !bHasOffer) return -1;
+    if (!aHasOffer && bHasOffer) return 1;
+    return 0;
+  });
 
   const [isModalOpened, setIsModalOpened] = useState(false)
   const [isCartOpened, setIsCartOpened] = useState(false)
   const [modalItem, setModalItem] = useState([])
-  const [msg, setMsg] = useState("Adicionado ao carrinho")
+  const [msg, setMsg] = useState("")
   const [msgVisib, setMsgVisib] = useState(false)
-  const cart = JSON.parse(localStorage.getItem('cart')) || []
-  const [bikinisCategorie, setBikinisCategorie] = useState(bikinis)
   const [selectedCat, setSelectedCat] = useState(0)
+  const [bikinisCategorie, setBikinisCategorie] = useState(onSaleBikinis)
   const [filteredBikinis, setFilteredBikinis] = useState(bikinisCategorie)
 
   function handleSearch(text) {
@@ -94,7 +103,6 @@ export default function App() {
   useEffect(() => {
     setFilteredBikinis(bikinisCategorie)
   }, [bikinisCategorie])
-
 
   return (
     <div className="app">
