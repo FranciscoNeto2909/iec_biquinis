@@ -10,8 +10,10 @@ export default function Serach({ handleSearch }) {
     }
 
     function handleSearchBtn() {
-        setSearching(true)
-        handleSearch(search.toLowerCase())
+        if (search.length > 0) {
+            setSearching(true)
+            handleSearch(search.toLowerCase())
+        }
     }
 
     function handleClearBtn() {
@@ -25,7 +27,7 @@ export default function Serach({ handleSearch }) {
             setSearching(false)
             handleSearch("")
         }
-    },[search, searching])
+    }, [search, searching])
 
     return (
         <div className="search">
