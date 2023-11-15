@@ -21,6 +21,7 @@
 }
 
 .search_text {
+    width: 100%;
     padding: 4px;
     border: none;
     font-size: 16px;
@@ -31,10 +32,9 @@
 
 @media (max-width:500px) {
     .search{
-        width: 100%;
+        width: 90%;
+        max-width: 300px;
     }
 
-    .search_text{
-        width: 100%;
-    }
+    .search_text
 }
