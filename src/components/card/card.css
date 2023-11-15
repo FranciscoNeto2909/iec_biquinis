@@ -1,6 +1,6 @@
 .card {
     width: 210px;
-    height: auto;
+    height: 321px;
     padding-bottom: 4px;
     display: flex;
     flex-direction: column;
@@ -29,6 +29,9 @@
 
 .card_price {
     display: flex;
+    margin: 0 auto;
+    align-items: flex-end;
+    text-wrap:nowrap;
     font-weight: bold;
     font-size: 18px;
 }
@@ -58,7 +61,7 @@
     display: inline-block;
     background-color: #f00;
     color: #fff;
-    font-size: 10px;
+    font-size: 9px;
     padding: 4px;
     border-radius: 4px;
     margin-left: 4px;

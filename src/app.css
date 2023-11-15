@@ -165,7 +165,7 @@
         align-items: center;
         flex-direction: column;
         gap: 10px;
-        margin-top: 70px;
+        margin-top: 72px;
     }
 
     .app_header_cart {
@@ -209,7 +209,7 @@
     }
 
     .app_container {
-        margin-top: 16px;
+        margin-top: 10px;
         gap: 16px 0;
         padding: 12px;
     }

@@ -28,3 +28,13 @@
     font-weight: 600;
     outline: none;
 }
+
+@media (max-width:500px) {
+    .search{
+        width: 100%;
+    }
+
+    .search_text{
+        width: 100%;
+    }
+}
