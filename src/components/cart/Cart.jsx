@@ -115,7 +115,7 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
                                     <div className="cart_body_cupom">
                                         <input value={cupom} onChange={e => setCupom(e.target.value.toUpperCase())} type="text" placeholder="cupom de desconto" autoComplete="none" />
                                     </div>
-                                    <a href={`https://wa.me/5585996585581?text=${text}`} className="cart_body_button" onClick={() => console.log(text)} target="_blank">Finalizar compra</a>
+                                    <a href={`https://wa.me/5585996585581?text=${text}`} className="cart_body_button" >Finalizar compra</a>
                                 </div>
                             </> :
                             <>
