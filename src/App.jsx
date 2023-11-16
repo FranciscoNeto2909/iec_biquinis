@@ -10,7 +10,7 @@ import "./app.css"
 
 export default function App() {
   const cart = JSON.parse(localStorage.getItem('cart')) || []
-  const categories = ["Todos", "Biquínis e sungas", "maiôs", "cangas e roupas de praia", "Acessórios"]
+  const categories = ["Todos", "Biquínis e sungas", "maiôs", "cangas e roupas de praia", "Plus size", "Acessórios"]
 
   const onSaleBikinis = bikinis.sort((a, b) => {
     const aHasOffer = a.onSale === true;
@@ -50,6 +50,8 @@ export default function App() {
         setBikinisCategorie(bikinis.filter(bik => bik.name.toLowerCase().includes("biquíni") || bik.name.toLowerCase().includes("sunga")))
       } else if (text.toLowerCase() === "maiôs") {
         setBikinisCategorie(bikinis.filter(bik => bik.name.toLowerCase().includes("maiô")))
+      } else if (text.toLowerCase() === "plus size") {
+        setBikinisCategorie(bikinis.filter((bik) => bik.colors[0].sizes.filter(s => s.name === "GG" || s.name === "XG").length > 0))
       } else if (text.toLowerCase() === "cangas e roupas de praia") {
         setBikinisCategorie(bikinis.filter(bik => bik.name.toLowerCase().includes("canga") || bik.name.toLowerCase().includes("saia")))
       } else if (text.toLowerCase() === "acessórios") {
