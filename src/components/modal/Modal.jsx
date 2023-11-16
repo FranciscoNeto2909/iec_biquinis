@@ -174,7 +174,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                             <span className="modal_info_value_portion"> Em até 3x sem juros</span>
                         </p>
                     </div>
-                    {color.inStock === true ?
+                    {color.inStock && size.inStock ?
                         <div className="modal_info_buttons">
                             <button type="button" title="adicionar ao carrinho" className="modal_info_button modal_info_button_cart" onClick={handleCartBtn}>Adicionar ao carrinho</button>
                             <a className="modal_info_button" title="finalizar" href={`https://wa.me/5585996585581?text=${text}`}>Finalizar pedido</a>
