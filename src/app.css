@@ -136,7 +136,7 @@
     max-width: 1030px;
     overflow-x: hidden;
     display: flex;
-    justify-content: space-between;
+    place-content: center;
     gap: 24px 32px;
     flex-wrap: wrap;
     padding: 24px;
@@ -212,6 +212,9 @@
         margin-top: 10px;
         gap: 16px 0;
         padding: 12px;
+        place-content: unset;
+        justify-content: space-between;
+
     }
 
     .app_header_logoAndSearch {
