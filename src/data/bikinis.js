@@ -51,6 +51,9 @@ import icarai2 from "../assets/icarai/icarai2.jpg"
 import icarai3 from "../assets/icarai/icarai3.jpg"
 import icarai4 from "../assets/icarai/icarai4.jpg"
 import dunas1 from "../assets/dunas/dunas1.jpg"
+import brisa1 from "../assets/brisa/brisa1.jpg"
+import cafune1 from "../assets/cafune/cafune1.jpg"
+import cafune2 from "../assets/cafune/cafune2.jpg"
 
 export const bikinis = [
     {
@@ -110,7 +113,28 @@ export const bikinis = [
         }],
         onSale: false,
         images: [canga1, canga2, canga3, canga4]
-    }, {
+    },
+    {
+        name: "Canga Cafuné",
+        colors: [{
+            name: "Estampado",
+            inStock: false,
+            sizes: [{ name: 'U', price: 70, inStock: false }]
+        }],
+        onSale: false,
+        images: [cafune1,cafune2]
+    },
+    {
+        name: "Saia Brisa",
+        colors: [{
+            name: "Branco",
+            inStock: true,
+            sizes: [{ name: 'U', price: 90, inStock: true }]
+        }],
+        onSale: false,
+        images: [brisa1]
+    },
+    {
         name: "Maiô Paraíso",
         colors: [{
             name: "Geométrica",
