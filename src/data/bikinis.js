@@ -23,6 +23,8 @@ import mb1 from "../assets/morro_branco/morro1.jpg"
 import mb2 from "../assets/morro_branco/morro2.jpg"
 import mb3 from "../assets/morro_branco/morro3.jpg"
 import mb4 from "../assets/morro_branco/morro4.jpg"
+import mb5 from "../assets/morro_branco/morro5.jpg"
+import mb6 from "../assets/morro_branco/morro6.jpg"
 import maio1 from "../assets/maio/maio1.jpg"
 import maio2 from "../assets/maio/maio2.jpg"
 import canga1 from "../assets/canga/canga1.jpg"
@@ -37,6 +39,9 @@ import uruau2 from "../assets/uruau/uruau2.jpg"
 import iracema1 from "../assets/iracema/iracema1.jpg"
 import iracema2 from "../assets/iracema/iracema2.jpg"
 import iracema3 from "../assets/iracema/iracema3.jpg"
+import iracema4 from "../assets/iracema/iracema4.jpg"
+import iracema5 from "../assets/iracema/iracema5.jpg"
+import iracema6 from "../assets/iracema/iracema6.jpg"
 import coqueirinho1 from "../assets/coqueirinho/coqueirinho1.jpg"
 import coqueirinho2 from "../assets/coqueirinho/coqueirinho2.jpg"
 import pipa1 from "../assets/pipa/pipa1.jpg"
@@ -51,6 +56,8 @@ import icarai2 from "../assets/icarai/icarai2.jpg"
 import icarai3 from "../assets/icarai/icarai3.jpg"
 import icarai4 from "../assets/icarai/icarai4.jpg"
 import dunas1 from "../assets/dunas/dunas1.jpg"
+import dunas2 from "../assets/dunas/dunas2.jpg"
+import dunas3 from "../assets/dunas/dunas3.jpg"
 import brisa1 from "../assets/brisa/brisa1.jpg"
 import cafune1 from "../assets/cafune/cafune1.jpg"
 import cafune2 from "../assets/cafune/cafune2.jpg"
@@ -85,12 +92,17 @@ export const bikinis = [
             inStock: true,
             sizes: [{ name: 'U', price: 40, inStock: true }]
         }, {
+            name: "Rosa",
+            inStock: true,
+            sizes: [{ name: 'U', price: 40, inStock: true }]
+        }
+            , {
             name: "Off White",
-            inStock: false,
-            sizes: [{ name: 'U', price: 40, inStock: false }]
+            inStock: true,
+            sizes: [{ name: 'U', price: 40, inStock: true }]
         },],
         onSale: false,
-        images: [dunas1]
+        images: [dunas1, dunas2, dunas3]
     },
     {
         name: "Canga",
@@ -122,7 +134,7 @@ export const bikinis = [
             sizes: [{ name: 'U', price: 70, inStock: false }]
         }],
         onSale: false,
-        images: [cafune1,cafune2]
+        images: [cafune1, cafune2]
     },
     {
         name: "Saia Brisa",
@@ -202,10 +214,10 @@ export const bikinis = [
         name: "Sunga Uruaú",
         colors: [{
             name: "Azul Marinho",
-            inStock: false,
+            inStock: true,
             sizes: [
                 { name: 'P', price: 60, inStock: false },
-                { name: 'M', price: 60, inStock: false },
+                { name: 'M', price: 60, inStock: true },
                 { name: 'G', price: 60, inStock: false },
                 { name: 'GG', price: 60, inStock: false }]
         }, {
@@ -230,8 +242,8 @@ export const bikinis = [
             sizes: [{ name: 'M', price: 60, inStock: false }]
         }, {
             name: "Preto",
-            inStock: false,
-            sizes: [{ name: 'M', price: 60, inStock: false }]
+            inStock: true,
+            sizes: [{ name: 'M', price: 60, inStock: true }]
         }],
         onSale: false,
         images: [sunga1, sunga2]
@@ -240,8 +252,8 @@ export const bikinis = [
         name: "Biquíni Prainha",
         colors: [{
             name: "Verde Bebê",
-            inStock: true,
-            sizes: [{ name: 'M', price: 76, inStock: true }]
+            inStock: false,
+            sizes: [{ name: 'M', price: 76, inStock: false }]
         }, {
             name: "Vermelho",
             inStock: false,
@@ -284,8 +296,8 @@ export const bikinis = [
         name: "Biquíni Canoa",
         colors: [{
             name: "Rosa Neon",
-            inStock: true,
-            sizes: [{ name: 'G', price: 100, inStock: true }]
+            inStock: false,
+            sizes: [{ name: 'G', price: 100, inStock: false }]
         }, {
             name: "Laranja",
             inStock: false,
@@ -410,7 +422,7 @@ export const bikinis = [
             ]
         }, {
             name: "Vermelho",
-            inStock: false,
+            inStock: true,
             sizes: [
                 { name: 'P', price: 80, inStock: false },
                 { name: 'M', price: 80, inStock: true }
@@ -467,19 +479,23 @@ export const bikinis = [
             sizes: [{ name: 'M', price: 80, inStock: false }]
         }, {
             name: "Preto",
-            inStock: false,
-            sizes: [{ name: 'M', price: 80, inStock: false }]
+            inStock: true,
+            sizes: [{ name: 'M', price: 80, inStock: true }]
         }, {
             name: "Verde Neon",
             inStock: false,
             sizes: [{ name: 'M', price: 80, inStock: false }]
+        }, {
+            name: "Rosa Neon",
+            inStock: true,
+            sizes: [{ name: 'M', price: 80, inStock: true }]
         }, {
             name: "Azul Celeste",
             inStock: false,
             sizes: [{ name: 'M', price: 80, inStock: false }]
         }],
         onSale: false,
-        images: [mb1, mb2, mb3, mb4]
+        images: [mb1, mb2, mb3, mb4, mb5, mb6]
     },
     {
         name: "Biquíni Coqueirinho",
@@ -498,14 +514,33 @@ export const bikinis = [
         colors: [{
             name: "Preto",
             inStock: true,
-            sizes: [{ name: 'G', price: 110, inStock: true }]
+            sizes: [
+                { name: 'M', price: 110, inStock: false },
+                { name: 'G', price: 110, inStock: true }]
         }, {
             name: "Laranja",
-            inStock: false,
-            sizes: [{ name: 'M', price: 110, inStock: true }]
+            inStock: true,
+            sizes: [
+                { name: 'M', price: 110, inStock: true },
+                { name: 'G', price: 110, inStock: false }
+            ]
+        }, {
+            name: "Roxo",
+            inStock: true,
+            sizes: [
+                { name: 'M', price: 110, inStock: true },
+                { name: 'G', price: 110, inStock: false }
+            ]
+        }, {
+            name: "Rosa Neon",
+            inStock: true,
+            sizes: [
+                { name: 'M', price: 110, inStock: true },
+                { name: 'G', price: 110, inStock: false }
+            ]
         }],
         onSale: false,
-        images: [iracema1, iracema2, iracema3]
+        images: [iracema1, iracema2, iracema3, iracema4, iracema5, iracema6]
     },
     {
         name: "Biquíni Pipa",
@@ -516,7 +551,7 @@ export const bikinis = [
                 { name: 'P', price: 110, inStock: true },
                 { name: 'GG', price: 110, inStock: false }
             ]
-        }],
+        },],
         onSale: true,
         images: [pipa1, pipa2, pipa3]
     },
