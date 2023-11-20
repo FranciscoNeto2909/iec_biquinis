@@ -1,6 +1,7 @@
 .app {
-    height: 100vh;
+    height: auto;
     max-width: 100vw;
+    background-color: #fbfbfb;
 }
 
 .app_notice {

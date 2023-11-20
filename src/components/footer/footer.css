@@ -1,0 +1,49 @@
+.footer {
+    padding: 10px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 0 4px #ccc;
+}
+
+.footer_texts {
+    text-align: center;
+    font-weight: 500;
+}
+
+.footer_texts .insta {
+    margin-bottom: 4px;
+}
+
+.footer_social {
+    display: flex;
+    gap: 8px;
+}
+
+.footer_button {
+    border: none;
+    background-color: transparent;
+}
+
+.social_icon {
+    height: 25px;
+    width: 25px;
+}
+
+.footer_copy {
+    color: #00CED1;
+    font-weight: bold;
+}
+
+@media (max-width:525px) {
+    .footer {
+        padding: 10px;
+    }
+
+    .footer_texts {
+        font-size: 14px;
+    }
+}

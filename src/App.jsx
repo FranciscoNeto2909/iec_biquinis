@@ -7,6 +7,7 @@ import { bikinis } from "./data/bikinis"
 import Modal from "./components/modal/Modal"
 import { BiShoppingBag } from "react-icons/bi"
 import "./app.css"
+import Footer from "./components/footer/Footer"
 
 export default function App() {
   const cart = JSON.parse(localStorage.getItem('cart')) || []
@@ -170,6 +171,7 @@ export default function App() {
       {isCartOpened &&
         <Cart handleCloseCart={handleCloseCart} handleSetMsg={handleSetMsg} />
       }
+      <Footer />
     </div>
   )
 }
