@@ -2,8 +2,8 @@
 import { useState, useRef, useEffect } from "react"
 import "./select.css"
 
-export default function Select({ ops, onClick, text }) {
-    const [selected, setSelected] = useState(ops[0])
+export default function Select({ ops, onClick, text, val }) {
+    const [selected, setSelected] = useState(val ? val : ops[0])
     const [showOptions, setShowOptions] = useState(false)
 
     const dropdownRef = useRef(null);

@@ -9,18 +9,21 @@ import { addressAvailables } from "../../data/address"
 export default function Modal({ item, handleCloseModal, handleSetMsg }) {
 
     const [itemQuant, setItemQuant] = useState(1)
-    const [size, setSize] = useState(item.colors[0].sizes[0] || [])
-    const [color, setColor] = useState(item.colors[0] || [])
+    const [color, setColor] = useState(item.colors.filter(item => (item.inStock === true))[0] || item.colors[0])
+    const [size, setSize] = useState(color.sizes[0])
     const [price, setPrice] = useState(item.onSale ? item.colors[0].sizes[0].price - 10 : item.colors[0].sizes[0].price || 0)
     const [closing, setClosing] = useState(false)
     const [address, setAddress] = useState(addressAvailables[0])
     const [cupom, setCupom] = useState("")
+    const colorsVal = item.colors.filter(item => (item.inStock === true))[0]
+    const sizesVal = color.sizes.filter(item => (item.inStock === true))[0]
+
     const validCupom = "INDICAÇÃO5";
 
-    const text = `------------------------------%0A%20%20%20%20*Novo%20Pedido*%0A------------------------------%0A%0A*${item.name}*%0A*Tamanho:*%20${size.name}%0A*Cor:*%20${color.name}%0A*Quantidade:*%20${itemQuant}%0A*Valor:*%20R$%20${price + address.price - 1 +",90"}%0A%0A*Endereço:*%20R$%20${address.name}%0A*Frete:*%20R$%20${address.price === 0 ? "Grátis" : address.price}%0A%0A*Cupom:*%20${cupom === validCupom ? cupom : "nenhum"}
+    const text = `------------------------------%0A%20%20%20%20*Novo%20Pedido*%0A------------------------------%0A%0A*${item.name}*%0A*Tamanho:*%20${size.name}%0A*Cor:*%20${color.name}%0A*Quantidade:*%20${itemQuant}%0A*Valor:*%20R$%20${price + address.price - 1 + ",90"}%0A%0A*Endereço:*%20R$%20${address.name}%0A*Frete:*%20R$%20${address.price === 0 ? "Grátis" : address.price}%0A%0A*Cupom:*%20${cupom === validCupom ? cupom : "nenhum"}
     `
 
-    const soldOfftext = `------------------------------%0A%20%20%20%20*Nova%20Encomenda*%0A------------------------------%0A%0A*${item.name}*%0A*Tamanho:*%20${size.name}%0A*Cor:*%20${color.name}%0A*Quantidade:*%20${itemQuant}%0A*Valor:*%20R$%20${price + address.price - 1 +",90"}%0A%0A*Endereço:*%20R$%20${address.name}%0A*Frete:*%20R$%20${address.price === 0 ? "Grátis" : address.price}%0A%0A*Cupom:*%20${cupom === validCupom ? cupom : "nenhum"}
+    const soldOfftext = `------------------------------%0A%20%20%20%20*Nova%20Encomenda*%0A------------------------------%0A%0A*${item.name}*%0A*Tamanho:*%20${size.name}%0A*Cor:*%20${color.name}%0A*Quantidade:*%20${itemQuant}%0A*Valor:*%20R$%20${price + address.price - 1 + ",90"}%0A%0A*Endereço:*%20R$%20${address.name}%0A*Frete:*%20R$%20${address.price === 0 ? "Grátis" : address.price}%0A%0A*Cupom:*%20${cupom === validCupom ? cupom : "nenhum"}
     `
 
 
@@ -129,10 +132,10 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                     <h2 className="modal_info_name">{item.name}</h2>
                     <div className="modal_info_selects">
                         <div className="modal_info_colors">
-                            <Select ops={item.colors} text={"Cores Disponiveis"} onClick={handleSetColor} />
+                            <Select ops={item.colors} text={"Cores Disponiveis"} onClick={handleSetColor} val={colorsVal} />
                         </div>
                         <div className="modal_info_sizes">
-                            <Select ops={color.sizes} text={"Tamanho"} onClick={handleSetSize} />
+                            <Select ops={color.sizes} text={"Tamanho"} onClick={handleSetSize} val={sizesVal} />
                         </div>
                     </div>
                     <div className="modal_info_quantAndAddress">

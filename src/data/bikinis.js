@@ -61,6 +61,7 @@ import dunas3 from "../assets/dunas/dunas3.jpg"
 import brisa1 from "../assets/brisa/brisa1.jpg"
 import cafune1 from "../assets/cafune/cafune1.jpg"
 import cafune2 from "../assets/cafune/cafune2.jpg"
+import cafune3 from "../assets/cafune/cafune3.jpg"
 
 export const bikinis = [
     {
@@ -134,7 +135,7 @@ export const bikinis = [
             sizes: [{ name: 'U', price: 70, inStock: false }]
         }],
         onSale: false,
-        images: [cafune1, cafune2]
+        images: [cafune1, cafune2, cafune3]
     },
     {
         name: "Saia Brisa",
