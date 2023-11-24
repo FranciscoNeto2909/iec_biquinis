@@ -7,8 +7,6 @@ import { bikinis } from "./data/bikinis"
 import Modal from "./components/modal/Modal"
 import { BiShoppingBag } from "react-icons/bi"
 import logo from "./assets/logo.png"
-import banner from "./assets/banner.png"
-import bannerDesktop from "./assets/bannerDesk.png"
 
 import "./app.css"
 
@@ -135,8 +133,8 @@ export default function App() {
               <Search handleSearch={handleSearch} />
               {window.innerWidth < 525 &&
                 <>
-                  <div className="banner_container">
-                    <img className="banner" src={banner} alt="" />
+                  <div className="app_banner">
+                    <p>5% de desconto a vísta!</p>
                   </div>
                   <div className="app_header_categories">
                     {categories.map((cat, i) => (
@@ -153,7 +151,7 @@ export default function App() {
       {window.innerWidth > 525 &&
         <>
           <section className="app_banner">
-            <img className="banner" src={bannerDesktop} alt="" />
+            <p>5% de desconto a vísta!</p>
           </section>
           <section className="app_categories">
             <div className="app_header_categories">

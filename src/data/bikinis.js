@@ -83,8 +83,8 @@ export const bikinis = [
             inStock: false,
             sizes: [{ name: 'U', price: 42, inStock: false }]
         }],
-        onSale: true,
-        discount:10,
+        onSale: false,
+        discount: 0,
         images: [viseira1, viseira2, viseira3, viseira4, viseira5]
     },
     {
@@ -103,8 +103,8 @@ export const bikinis = [
             inStock: true,
             sizes: [{ name: 'U', price: 40, inStock: true }]
         },],
-        onSale: true,
-        discount:10,
+        onSale: false,
+        discount: 0,
         images: [dunas1, dunas2, dunas3]
     },
     {
@@ -127,7 +127,7 @@ export const bikinis = [
             sizes: [{ name: 'U', price: 70, inStock: false }]
         }],
         onSale: false,
-        discount:0,
+        discount: 0,
         images: [canga1, canga2, canga3, canga4]
     },
     {
@@ -138,7 +138,7 @@ export const bikinis = [
             sizes: [{ name: 'U', price: 70, inStock: false }]
         }],
         onSale: false,
-        discount:0,
+        discount: 0,
         images: [cafune1, cafune2, cafune3]
     },
     {
@@ -148,8 +148,8 @@ export const bikinis = [
             inStock: true,
             sizes: [{ name: 'U', price: 90, inStock: true }]
         }],
-        onSale: true,
-        discount:10,
+        onSale: false,
+        discount: 0,
         images: [brisa1]
     },
     {
@@ -172,7 +172,7 @@ export const bikinis = [
                 { name: 'GG', price: 130, inStock: false }],
         }],
         onSale: false,
-        discount:0,
+        discount: 0,
         images: [maio1, maio2]
     },
     {
@@ -201,7 +201,7 @@ export const bikinis = [
             ]
         }],
         onSale: false,
-        discount:0,
+        discount: 0,
         images: [cauipe1, cauipe2, cauipe3]
     },
     {
@@ -215,8 +215,8 @@ export const bikinis = [
             inStock: false,
             sizes: [{ name: 'M', price: 110, inStock: false }]
         },],
-        onSale: true,
-        discount:10,
+        onSale: false,
+        discount: 0,
         images: [icarai1, icarai2, icarai3, icarai4]
     },
     {
@@ -254,8 +254,8 @@ export const bikinis = [
             inStock: true,
             sizes: [{ name: 'M', price: 60, inStock: true }]
         }],
-        onSale: true,
-        discount:10,
+        onSale: false,
+        discount: 0,
         images: [sunga1, sunga2]
     },
     {
@@ -278,7 +278,7 @@ export const bikinis = [
             sizes: [{ name: 'M', price: 76, inStock: false }]
         }],
         onSale: false,
-        discount:0,
+        discount: 0,
         images: [prainha1, prainha2, prainha3]
     },
     {
@@ -300,8 +300,8 @@ export const bikinis = [
             inStock: false,
             sizes: [{ name: 'P', price: 90, inStock: false }]
         }],
-        onSale: true,
-        discount:30,
+        onSale: false,
+        discount: 0,
         images: [jeri1, jeri2, jeri3]
     },
     {
@@ -324,7 +324,7 @@ export const bikinis = [
             sizes: [{ name: 'G', price: 100, inStock: false }]
         }],
         onSale: false,
-        discount:0,
+        discount: 0,
         images: [canoa1, canoa2]
     },
     {
@@ -355,7 +355,7 @@ export const bikinis = [
             sizes: [{ name: 'P', price: 76, inStock: false }]
         }],
         onSale: false,
-        discount:0,
+        discount: 0,
         images: [maragogi1, maragogi2, maragogi3]
     },
     {
@@ -415,8 +415,8 @@ export const bikinis = [
                 { name: 'GG', price: 110, inStock: false },
                 { name: 'XG', price: 110, inStock: false }]
         }],
-        onSale: true,
-        discount:20,
+        onSale: false,
+        discount: 0,
         images: [noronha1, noronha2, noronha3]
     },
     {
@@ -457,8 +457,8 @@ export const bikinis = [
                 { name: 'M', price: 80, inStock: false }
             ]
         }],
-        onSale: true,
-        discount:20,
+        onSale: false,
+        discount: 0,
         images: [uruau1, uruau2]
     },
     {
@@ -484,8 +484,8 @@ export const bikinis = [
             inStock: false,
             sizes: [{ name: 'M', price: 80, inStock: false }]
         }],
-        onSale: true,
-        discount:30,
+        onSale: false,
+        discount: 0,
         images: [aguas1, aguas2, aguas3]
     },
     {
@@ -511,8 +511,8 @@ export const bikinis = [
             inStock: false,
             sizes: [{ name: 'M', price: 80, inStock: false }]
         }],
-        onSale: true,
-        discount:20,
+        onSale: false,
+        discount: 0,
         images: [mb1, mb2, mb3, mb4, mb5, mb6]
     },
     {
@@ -524,8 +524,8 @@ export const bikinis = [
                 { name: 'P', price: 100, inStock: true },
                 { name: 'GG', price: 100, inStock: false }]
         },],
-        onSale: true,
-        discount:30,
+        onSale: false,
+        discount: 0,
         images: [coqueirinho1, coqueirinho2]
     },
     {
@@ -558,8 +558,8 @@ export const bikinis = [
                 { name: 'G', price: 110, inStock: false }
             ]
         }],
-        onSale: true,
-        discount:20,
+        onSale: false,
+        discount: 0,
         images: [iracema1, iracema2, iracema3, iracema4, iracema5, iracema6]
     },
     {
@@ -572,8 +572,8 @@ export const bikinis = [
                 { name: 'GG', price: 110, inStock: false }
             ]
         },],
-        onSale: true,
-        discount:20,
+        onSale: false,
+        discount: 0,
         images: [pipa1, pipa2, pipa3]
     },
     {
@@ -596,7 +596,7 @@ export const bikinis = [
             ]
         }],
         onSale: false,
-        discount:0,
+        discount: 0,
         images: [flecheiras1]
     }
 ]

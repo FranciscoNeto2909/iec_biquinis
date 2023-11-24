@@ -100,6 +100,7 @@
 
 .app_banner {
     margin: 0 auto;
+    margin-top: 24px;
     color: #000d;
     width: 80%;
     display: flex;
@@ -208,6 +209,7 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 4px;
+        margin-top: 0;
         background-color: transparent;
         box-shadow: unset;
     }
@@ -237,7 +239,7 @@
 
     .app_banner {
         width: auto;
-        margin: 12px;
+        margin: 8px;
         font-size: 18px;
     }
 
