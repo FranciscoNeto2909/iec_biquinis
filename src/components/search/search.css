@@ -3,20 +3,21 @@
     align-items: center;
     border: 1px solid #00CED1;
     overflow: hidden;
-    padding: 2px;
+    padding: 4px;
+    width: 300px;
     padding-right: 6px;
     gap: 4px;
     border-radius: 8px;
 }
 
-.search_button{
+.search_button {
     padding: 0;
     height: 20px;
     border: none;
     background-color: transparent;
 }
 
-.search_icon{
+.search_icon {
     color: #0009;
 }
 
@@ -31,10 +32,20 @@
 }
 
 @media (max-width:500px) {
-    .search{
+    .search {
         width: 90%;
-        max-width: 300px;
+        max-width: 320px;
     }
 
-    .search_text
+}
+
+@media (max-width:325px) {
+    .search {
+        width: 96%;
+        padding: 5px;
+    }
+
+    .search_text {
+        font-size: 17px;
+    }
 }

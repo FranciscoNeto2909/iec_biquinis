@@ -17,9 +17,9 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
 
     const items = cart.map(item => (
         `*${item.name}*%0A*Tamanho:*%20${item.size}%0A*Cor:*%20${item.color}%0A*Quantidade:*%20${item.quant}%0A*Valor:*%20R$%20${item.price + address.price - 1 +",90"}`
-    )).join("%0A");
+    )).join("%0A%0A");
 
-    const text = `------------------------------%0A%20%20%20%20*Novo%20Pedido*%0A------------------------------%0A%0A${items}%0A%0A*Endereço:*%20${address.name}%0A*Frete:*%20R${address.price === 0 ? 'Grátis' : `$%20${address.price}`}%0A*Cupom:*%20${cupom === "INDICAÇÃO5" ? "INDICAÇÃO5" : "Nenhum" }%0A*Total:*%20R$%20${price - 1 + address.price},90`
+    const text = `-----------------%0A%20%20%20%20*Novo%20Pedido*%0A-----------------%0A%0A${items}%0A%0A*Endereço:*%20${address.name}%0A*Frete:*%20R${address.price === 0 ? 'Grátis' : `$%20${address.price}`}%0A*Cupom:*%20${cupom === "INDICAÇÃO5" ? "INDICAÇÃO5" : "Nenhum" }%0A*Total:*%20R$%20${price - 1 + address.price},90`
 
     function handleCloseBtn() {
         setClosing(true)

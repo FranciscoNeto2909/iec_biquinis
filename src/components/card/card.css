@@ -1,7 +1,6 @@
 .card {
-    width: 210px;
+    width: 200px;
     height: auto;
-    padding-bottom: 4px;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -57,14 +56,29 @@
     font-size: 8px;
 }
 
+.card_price_discount_value{
+    font-size: 12px;
+    color: #f00;
+    margin-left: 4px;
+}
+
+.discount_color{
+    color: #f00 !important;
+}
+
 .card_price_offer {
     display: inline-block;
     background-color: #f00;
     color: #fff;
-    font-size: 9px;
+    font-size: 10px;
+    margin-bottom: 2px;
     padding: 4px;
     border-radius: 4px;
-    margin-left: 4px;
+}
+
+.card_price_discount{
+    display: inline-block;
+    color: #f00;
 }
 
 .card_portion {
@@ -85,7 +99,7 @@
 
 @media (max-width : 425px) {
     .card {
-        width: 48%;
+        width: 49%;
     }
 
     .card_portion {

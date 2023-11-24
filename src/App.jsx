@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react"
 import Search from "./components/search/Search"
-import logo from "./assets/logo.png"
 import Card from "./components/card/Card"
 import Cart from "./components/cart/Cart"
+import Footer from "./components/footer/Footer"
 import { bikinis } from "./data/bikinis"
 import Modal from "./components/modal/Modal"
 import { BiShoppingBag } from "react-icons/bi"
+import logo from "./assets/logo.png"
+import banner from "./assets/banner.png"
+import bannerDesktop from "./assets/bannerDesk.png"
+
 import "./app.css"
-import Footer from "./components/footer/Footer"
 
 export default function App() {
   const cart = JSON.parse(localStorage.getItem('cart')) || []
-  const categories = ["Todos", "Biquínis e sungas", "maiôs", "cangas e roupas de praia", "Plus size", "Acessórios"]
+  const categories = ["Todos", "Biquínis e sungas", "maiôs", "Plus size", "cangas e roupas de praia", "Acessórios"]
 
   const onSaleBikinis = bikinis.sort((a, b) => {
     const aHasOffer = a.onSale === true;
@@ -132,7 +135,9 @@ export default function App() {
               <Search handleSearch={handleSearch} />
               {window.innerWidth < 525 &&
                 <>
-                  <p className="app_header_onSale_txt">5% DE DESCONTO NO PIX</p>
+                  <div className="banner_container">
+                    <img className="banner" src={banner} alt="" />
+                  </div>
                   <div className="app_header_categories">
                     {categories.map((cat, i) => (
                       <button className={`app_header_categories_button ${i === selectedCat && "categories_button_selected"}`} onClick={() => handleSetCategorie(cat, i)} key={i}>{cat.toUpperCase()}
@@ -148,7 +153,7 @@ export default function App() {
       {window.innerWidth > 525 &&
         <>
           <section className="app_banner">
-            <p>5% DE DESCONTO NO PIX</p>
+            <img className="banner" src={bannerDesktop} alt="" />
           </section>
           <section className="app_categories">
             <div className="app_header_categories">

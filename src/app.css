@@ -40,7 +40,7 @@
 .app_header_container {
     height: 70px;
     width: 100%;
-    max-width: 985px;
+    max-width: 1128px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -99,15 +99,25 @@
 }
 
 .app_banner {
-    margin: 18px auto 0;
+    margin: 0 auto;
     color: #000d;
     width: 80%;
     display: flex;
     justify-content: center;
     font-size: 24px;
     font-weight: bold;
-    max-width: 975px;
+    max-width: 1200px;
 }
+
+.banner_container {
+    height: auto;
+    width: 100%;
+}
+
+.banner {
+    height: 300px;
+}
+
 
 .app_categories {
     display: flex;
@@ -116,14 +126,25 @@
 }
 
 .app_header_categories {
-    max-width: 985px;
+    max-width: 1128px;
+    margin-top: 10px;
     width: 100%;
-    background-color: #F0F0F0;
+    background-color: #FFF;
+    box-shadow: 0 0 2px #0003;
+    border-radius: 4px;
+    overflow: hidden;
+
 }
 
 .app_header_categories_button {
-    padding: 8px;
+    padding: 12px 16px;
     color: #00ced1;
+    background-color: #fff;
+    border: none;
+    border-right: 1px solid #ddd;
+}
+
+.app_header_categories_button:last-child {
     border: none;
 }
 
@@ -134,7 +155,7 @@
 
 .app_container {
     margin: 0 auto;
-    max-width: 1030px;
+    max-width: 1200px;
     overflow-x: hidden;
     display: flex;
     place-content: center;
@@ -177,22 +198,33 @@
         justify-content: flex-end;
     }
 
+    .banner {
+        height: auto;
+        width: 100vw;
+    }
+
     .app_header_categories {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         gap: 4px;
         background-color: transparent;
+        box-shadow: unset;
     }
 
     .app_header_categories_button {
-        padding: 2px;
+        padding: 4px;
         background-color: transparent;
         color: #00ced1;
         border: 1px solid #00ced1;
         border-radius: 2px;
         font-size: 14px;
     }
+
+    .app_header_categories_button:last-child {
+        border: 1px solid #00ced1;
+    }
+
 
     .categories_button_selected {
         background-color: #00ced1;
@@ -232,7 +264,11 @@
 
 @media (max-width : 340px) {
     .app_container {
-        gap: 8px;
-        padding: 4px;
+        gap: 6px;
+        padding: 4px 8px;
+    }
+
+    .app_header_search {
+        font-size: 18px;
     }
 }

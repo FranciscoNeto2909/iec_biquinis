@@ -9,6 +9,17 @@
     height: 450px;
 }
 
+.swiper-button-prev {
+    left: -2px !important;
+    transform: scale(0.8);
+}
+
+.swiper-button-next {
+    right: -2px !important;
+    transform: scale(0.8);
+}
+
+
 @media (max-width : 625px) {
     .carousel {
         height: 100%;
@@ -25,7 +36,6 @@
 
 @media (max-width : 375px) {
     .carousel_img {
-        max-height: 320px;
+        max-height: 360px;
     }
 }
-

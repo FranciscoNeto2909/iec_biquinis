@@ -8,10 +8,13 @@ import { addressAvailables } from "../../data/address"
 
 export default function Modal({ item, handleCloseModal, handleSetMsg }) {
 
+    const realPrice = item.colors[0].sizes[0].price
+    const percent = ((item.discount / 100).toFixed(2) * realPrice).toFixed(0)
+
     const [itemQuant, setItemQuant] = useState(1)
     const [color, setColor] = useState(item.colors.filter(item => (item.inStock === true))[0] || item.colors[0])
     const [size, setSize] = useState(color.sizes[0])
-    const [price, setPrice] = useState(item.onSale ? item.colors[0].sizes[0].price - 10 : item.colors[0].sizes[0].price || 0)
+    const [price, setPrice] = useState(item.onSale ?  realPrice - percent : item.colors[0].sizes[0].price)
     const [closing, setClosing] = useState(false)
     const [address, setAddress] = useState(addressAvailables[0])
     const [cupom, setCupom] = useState("")
@@ -66,7 +69,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
         if (address.price === 0) {
             return `R$: ${(price * itemQuant) - 1},90`
         } else if (address.price === undefined) {
-            return `R$: ${(price * itemQuant) - 1},90 - frete a consultar`
+            return `R$: ${(price * itemQuant) - 1},90 + Frete`
         } else {
             return `R$: ${((price * itemQuant) - 1) + address.price},90`
         }
@@ -163,7 +166,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                         <div className="modal_info_value_prod">
                             <p className="modal_info_value_text">
                                 Produto:
-                                <span className="modal_info_value_price"> R$ {(price * itemQuant) - 1},90</span>
+                                <span className={`modal_info_value_price ${item.onSale && "discount_color"}`}> R$ {(price * itemQuant) - 1},90</span>
                             </p>
                             <p className="modal_info_value_text">
                                 Frete:
@@ -173,8 +176,8 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
 
                         <p className="modal_info_value_finalPrice">
                             Valor total:
-                            <span className="modal_info_value_price">{finalPrice()}</span>
-                            <span className="modal_info_value_portion"> Em até 3x sem juros</span>
+                            <span className={`modal_info_value_price ${item.onSale && "discount_color"}`}>{finalPrice()}</span>
+                            <span className="modal_info_value_portion">{item.onSale ? " Até 2x sem juros" : " Em até 3x sem juros"}</span>
                         </p>
                     </div>
                     {color.inStock && size.inStock ?

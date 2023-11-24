@@ -1,5 +1,8 @@
 import "./card.css"
 export default function Card({ bik, handleOpenModal }) {
+    const price = bik.colors[0].sizes[0].price - 1
+    const percent = ((bik.discount / 100).toFixed(2) * price).toFixed(0)
+
     function handleSetItem() {
         handleOpenModal(bik)
     }
@@ -12,15 +15,26 @@ export default function Card({ bik, handleOpenModal }) {
             <div className="card_info">
                 <h2 className="card_title">{bik.name}</h2>
                 <div className="card_info_price">
-                    <div className="card_price"><span>R$ {bik.onSale ? bik.colors[0].sizes[0].price - 11 : bik.colors[0].sizes[0].price - 1},<span className="card_price_decimal">90</span></span>
-                        {bik.onSale && <>
-                            <span className="card_price card_onSale">{bik.colors[0].sizes[0].price - 1},<span className="card_price_decimal">90</span></span>
-                            <span className="card_price_offer">OFERTA</span>
-                        </>
+                    <div className="card_price">
+                        {bik.onSale ?
+                            <div className="card_price_bf">
+                                <div>
+                                    <span className="card_price_offer">Oferta Black Friday</span>
+                                    <span className="card_price_discount_value">-{bik.discount}%</span>
+                                    </div>
+                                <div className="card_price_discount">
+                                    <span>R$ {price - percent},</span><span className="card_price_decimal">90</span>
+                                </div>
+                                <span className="card_price card_onSale">{price},<span className="card_price_decimal">90</span>
+                                </span>
+                            </div> :
+                            <>
+                                <span>R$ {price},<span className="card_price_decimal">90</span></span>
+                            </>
                         }
                     </div>
                 </div>
-                <p className="card_portion">Em até 3x  sem juros</p>
+                <p className="card_portion">{bik.onSale ? "Até 2x sem juros" : "Em até 3x sem juros"}</p>
                 <button type="button" className="card_button">Adicionar pedido</button>
             </div>
         </div>
