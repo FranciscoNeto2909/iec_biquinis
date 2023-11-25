@@ -134,7 +134,7 @@ export default function App() {
               {window.innerWidth < 525 &&
                 <>
                   <div className="app_banner">
-                    <p>5% de desconto a vísta!</p>
+                    <p>5% de desconto à vista!</p>
                   </div>
                   <div className="app_header_categories">
                     {categories.map((cat, i) => (
@@ -151,7 +151,7 @@ export default function App() {
       {window.innerWidth > 525 &&
         <>
           <section className="app_banner">
-            <p>5% de desconto a vísta!</p>
+            <p>5% de desconto à vista!</p>
           </section>
           <section className="app_categories">
             <div className="app_header_categories">
