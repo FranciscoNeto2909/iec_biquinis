@@ -12,6 +12,7 @@
     animation: openModal 500ms ease-in-out normal;
     animation-fill-mode: forwards;
     backdrop-filter: blur(0.8px);
+    z-index: 4;
 }
 
 .close_modal {

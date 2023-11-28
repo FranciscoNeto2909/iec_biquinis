@@ -8,6 +8,7 @@
     justify-content: flex-end;
     background-color: #00CED153;
     backdrop-filter: blur(0.8px);
+    z-index: 4;
 }
 
 .cart {

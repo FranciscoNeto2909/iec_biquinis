@@ -7,6 +7,8 @@ import { bikinis } from "./data/bikinis"
 import Modal from "./components/modal/Modal"
 import { BiShoppingBag } from "react-icons/bi"
 import logo from "./assets/logo.png"
+import banner from "./assets/banner.png"
+import bannerDesk from "./assets/bannerDesk.png"
 
 import "./app.css"
 
@@ -131,27 +133,27 @@ export default function App() {
             <img src={logo} alt="logo" className="app_logo" />
             <div className="app_header_search">
               <Search handleSearch={handleSearch} />
-              {window.innerWidth < 525 &&
-                <>
-                  <div className="app_banner">
-                    <p>5% de desconto à vista!</p>
-                  </div>
-                  <div className="app_header_categories">
-                    {categories.map((cat, i) => (
-                      <button className={`app_header_categories_button ${i === selectedCat && "categories_button_selected"}`} onClick={() => handleSetCategorie(cat, i)} key={i}>{cat.toUpperCase()}
-                      </button>
-                    ))}
-                  </div>
-                </>
-              }
             </div>
           </div>
         </div>
       </header>
+      {window.innerWidth < 525 &&
+        <>
+          <div className="app_banner">
+            <img src={banner} alt="" className="app_banner_img" />
+          </div>
+          <div className="app_header_categories">
+            {categories.map((cat, i) => (
+              <button className={`app_header_categories_button ${i === selectedCat && "categories_button_selected"}`} onClick={() => handleSetCategorie(cat, i)} key={i}>{cat.toUpperCase()}
+              </button>
+            ))}
+          </div>
+        </>
+      }
       {window.innerWidth > 525 &&
         <>
           <section className="app_banner">
-            <p>5% de desconto à vista!</p>
+            <img src={bannerDesk} style={{height:"auto", width:"100vw"}} alt="" className="app_banner_img" />
           </section>
           <section className="app_categories">
             <div className="app_header_categories">

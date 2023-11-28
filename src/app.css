@@ -7,7 +7,7 @@
 .app_notice {
     top: 70px;
     position: fixed;
-    z-index: 3;
+    z-index: 5;
     background-color: transparent;
     color: #fff;
     margin: 0 auto;
@@ -33,8 +33,11 @@
     background-color: #fff;
     display: flex;
     padding-top: 8px;
-    box-shadow: 0 0 4px #ccc;
+    box-shadow: 0 0 8px #ddd;
     justify-content: center;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
 }
 
 .app_header_container {
@@ -100,14 +103,17 @@
 
 .app_banner {
     margin: 0 auto;
-    margin-top: 24px;
     color: #000d;
-    width: 80%;
+    max-width: 100vw;
     display: flex;
     justify-content: center;
     font-size: 24px;
     font-weight: bold;
-    max-width: 1200px;
+    overflow-x: hidden;
+}
+
+.app_banner_img {
+    max-width: 100vw;
 }
 
 .banner_container {
@@ -115,20 +121,18 @@
     width: 100%;
 }
 
-.banner {
-    height: 300px;
-}
-
-
 .app_categories {
     display: flex;
-    margin-top: 10px;
     justify-content: center;
+    position: sticky;
+    top: 80px;
+    z-index: 3;
+    margin-top: 10px;
+    background-color: #fff;
 }
 
 .app_header_categories {
     max-width: 1128px;
-    margin-top: 10px;
     width: 100%;
     background-color: #FFF;
     box-shadow: 0 0 2px #0003;
@@ -143,6 +147,11 @@
     background-color: #fff;
     border: none;
     border-right: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.app_header_categories_button:not(.categories_button_selected):hover{
+    background-color: #bffcfc;
 }
 
 .app_header_categories_button:last-child {
@@ -169,6 +178,7 @@
     .app_header {
         height: auto;
         padding: 12px 0;
+        box-shadow: 0 0 2px #ddd;
     }
 
     .app_header_container {
@@ -199,11 +209,6 @@
         justify-content: flex-end;
     }
 
-    .banner {
-        height: auto;
-        width: 100vw;
-    }
-
     .app_header_categories {
         display: flex;
         justify-content: center;
@@ -212,15 +217,24 @@
         margin-top: 0;
         background-color: transparent;
         box-shadow: unset;
+        position: sticky;
+        top: 135px;
+        z-index: 3;
+        padding-bottom: 10px;
+        background-color: #fff;
     }
 
     .app_header_categories_button {
-        padding: 4px;
+        padding: 3px;
         background-color: transparent;
         color: #00ced1;
         border: 1px solid #00ced1;
         border-radius: 2px;
         font-size: 14px;
+    }
+
+    .app_header_categories_button:not(.categories_button_selected):hover{
+        background-color: transparent;
     }
 
     .app_header_categories_button:last-child {
@@ -238,13 +252,16 @@
     }
 
     .app_banner {
-        width: auto;
-        margin: 8px;
+        width: 100vw;
+        margin: 0 0 12px 0;
         font-size: 18px;
     }
 
+    .app_banner_img {
+        width: 100%;
+    }
+
     .app_container {
-        margin-top: 10px;
         gap: 16px 0;
         padding: 12px;
         place-content: unset;
@@ -255,7 +272,8 @@
     .app_header_logoAndSearch {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        max-width: 100vw;
+        width: 100%;
     }
 
     .app_header_onSale_txt {
