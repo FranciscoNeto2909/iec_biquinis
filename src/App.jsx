@@ -14,7 +14,7 @@ import "./app.css"
 
 export default function App() {
   const cart = JSON.parse(localStorage.getItem('cart')) || []
-  const categories = ["Todos", "Biquínis e sungas", "maiôs", "Plus size", "cangas e roupas de praia", "Acessórios"]
+  const categories = ["Todos", "Biquínis e sungas", "maiôs", "Plus size", "cangas e roupas de praia", "Acessórios", "Pronta-entrega"]
 
   const onSaleBikinis = bikinis.sort((a, b) => {
     const aHasOffer = a.onSale === true;
@@ -60,6 +60,10 @@ export default function App() {
         setBikinisCategorie(bikinis.filter(bik => bik.name.toLowerCase().includes("canga") || bik.name.toLowerCase().includes("saia")))
       } else if (text.toLowerCase() === "acessórios") {
         setBikinisCategorie(bikinis.filter(bik => bik.name.toLowerCase().includes("viseira")))
+      } else if (text.toLowerCase() === "pronta-entrega") {
+        setBikinisCategorie(bikinis.filter((bik) => (
+          bik.colors.filter(item => item.inStock === true).length > 0
+        )))
       }
     }
   }
@@ -153,7 +157,7 @@ export default function App() {
       {window.innerWidth > 525 &&
         <>
           <section className="app_banner">
-            <img src={bannerDesk} style={{height:"auto", width:"100vw"}} alt="" className="app_banner_img" />
+            <img src={bannerDesk} style={{ height: "auto", width: "100vw" }} alt="" className="app_banner_img" />
           </section>
           <section className="app_categories">
             <div className="app_header_categories">
