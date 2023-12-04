@@ -47,6 +47,7 @@ import coqueirinho2 from "../assets/coqueirinho/coqueirinho2.jpg"
 import pipa1 from "../assets/pipa/pipa1.jpg"
 import pipa2 from "../assets/pipa/pipa2.jpg"
 import pipa3 from "../assets/pipa/pipa3.jpg"
+import pipa4 from "../assets/pipa/pipa4.jpg"
 import flecheiras1 from "../assets/flecheiras/flecheiras1.jpg"
 import cauipe1 from "../assets/cauípe/cauipe1.jpg"
 import cauipe2 from "../assets/cauípe/cauipe2.jpg"
@@ -62,6 +63,15 @@ import brisa1 from "../assets/brisa/brisa1.jpg"
 import cafune1 from "../assets/cafune/cafune1.jpg"
 import cafune2 from "../assets/cafune/cafune2.jpg"
 import cafune3 from "../assets/cafune/cafune3.jpg"
+import pamor1 from "../assets/praiadoamor/pamor1.jpg"
+import pamor2 from "../assets/praiadoamor/pamor2.jpg"
+import pamor3 from "../assets/praiadoamor/pamor3.jpg"
+import ica1 from "../assets/icaraizinho/ica1.jpg"
+import ica2 from "../assets/icaraizinho/ica2.jpg"
+import ica3 from "../assets/icaraizinho/ica3.jpg"
+import ica4 from "../assets/icaraizinho/ica4.jpg"
+import ica5 from "../assets/icaraizinho/ica5.jpg"
+
 
 export const bikinis = [
     {
@@ -111,8 +121,8 @@ export const bikinis = [
         name: "Canga",
         colors: [{
             name: "Preto Vibrante",
-            inStock: true,
-            sizes: [{ name: 'U', price: 70, inStock: true }]
+            inStock: false,
+            sizes: [{ name: 'U', price: 70, inStock: false }]
         }, {
             name: "Branco Paz e Amor",
             inStock: false,
@@ -574,7 +584,7 @@ export const bikinis = [
         },],
         onSale: false,
         discount: 0,
-        images: [pipa1, pipa2, pipa3]
+        images: [pipa1, pipa2, pipa3, pipa4]
     },
     {
         name: "Biquíni Flecheiras",
@@ -598,5 +608,130 @@ export const bikinis = [
         onSale: false,
         discount: 0,
         images: [flecheiras1]
+    },
+    {
+        name: "Biquíni praia do amor",
+        colors: [{
+            name: "Rosa neon",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 77, inStock: false },
+                { name: 'M', price: 77, inStock: false },
+                { name: 'G', price: 77, inStock: false }
+            ]
+        }, {
+            name: "Azul Celeste",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 77, inStock: false },
+                { name: 'M', price: 77, inStock: false },
+                { name: 'G', price: 77, inStock: false }
+            ]
+        }, {
+            name: "Verde Àgua",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 77, inStock: false },
+                { name: 'M', price: 77, inStock: false },
+                { name: 'G', price: 77, inStock: false }
+            ]
+        }, {
+            name: "Preto",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 77, inStock: false },
+                { name: 'M', price: 77, inStock: false },
+                { name: 'G', price: 77, inStock: false }
+            ]
+        }, {
+            name: "Vermelho",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 77, inStock: false },
+                { name: 'M', price: 77, inStock: false },
+                { name: 'G', price: 77, inStock: false }
+            ]
+        }, {
+            name: "Lilás",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 77, inStock: false },
+                { name: 'M', price: 77, inStock: false },
+                { name: 'G', price: 77, inStock: false }
+            ]
+        }, {
+            name: "laranja",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 77, inStock: false },
+                { name: 'M', price: 77, inStock: false },
+                { name: 'G', price: 77, inStock: false }
+            ]
+        }],
+        onSale: false,
+        discount: 0,
+        images: [pamor1,pamor2,pamor3]
+    },
+    {
+        name: "Biquíni icaraizinho",
+        colors: [{
+            name: "Verde Água",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 87, inStock: false },
+                { name: 'M', price: 87, inStock: false },
+                { name: 'G', price: 87, inStock: false },
+                { name: 'GG', price: 87, inStock: false }
+            ]
+        }, {
+            name: "Azul Celeste",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 87, inStock: false },
+                { name: 'M', price: 87, inStock: false },
+                { name: 'G', price: 87, inStock: false },
+                { name: 'GG', price: 87, inStock: false }
+
+            ]
+        },{
+            name: "Preto",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 87, inStock: false },
+                { name: 'M', price: 87, inStock: false },
+                { name: 'G', price: 87, inStock: false },
+                { name: 'GG', price: 87, inStock: false }
+            ]
+        },{
+            name: "Vermelho",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 87, inStock: false },
+                { name: 'M', price: 87, inStock: false },
+                { name: 'G', price: 87, inStock: false },
+                { name: 'GG', price: 87, inStock: false }
+            ]
+        },{
+            name: "Laranja",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 87, inStock: false },
+                { name: 'M', price: 87, inStock: false },
+                { name: 'G', price: 87, inStock: false },
+                { name: 'GG', price: 87, inStock: false }
+            ]
+        },{
+            name: "Lilás",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 87, inStock: false },
+                { name: 'M', price: 87, inStock: false },
+                { name: 'G', price: 87, inStock: false },
+                { name: 'GG', price: 87, inStock: false }
+            ]
+        }],
+        onSale: false,
+        discount: 0,
+        images: [ica1,ica2,ica3,ica4,ica5]
     }
 ]
