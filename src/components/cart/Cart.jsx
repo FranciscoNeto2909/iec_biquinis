@@ -10,7 +10,7 @@ import Select from "../Select/Select";
 export default function Cart({ handleCloseCart, handleSetMsg }) {
     const [closing, setClosing] = useState(false)
     const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || [])
-
+    const cupoms = ["INDICAÇÃO5", "PRIMEIRACOMPRA", "ANIVERDEZEMBRO"]
     const [address, setAddress] = useState(addressAvailables[0])
     const [cupom, setCupom] = useState("")
     const [price, setPrice] = useState(0)
@@ -19,10 +19,8 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
         `*${item.name}*%0A*Tamanho:*%20${item.size}%0A*Cor:*%20${item.color}%0A*Quantidade:*%20${item.quant}%0A*Valor:*%20R$%20${item.price + address.price - 1 +",90"}`
     )).join("%0A%0A");
 
-    const cupom1 = "INDICAÇÃO5";
-    const cupom2 = "PRIMEIRACOMPRA";
 
-    const text = `-----------------%0A%20%20%20%20*Novo%20Pedido*%0A-----------------%0A%0A${items}%0A%0A*Endereço:*%20${address.name}%0A*Frete:*%20R${address.price === 0 ? 'Grátis' : `$%20${address.price}`}%0A*Cupom:*%20${cupom.toUpperCase() === cupom1 || cupom.toUpperCase() === cupom2 ? cupom : "nenhum"}%0A*Total:*%20R$%20${price - 1 + address.price},90`
+    const text = `-----------------%0A%20%20%20%20*Novo%20Pedido*%0A-----------------%0A%0A${items}%0A%0A*Endereço:*%20${address.name}%0A*Frete:*%20R${address.price === 0 ? 'Grátis' : `$%20${address.price}`}%0A*Cupom:*%20${cupoms.filter(cup => cup === cupom.toUpperCase()).length > 0 ? cupom : "nenhum"}%0A*Total:*%20R$%20${price - 1 + address.price},90`
 
     function handleCloseBtn() {
         setClosing(true)
