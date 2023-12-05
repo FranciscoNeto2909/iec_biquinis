@@ -534,8 +534,8 @@ export const bikinis = [
                 { name: 'P', price: 100, inStock: true },
                 { name: 'GG', price: 100, inStock: false }]
         },],
-        onSale: false,
-        discount: 0,
+        onSale: true,
+        discount: 10,
         images: [coqueirinho1, coqueirinho2]
     },
     {
@@ -582,8 +582,8 @@ export const bikinis = [
                 { name: 'GG', price: 110, inStock: false }
             ]
         },],
-        onSale: false,
-        discount: 0,
+        onSale: true,
+        discount: 9,
         images: [pipa1, pipa2, pipa3, pipa4]
     },
     {

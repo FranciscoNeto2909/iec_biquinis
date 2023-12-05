@@ -19,7 +19,7 @@ export default function Card({ bik, handleOpenModal }) {
                         {bik.onSale ?
                             <div className="card_price_bf">
                                 <div>
-                                    <span className="card_price_offer">Oferta Black Friday</span>
+                                    <span className="card_price_offer">Oferta</span>
                                     <span className="card_price_discount_value">-{bik.discount}%</span>
                                     </div>
                                 <div className="card_price_discount">
