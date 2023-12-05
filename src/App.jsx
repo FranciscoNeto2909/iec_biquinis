@@ -61,9 +61,8 @@ export default function App() {
       } else if (text.toLowerCase() === "acessórios") {
         setBikinisCategorie(bikinis.filter(bik => bik.name.toLowerCase().includes("viseira")))
       } else if (text.toLowerCase() === "pronta-entrega") {
-        setBikinisCategorie(bikinis.filter((bik) => (
-          bik.colors.filter(item => item.inStock === true).length > 0
-        )))
+        window.location.href = "https://wa.me/c/558596585581"
+        setSelectedCat(0)
       }
     }
   }
