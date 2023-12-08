@@ -264,8 +264,8 @@ export const bikinis = [
             inStock: true,
             sizes: [{ name: 'M', price: 60, inStock: true }]
         }],
-        onSale: false,
-        discount: 0,
+        onSale: true,
+        discount: 10,
         images: [sunga1, sunga2]
     },
     {
@@ -425,8 +425,8 @@ export const bikinis = [
                 { name: 'GG', price: 110, inStock: false },
                 { name: 'XG', price: 110, inStock: false }]
         }],
-        onSale: false,
-        discount: 0,
+        onSale: true,
+        discount: 15,
         images: [noronha1, noronha2, noronha3]
     },
     {
@@ -494,8 +494,8 @@ export const bikinis = [
             inStock: false,
             sizes: [{ name: 'M', price: 80, inStock: false }]
         }],
-        onSale: false,
-        discount: 0,
+        onSale: true,
+        discount: 15,
         images: [aguas1, aguas2, aguas3]
     },
     {
