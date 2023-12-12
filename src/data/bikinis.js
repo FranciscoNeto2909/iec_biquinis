@@ -102,16 +102,16 @@ export const bikinis = [
         colors: [{
             name: "Preto",
             inStock: true,
-            sizes: [{ name: 'U', price: 40, inStock: true }]
+            sizes: [{ name: 'U', price: 39, inStock: true }]
         }, {
             name: "Rosa",
             inStock: true,
-            sizes: [{ name: 'U', price: 40, inStock: true }]
+            sizes: [{ name: 'U', price: 39, inStock: true }]
         }
             , {
             name: "Off White",
             inStock: true,
-            sizes: [{ name: 'U', price: 40, inStock: true }]
+            sizes: [{ name: 'U', price: 39, inStock: true }]
         },],
         onSale: false,
         discount: 0,
@@ -156,7 +156,7 @@ export const bikinis = [
         colors: [{
             name: "Branco",
             inStock: true,
-            sizes: [{ name: 'U', price: 90, inStock: true }]
+            sizes: [{ name: 'U', price: 84, inStock: true }]
         }],
         onSale: false,
         discount: 0,
@@ -168,18 +168,18 @@ export const bikinis = [
             name: "Geométrica",
             inStock: false,
             sizes: [
-                { name: 'P', price: 130, inStock: false },
-                { name: 'M', price: 130, inStock: false },
-                { name: 'G', price: 130, inStock: false },
-                { name: 'GG', price: 130, inStock: false }],
+                { name: 'P', price: 125, inStock: false },
+                { name: 'M', price: 125, inStock: false },
+                { name: 'G', price: 125, inStock: false },
+                { name: 'GG', price: 125, inStock: false }],
         }, {
             name: "Onça Azul",
             inStock: false,
             sizes: [
-                { name: 'P', price: 130, inStock: false },
-                { name: 'M', price: 130, inStock: false },
-                { name: 'G', price: 130, inStock: false },
-                { name: 'GG', price: 130, inStock: false }],
+                { name: 'P', price: 125, inStock: false },
+                { name: 'M', price: 125, inStock: false },
+                { name: 'G', price: 125, inStock: false },
+                { name: 'GG', price: 125, inStock: false }],
         }],
         onSale: false,
         discount: 0,
@@ -191,22 +191,22 @@ export const bikinis = [
             name: "Preto",
             inStock: false,
             sizes: [
-                { name: 'P', price: 130, inStock: false },
-                { name: 'M', price: 130, inStock: false },
-                { name: 'G', price: 130, inStock: false },
-                { name: 'GG', price: 130, inStock: false },
-                { name: 'XG', price: 130, inStock: false }
+                { name: 'P', price: 125, inStock: false },
+                { name: 'M', price: 125, inStock: false },
+                { name: 'G', price: 125, inStock: false },
+                { name: 'GG', price: 125, inStock: false },
+                { name: 'XG', price: 125, inStock: false }
 
             ]
         }, {
             name: "Azul",
             inStock: false,
             sizes: [
-                { name: 'P', price: 130, inStock: false },
-                { name: 'M', price: 130, inStock: false },
-                { name: 'G', price: 130, inStock: false },
-                { name: 'GG', price: 130, inStock: false },
-                { name: 'XG', price: 130, inStock: false }
+                { name: 'P', price: 125, inStock: false },
+                { name: 'M', price: 125, inStock: false },
+                { name: 'G', price: 125, inStock: false },
+                { name: 'GG', price: 125, inStock: false },
+                { name: 'XG', price: 125, inStock: false }
 
             ]
         }],
@@ -219,11 +219,11 @@ export const bikinis = [
         colors: [{
             name: "Rosa e Preto",
             inStock: true,
-            sizes: [{ name: 'M', price: 110, inStock: true }]
+            sizes: [{ name: 'M', price: 105, inStock: true }]
         }, {
             name: "Preto e Branco",
             inStock: false,
-            sizes: [{ name: 'M', price: 110, inStock: false }]
+            sizes: [{ name: 'M', price: 105, inStock: false }]
         },],
         onSale: false,
         discount: 0,
@@ -235,37 +235,45 @@ export const bikinis = [
             name: "Azul Marinho",
             inStock: true,
             sizes: [
-                { name: 'P', price: 60, inStock: false },
-                { name: 'M', price: 60, inStock: true },
-                { name: 'G', price: 60, inStock: false },
-                { name: 'GG', price: 60, inStock: false }]
+                { name: 'P', price: 59, inStock: false },
+                { name: 'M', price: 59, inStock: true },
+                { name: 'G', price: 59, inStock: false },
+                { name: 'GG', price: 59, inStock: false }]
         }, {
             name: "Azul Claro",
             inStock: false,
             sizes: [
-                { name: 'P', price: 60, inStock: false },
-                { name: 'M', price: 60, inStock: false },
-                { name: 'G', price: 60, inStock: false },
-                { name: 'GG', price: 60, inStock: false }]
+                { name: 'P', price: 59, inStock: false },
+                { name: 'M', price: 59, inStock: false },
+                { name: 'G', price: 59, inStock: false },
+                { name: 'GG', price: 59, inStock: false }]
         }, {
             name: "Branco",
             inStock: false,
             sizes: [
-                { name: 'P', price: 60, inStock: false },
-                { name: 'M', price: 60, inStock: false },
-                { name: 'G', price: 60, inStock: false },
-                { name: 'GG', price: 60, inStock: false }]
+                { name: 'P', price: 59, inStock: false },
+                { name: 'M', price: 59, inStock: false },
+                { name: 'G', price: 59, inStock: false },
+                { name: 'GG', price: 59, inStock: false }]
         }, {
             name: "Vermelho",
             inStock: false,
-            sizes: [{ name: 'M', price: 60, inStock: false }]
+            sizes: [
+                { name: 'P', price: 59, inStock: false },
+                { name: 'M', price: 59, inStock: false },
+                { name: 'G', price: 59, inStock: false },
+                { name: 'GG', price: 59, inStock: false }]
         }, {
             name: "Preto",
             inStock: true,
-            sizes: [{ name: 'M', price: 60, inStock: true }]
+            sizes: [
+                { name: 'P', price: 59, inStock: false },
+                { name: 'M', price: 59, inStock: true },
+                { name: 'G', price: 59, inStock: false },
+                { name: 'GG', price: 59, inStock: false }]
         }],
-        onSale: true,
-        discount: 10,
+        onSale: false,
+        discount: 0,
         images: [sunga1, sunga2]
     },
     {
@@ -273,19 +281,19 @@ export const bikinis = [
         colors: [{
             name: "Verde Bebê",
             inStock: false,
-            sizes: [{ name: 'M', price: 76, inStock: false }]
+            sizes: [{ name: 'M', price: 70, inStock: false }]
         }, {
             name: "Vermelho",
             inStock: false,
-            sizes: [{ name: 'M', price: 76, inStock: false }]
+            sizes: [{ name: 'M', price: 70, inStock: false }]
         }, {
             name: "Azul Marinho",
             inStock: false,
-            sizes: [{ name: 'M', price: 76, inStock: false }]
+            sizes: [{ name: 'M', price: 70, inStock: false }]
         }, {
             name: "Vermelho",
             inStock: false,
-            sizes: [{ name: 'M', price: 76, inStock: false }]
+            sizes: [{ name: 'M', price: 70, inStock: false }]
         }],
         onSale: false,
         discount: 0,
@@ -296,19 +304,19 @@ export const bikinis = [
         colors: [{
             name: "Fucsia e Laranja",
             inStock: true,
-            sizes: [{ name: 'P', price: 90, inStock: true }]
+            sizes: [{ name: 'P', price: 79, inStock: true }]
         }, {
             name: "Preto com Rosa",
             inStock: false,
-            sizes: [{ name: 'P', price: 90, inStock: false }]
+            sizes: [{ name: 'P', price: 79, inStock: false }]
         }, {
             name: "Rosa com Verde Bebê",
             inStock: false,
-            sizes: [{ name: 'P', price: 90, inStock: false }]
+            sizes: [{ name: 'P', price: 79, inStock: false }]
         }, {
             name: "Verde Bebê com Preto",
             inStock: false,
-            sizes: [{ name: 'P', price: 90, inStock: false }]
+            sizes: [{ name: 'P', price: 79, inStock: false }]
         }],
         onSale: false,
         discount: 0,
@@ -319,19 +327,19 @@ export const bikinis = [
         colors: [{
             name: "Rosa Neon",
             inStock: false,
-            sizes: [{ name: 'G', price: 100, inStock: false }]
+            sizes: [{ name: 'G', price: 97, inStock: false }]
         }, {
             name: "Laranja",
             inStock: false,
-            sizes: [{ name: 'G', price: 100, inStock: false }]
+            sizes: [{ name: 'G', price: 97, inStock: false }]
         }, {
             name: "Preto",
             inStock: false,
-            sizes: [{ name: 'G', price: 100, inStock: false }]
+            sizes: [{ name: 'G', price: 97, inStock: false }]
         }, {
             name: "Vermelho",
             inStock: false,
-            sizes: [{ name: 'G', price: 100, inStock: false }]
+            sizes: [{ name: 'G', price: 97, inStock: false }]
         }],
         onSale: false,
         discount: 0,
@@ -342,27 +350,27 @@ export const bikinis = [
         colors: [{
             name: "Azul",
             inStock: false,
-            sizes: [{ name: 'P', price: 76, inStock: false }]
+            sizes: [{ name: 'P', price: 74, inStock: false }]
         }, {
             name: "Vermelho",
             inStock: false,
-            sizes: [{ name: 'P', price: 76, inStock: false }]
+            sizes: [{ name: 'P', price: 74, inStock: false }]
         }, {
             name: "Rosa",
             inStock: false,
-            sizes: [{ name: 'P', price: 76, inStock: false }]
+            sizes: [{ name: 'P', price: 74, inStock: false }]
         }, {
             name: "Preto",
             inStock: false,
-            sizes: [{ name: 'P', price: 76, inStock: false }]
+            sizes: [{ name: 'P', price: 74, inStock: false }]
         }, {
             name: "Verde Bandeira",
             inStock: false,
-            sizes: [{ name: 'P', price: 76, inStock: false }]
+            sizes: [{ name: 'P', price: 74, inStock: false }]
         }, {
             name: "Verde Bebê",
             inStock: false,
-            sizes: [{ name: 'P', price: 76, inStock: false }]
+            sizes: [{ name: 'P', price: 74, inStock: false }]
         }],
         onSale: false,
         discount: 0,
@@ -374,59 +382,59 @@ export const bikinis = [
             name: "Lilás",
             inStock: true,
             sizes: [
-                { name: 'P', price: 110, inStock: false },
-                { name: 'M', price: 110, inStock: false },
-                { name: 'G', price: 110, inStock: true },
-                { name: 'GG', price: 110, inStock: false },
-                { name: 'XG', price: 110, inStock: false }]
+                { name: 'P', price: 99, inStock: false },
+                { name: 'M', price: 99, inStock: false },
+                { name: 'G', price: 99, inStock: true },
+                { name: 'GG', price: 99, inStock: false },
+                { name: 'XG', price: 99, inStock: false }]
         }, {
             name: "Laranja",
             inStock: false,
             sizes: [
-                { name: 'P', price: 110, inStock: false },
-                { name: 'M', price: 110, inStock: false },
-                { name: 'G', price: 110, inStock: false },
-                { name: 'GG', price: 110, inStock: false },
-                { name: 'XG', price: 110, inStock: false }]
+                { name: 'P', price: 99, inStock: false },
+                { name: 'M', price: 99, inStock: false },
+                { name: 'G', price: 99, inStock: false },
+                { name: 'GG', price: 99, inStock: false },
+                { name: 'XG', price: 99, inStock: false }]
         }, {
             name: "Rosa Neon",
             inStock: false,
             sizes: [
-                { name: 'P', price: 110, inStock: false },
-                { name: 'M', price: 110, inStock: false },
-                { name: 'G', price: 110, inStock: false },
-                { name: 'GG', price: 110, inStock: false },
-                { name: 'XG', price: 110, inStock: false }]
+                { name: 'P', price: 99, inStock: false },
+                { name: 'M', price: 99, inStock: false },
+                { name: 'G', price: 99, inStock: false },
+                { name: 'GG', price: 99, inStock: false },
+                { name: 'XG', price: 99, inStock: false }]
         }, {
             name: "Verde Neon",
             inStock: false,
             sizes: [
-                { name: 'P', price: 110, inStock: false },
-                { name: 'M', price: 110, inStock: false },
-                { name: 'G', price: 110, inStock: false },
-                { name: 'GG', price: 110, inStock: false },
-                { name: 'XG', price: 110, inStock: false }]
+                { name: 'P', price: 99, inStock: false },
+                { name: 'M', price: 99, inStock: false },
+                { name: 'G', price: 99, inStock: false },
+                { name: 'GG', price: 99, inStock: false },
+                { name: 'XG', price: 99, inStock: false }]
         }, {
             name: "Verde Bebê",
             inStock: false,
             sizes: [
-                { name: 'P', price: 110, inStock: false },
-                { name: 'M', price: 110, inStock: false },
-                { name: 'G', price: 110, inStock: false },
-                { name: 'GG', price: 110, inStock: false },
-                { name: 'XG', price: 110, inStock: false }]
+                { name: 'P', price: 99, inStock: false },
+                { name: 'M', price: 99, inStock: false },
+                { name: 'G', price: 99, inStock: false },
+                { name: 'GG', price: 99, inStock: false },
+                { name: 'XG', price: 99, inStock: false }]
         }, {
             name: "Azul Marinho",
             inStock: false,
             sizes: [
-                { name: 'P', price: 110, inStock: false },
-                { name: 'M', price: 110, inStock: false },
-                { name: 'G', price: 110, inStock: false },
-                { name: 'GG', price: 110, inStock: false },
-                { name: 'XG', price: 110, inStock: false }]
+                { name: 'P', price: 99, inStock: false },
+                { name: 'M', price: 99, inStock: false },
+                { name: 'G', price: 99, inStock: false },
+                { name: 'GG', price: 99, inStock: false },
+                { name: 'XG', price: 99, inStock: false }]
         }],
-        onSale: true,
-        discount: 15,
+        onSale: false,
+        discount: 0,
         images: [noronha1, noronha2, noronha3]
     },
     {
@@ -435,36 +443,36 @@ export const bikinis = [
             name: "Preto",
             inStock: true,
             sizes: [
-                { name: 'P', price: 80, inStock: true },
-                { name: 'M', price: 80, inStock: false }
+                { name: 'P', price: 76, inStock: true },
+                { name: 'M', price: 76, inStock: false }
             ]
         }, {
             name: "Lilás",
             inStock: false,
             sizes: [
-                { name: 'P', price: 80, inStock: false },
-                { name: 'M', price: 80, inStock: false }
+                { name: 'P', price: 76, inStock: false },
+                { name: 'M', price: 76, inStock: false }
             ]
         }, {
             name: "Vermelho",
             inStock: true,
             sizes: [
-                { name: 'P', price: 80, inStock: false },
-                { name: 'M', price: 80, inStock: true }
+                { name: 'P', price: 76, inStock: false },
+                { name: 'M', price: 76, inStock: true }
             ]
         }, {
             name: "Rosa Neon",
             inStock: false,
             sizes: [
-                { name: 'P', price: 80, inStock: false },
-                { name: 'M', price: 80, inStock: false }
+                { name: 'P', price: 76, inStock: false },
+                { name: 'M', price: 76, inStock: false }
             ]
         }, {
             name: "Azul Celeste",
             inStock: false,
             sizes: [
-                { name: 'P', price: 80, inStock: false },
-                { name: 'M', price: 80, inStock: false }
+                { name: 'P', price: 76, inStock: false },
+                { name: 'M', price: 76, inStock: false }
             ]
         }],
         onSale: false,
@@ -476,26 +484,26 @@ export const bikinis = [
         colors: [{
             name: "Lilás",
             inStock: false,
-            sizes: [{ name: 'M', price: 80, inStock: false }]
+            sizes: [{ name: 'M', price: 76, inStock: false }]
         }, {
             name: "Azul Celeste",
             inStock: true,
-            sizes: [{ name: 'M', price: 80, inStock: true }]
+            sizes: [{ name: 'M', price: 76, inStock: true }]
         }, {
             name: "Rosa Neon",
             inStock: false,
-            sizes: [{ name: 'M', price: 80, inStock: false }]
+            sizes: [{ name: 'M', price: 76, inStock: false }]
         }, {
             name: "Verde Bebê",
             inStock: false,
-            sizes: [{ name: 'M', price: 80, inStock: false }]
+            sizes: [{ name: 'M', price: 76, inStock: false }]
         }, {
             name: "Verde Neon",
             inStock: false,
-            sizes: [{ name: 'M', price: 80, inStock: false }]
+            sizes: [{ name: 'M', price: 76, inStock: false }]
         }],
-        onSale: true,
-        discount: 15,
+        onSale: false,
+        discount: 0,
         images: [aguas1, aguas2, aguas3]
     },
     {
@@ -503,23 +511,23 @@ export const bikinis = [
         colors: [{
             name: "Vermelho",
             inStock: false,
-            sizes: [{ name: 'M', price: 80, inStock: false }]
+            sizes: [{ name: 'M', price: 79, inStock: false }]
         }, {
             name: "Preto",
             inStock: true,
-            sizes: [{ name: 'M', price: 80, inStock: true }]
+            sizes: [{ name: 'M', price: 79, inStock: true }]
         }, {
             name: "Verde Neon",
             inStock: false,
-            sizes: [{ name: 'M', price: 80, inStock: false }]
+            sizes: [{ name: 'M', price: 79, inStock: false }]
         }, {
             name: "Rosa Neon",
             inStock: true,
-            sizes: [{ name: 'M', price: 80, inStock: true }]
+            sizes: [{ name: 'M', price: 79, inStock: true }]
         }, {
             name: "Azul Celeste",
             inStock: false,
-            sizes: [{ name: 'M', price: 80, inStock: false }]
+            sizes: [{ name: 'M', price: 79, inStock: false }]
         }],
         onSale: false,
         discount: 0,
@@ -531,11 +539,11 @@ export const bikinis = [
             name: "Vermelho",
             inStock: true,
             sizes: [
-                { name: 'P', price: 100, inStock: true },
-                { name: 'GG', price: 100, inStock: false }]
+                { name: 'P', price: 88, inStock: true },
+                { name: 'GG', price: 88, inStock: false }]
         },],
-        onSale: true,
-        discount: 10,
+        onSale: false,
+        discount: 0,
         images: [coqueirinho1, coqueirinho2]
     },
     {
@@ -544,28 +552,28 @@ export const bikinis = [
             name: "Preto",
             inStock: true,
             sizes: [
-                { name: 'M', price: 110, inStock: false },
-                { name: 'G', price: 110, inStock: true }]
+                { name: 'M', price: 99, inStock: false },
+                { name: 'G', price: 99, inStock: true }]
         }, {
             name: "Laranja",
             inStock: true,
             sizes: [
-                { name: 'M', price: 110, inStock: true },
-                { name: 'G', price: 110, inStock: false }
+                { name: 'M', price: 99, inStock: true },
+                { name: 'G', price: 99, inStock: false }
             ]
         }, {
             name: "Roxo",
             inStock: true,
             sizes: [
-                { name: 'M', price: 110, inStock: true },
-                { name: 'G', price: 110, inStock: false }
+                { name: 'M', price: 99, inStock: true },
+                { name: 'G', price: 99, inStock: false }
             ]
         }, {
             name: "Rosa Neon",
             inStock: true,
             sizes: [
-                { name: 'M', price: 110, inStock: true },
-                { name: 'G', price: 110, inStock: false }
+                { name: 'M', price: 99, inStock: true },
+                { name: 'G', price: 99, inStock: false }
             ]
         }],
         onSale: false,
@@ -578,12 +586,12 @@ export const bikinis = [
             name: "Branco",
             inStock: true,
             sizes: [
-                { name: 'P', price: 110, inStock: true },
-                { name: 'GG', price: 110, inStock: false }
+                { name: 'P', price: 99, inStock: true },
+                { name: 'GG', price: 99, inStock: false }
             ]
         },],
-        onSale: true,
-        discount: 9,
+        onSale: false,
+        discount: 0,
         images: [pipa1, pipa2, pipa3, pipa4]
     },
     {
@@ -592,17 +600,17 @@ export const bikinis = [
             name: "Rosa",
             inStock: false,
             sizes: [
-                { name: 'P', price: 93, inStock: false },
-                { name: 'M', price: 93, inStock: false },
-                { name: 'G', price: 93, inStock: false }
+                { name: 'P', price: 80, inStock: false },
+                { name: 'M', price: 80, inStock: false },
+                { name: 'G', price: 80, inStock: false }
             ]
         }, {
             name: "Amarelo",
             inStock: false,
             sizes: [
-                { name: 'P', price: 93, inStock: false },
-                { name: 'M', price: 93, inStock: false },
-                { name: 'G', price: 93, inStock: false }
+                { name: 'P', price: 80, inStock: false },
+                { name: 'M', price: 80, inStock: false },
+                { name: 'G', price: 80, inStock: false }
             ]
         }],
         onSale: false,
