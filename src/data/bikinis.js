@@ -170,8 +170,8 @@ export const bikinis = [
         name: "Saia Brisa",
         colors: [{
             name: "Branco",
-            inStock: true,
-            sizes: [{ name: 'U', price: 84, inStock: true }]
+            inStock: false,
+            sizes: [{ name: 'U', price: 84, inStock: false }]
         }],
         onSale: false,
         discount: 0,
@@ -518,9 +518,9 @@ export const bikinis = [
         name: "Biquíni Uruaú",
         colors: [{
             name: "Preto",
-            inStock: true,
+            inStock: false,
             sizes: [
-                { name: 'P', price: 76, inStock: true },
+                { name: 'P', price: 76, inStock: false },
                 { name: 'M', price: 76, inStock: false }
             ]
         }, {
@@ -532,10 +532,10 @@ export const bikinis = [
             ]
         }, {
             name: "Vermelho",
-            inStock: true,
+            inStock: false,
             sizes: [
                 { name: 'P', price: 76, inStock: false },
-                { name: 'M', price: 76, inStock: true }
+                { name: 'M', price: 76, inStock: false }
             ]
         }, {
             name: "Rosa Neon",
