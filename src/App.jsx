@@ -59,7 +59,7 @@ export default function App() {
       } else if (text.toLowerCase() === "cangas e roupas de praia") {
         setBikinisCategorie(bikinis.filter(bik => bik.name.toLowerCase().includes("canga") || bik.name.toLowerCase().includes("saia")))
       } else if (text.toLowerCase() === "acessórios") {
-        setBikinisCategorie(bikinis.filter(bik => bik.name.toLowerCase().includes("viseira")))
+        setBikinisCategorie(bikinis.filter(bik => bik.name.toLowerCase().includes("viseira") || bik.name.toLowerCase().includes("bolsa")))
       } else if (text.toLowerCase() === "pronta-entrega") {
         window.location.href = "https://wa.me/c/558596585581"
         setSelectedCat(0)
