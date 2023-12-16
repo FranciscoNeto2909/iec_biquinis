@@ -140,6 +140,7 @@
 
 .modal_info_cupom_inpt {
     padding: 7px;
+    height: 37px;
     border: 1px solid #018B6A;
     border-radius: 6px;
     outline: none;
@@ -200,10 +201,17 @@
 }
 
 .modal_soldOff {
-    height: 86px;
+    margin-top: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.modal_soldOff_notice{
+    text-align: center;
+    color: #f00;
+    margin-bottom: 4px;
+    font-size: 14px;
 }
 
 .modal_soldOff_button {
@@ -328,7 +336,7 @@
     .modal_info {
         flex: 1;
         padding: 0;
-        gap: 8px;
+        gap: 6px;
         padding-top: 10px;
     }
 
@@ -336,10 +344,6 @@
         display: flex;
         flex-direction: row;
         gap: 12px;
-    }
-
-    .modal_info_quantAndAddress {
-        margin-top: 4px;
     }
 
     .modal_info_quant_buttons {
@@ -355,6 +359,7 @@
     }
 
     .modal_info_cupom {
+        height: 33px;
         max-width: 120px;
     }
 
@@ -370,8 +375,7 @@
     }
 
     .modal_soldOff {
-        margin-top: 4px;
-        height: auto;
+        margin-top: 0;
     }
 }
 

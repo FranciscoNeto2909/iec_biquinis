@@ -36,7 +36,6 @@ export default function Select({ ops, onClick, text, val }) {
         <div className="select_container">
             <label className="select_title" htmlFor="sel">{text}</label>
             <div className="select" id="sel" onClick={handleShowOptions}>{selected.name}</div>
-            {selected.inStock === false && <div className="select_notice">Item esgotado</div>}
             {showOptions &&
                 <div className="select_dropdown" ref={dropdownRef}>
                     {

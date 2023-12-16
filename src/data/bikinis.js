@@ -180,7 +180,7 @@ export const bikinis = [
     {
         name: "Saia Coral",
         colors: [{
-            name: "Xadres",
+            name: "Xadrez",
             inStock: false,
             sizes: [
                 { name: 'M', price: 70, inStock: false },
@@ -235,8 +235,8 @@ export const bikinis = [
                 { name: 'G', price: 107, inStock: false }
             ]
         }],
-        onSale: true,
-        discount: 8,
+        onSale: false,
+        discount: 0,
         images: [mel1, mel2, mel3, mel4]
     },
     {
