@@ -394,19 +394,31 @@ export const bikinis = [
         colors: [{
             name: "Fucsia e Laranja",
             inStock: true,
-            sizes: [{ name: 'P', price: 79, inStock: true }]
+            sizes: [
+                { name: 'P', price: 79, inStock: true },
+                { name: 'M', price: 79, inStock: false },
+                { name: 'G', price: 79, inStock: false }]
         }, {
             name: "Preto com Rosa",
             inStock: true,
-            sizes: [{ name: 'P', price: 79, inStock: true }]
+            sizes: [
+                { name: 'P', price: 79, inStock: false },
+                { name: 'M', price: 79, inStock: false },
+                { name: 'G', price: 79, inStock: true }]
         }, {
             name: "Rosa com Verde Bebê",
             inStock: false,
-            sizes: [{ name: 'P', price: 79, inStock: false }]
+            sizes: [
+                { name: 'P', price: 79, inStock: false },
+                { name: 'M', price: 79, inStock: false },
+                { name: 'G', price: 79, inStock: false }]
         }, {
             name: "Verde Bebê com Preto",
             inStock: false,
-            sizes: [{ name: 'P', price: 79, inStock: false }]
+            sizes: [
+                { name: 'P', price: 79, inStock: false },
+                { name: 'M', price: 79, inStock: false },
+                { name: 'G', price: 79, inStock: false }]
         }],
         onSale: false,
         discount: 0,

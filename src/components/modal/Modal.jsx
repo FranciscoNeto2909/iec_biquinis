@@ -13,7 +13,8 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
 
     const [itemQuant, setItemQuant] = useState(1)
     const [color, setColor] = useState(item.colors.filter(item => (item.inStock === true))[0] || item.colors[0])
-    const [size, setSize] = useState(color.sizes.filter(item => (item.inStock === true))[0] || item.size[0])
+    const [sizes, setSizes] = useState(item.colors.sizes)
+    const [size, setSize] = useState(color.sizes.filter(item => (item.inStock === true))[0] || color.sizes[0])
     const [price, setPrice] = useState(item.onSale ? realPrice - percent : item.colors[0].sizes[0].price)
     const [closing, setClosing] = useState(false)
     const [address, setAddress] = useState(addressAvailables[0])
@@ -43,7 +44,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
 
     function handleSetColor(op) {
         setColor(op)
-        setSize(op.sizes.filter(item => (item.inStock === true))[0] || item.size[0])
+        setSizes(op.sizes)
     }
 
     function handleSetSize(op) {
@@ -138,7 +139,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                             <Select ops={item.colors} text={"Cores Disponiveis"} onClick={handleSetColor} val={colorsVal} />
                         </div>
                         <div className="modal_info_sizes">
-                            <Select ops={color.sizes} text={"Tamanho"} onClick={handleSetSize} val={sizesVal} />
+                            <Select ops={sizes} text={"Tamanho"} onClick={handleSetSize} val={sizesVal} />
                         </div>
                     </div>
                     <div className="modal_info_quantAndAddress">
