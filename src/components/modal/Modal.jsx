@@ -133,7 +133,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                     <h2 className="modal_info_name">{item.name}</h2>
                     <div className="modal_info_selects">
                         <div className="modal_info_colors">
-                            <Select ops={item.colors} text={"Cores Disponiveis"} onClick={handleSetColor} />
+                            <Select ops={item.colors} text={"Cores Disponiveis"} onClick={handleSetColor} initial={color} />
                         </div>
                         <div className="modal_info_sizes">
                             <Select ops={color.sizes} text={"Tamanho"} onClick={handleSetSize} initial={size} />

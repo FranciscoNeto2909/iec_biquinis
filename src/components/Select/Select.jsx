@@ -32,10 +32,8 @@ export default function Select({ ops, onClick, text, initial }) {
     }, []);
 
     useEffect(() => {
-        if (initial !== undefined) {
-            setSelected(initial)
-        }
-    }, [initial])
+        setSelected(initial ?? ops[0])
+    }, [initial, ops])
 
     return (
         <div className="select_container">
