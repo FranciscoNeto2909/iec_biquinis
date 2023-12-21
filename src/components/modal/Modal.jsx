@@ -43,6 +43,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
 
     function handleSetColor(op) {
         setColor(op)
+        setSize(op.sizes[0])
     }
 
     function handleSetSize(op) {

@@ -1,17 +1,19 @@
 .card {
-    width: 200px;
+    background-color: #fff;
+    width: 210px;
     height: auto;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    box-shadow: 0 0 4px #ddd;
 }
 
 .card_img {
     width: 100%;
-    border-radius: 8px;
+    max-height: 263px;
 }
 
 .card_info {
@@ -19,6 +21,7 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 6px;
+    padding: 4px 8px 10px;
 }
 
 .card_title {
@@ -30,7 +33,7 @@
     display: flex;
     margin: 0 auto;
     align-items: flex-end;
-    text-wrap:nowrap;
+    text-wrap: nowrap;
     font-weight: bold;
     font-size: 18px;
 }
@@ -56,13 +59,13 @@
     font-size: 8px;
 }
 
-.card_price_discount_value{
+.card_price_discount_value {
     font-size: 12px;
     color: #f00;
     margin-left: 4px;
 }
 
-.discount_color{
+.discount_color {
     color: #f00 !important;
 }
 
@@ -76,7 +79,7 @@
     border-radius: 4px;
 }
 
-.card_price_discount{
+.card_price_discount {
     display: inline-block;
     color: #f00;
 }
@@ -104,5 +107,9 @@
 
     .card_portion {
         font-size: 10px;
+    }
+
+    .card_img{
+        max-height: 186px;
     }
 }

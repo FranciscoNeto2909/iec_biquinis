@@ -169,7 +169,7 @@
     overflow-x: hidden;
     display: flex;
     place-content: center;
-    gap: 24px 32px;
+    gap: 24px 20px;
     flex-wrap: wrap;
     padding: 24px;
 }
