@@ -470,11 +470,11 @@ export const bikinis = [
         name: "Biquíni Noronha",
         colors: [{
             name: "Lilás",
-            inStock: true,
+            inStock: false,
             sizes: [
                 { name: 'P', price: 99, inStock: false },
                 { name: 'M', price: 99, inStock: false },
-                { name: 'G', price: 99, inStock: true },
+                { name: 'G', price: 99, inStock: false },
                 { name: 'GG', price: 99, inStock: false },
                 { name: 'XG', price: 99, inStock: false }]
         }, {
