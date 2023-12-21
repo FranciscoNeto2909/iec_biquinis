@@ -3,6 +3,7 @@ import sunga2 from "../assets/sunga/sunga2.jpg"
 import prainha1 from "../assets/prainha/prainha1.jpg"
 import prainha2 from "../assets/prainha/prainha2.jpg"
 import prainha3 from "../assets/prainha/prainha3.jpg"
+import prainha4 from "../assets/prainha/prainha4.jpg"
 import viseira1 from "../assets/viseira/viseira1.jpg"
 import viseira2 from "../assets/viseira/viseira2.jpg"
 import viseira3 from "../assets/viseira/viseira3.jpg"
@@ -11,6 +12,7 @@ import viseira5 from "../assets/viseira/viseira5.jpg"
 import jeri1 from "../assets/jeri/jeri1.jpg"
 import jeri2 from "../assets/jeri/jeri2.jpg"
 import jeri3 from "../assets/jeri/jeri3.jpg"
+import jeri4 from "../assets/jeri/jeri4.jpg"
 import canoa1 from "../assets/canoa/canoa1.jpg"
 import canoa2 from "../assets/canoa/canoa2.jpg"
 import maragogi1 from "../assets/maragogi/maragogi1.jpg"
@@ -25,8 +27,10 @@ import mb3 from "../assets/morro_branco/morro3.jpg"
 import mb4 from "../assets/morro_branco/morro4.jpg"
 import mb5 from "../assets/morro_branco/morro5.jpg"
 import mb6 from "../assets/morro_branco/morro6.jpg"
-import maio1 from "../assets/maio/maio1.jpg"
-import maio2 from "../assets/maio/maio2.jpg"
+import paraiso1 from "../assets/paraiso/paraiso1.jpg"
+import paraiso2 from "../assets/paraiso/paraiso2.jpg"
+import paraiso3 from "../assets/paraiso/paraiso3.jpg"
+import paraiso4 from "../assets/paraiso/paraiso4.jpg"
 import canga1 from "../assets/canga/canga1.jpg"
 import canga2 from "../assets/canga/canga2.jpg"
 import canga3 from "../assets/canga/canga3.jpg"
@@ -36,6 +40,7 @@ import aguas2 from "../assets/aguas_belas/aguas2.jpg"
 import aguas3 from "../assets/aguas_belas/aguas3.jpg"
 import uruau1 from "../assets/uruau/uruau1.jpg"
 import uruau2 from "../assets/uruau/uruau2.jpg"
+import uruau3 from "../assets/uruau/uruau3.jpg"
 import iracema1 from "../assets/iracema/iracema1.jpg"
 import iracema2 from "../assets/iracema/iracema2.jpg"
 import iracema3 from "../assets/iracema/iracema3.jpg"
@@ -49,6 +54,7 @@ import pipa2 from "../assets/pipa/pipa2.jpg"
 import pipa3 from "../assets/pipa/pipa3.jpg"
 import pipa4 from "../assets/pipa/pipa4.jpg"
 import flecheiras1 from "../assets/flecheiras/flecheiras1.jpg"
+import flecheiras2 from "../assets/flecheiras/flecheiras2.jpg"
 import cauipe1 from "../assets/cauípe/cauipe1.jpg"
 import cauipe2 from "../assets/cauípe/cauipe2.jpg"
 import cauipe3 from "../assets/cauípe/cauipe3.jpg"
@@ -268,7 +274,7 @@ export const bikinis = [
         }],
         onSale: false,
         discount: 0,
-        images: [maio1, maio2]
+        images: [paraiso1, paraiso2, paraiso3, paraiso4]
     },
     {
         name: "Maiô Cauípe",
@@ -387,7 +393,7 @@ export const bikinis = [
         }],
         onSale: false,
         discount: 0,
-        images: [prainha1, prainha2, prainha3]
+        images: [prainha1, prainha2, prainha3, prainha4]
     },
     {
         name: "Biquíni Jeri",
@@ -422,7 +428,7 @@ export const bikinis = [
         }],
         onSale: false,
         discount: 0,
-        images: [jeri1, jeri2, jeri3]
+        images: [jeri1, jeri2, jeri3, jeri4]
     },
     {
         name: "Biquíni Canoa",
@@ -579,7 +585,7 @@ export const bikinis = [
         }],
         onSale: false,
         discount: 0,
-        images: [uruau1, uruau2]
+        images: [uruau1, uruau2, uruau3]
     },
     {
         name: "Biquíni Águas Belas",
@@ -721,7 +727,7 @@ export const bikinis = [
         }],
         onSale: false,
         discount: 0,
-        images: [flecheiras1]
+        images: [flecheiras1, flecheiras2]
     },
     {
         name: "Biquíni praia do amor",
