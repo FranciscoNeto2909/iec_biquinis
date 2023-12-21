@@ -115,8 +115,8 @@ export const bikinis = [
         }
             , {
             name: "Off White",
-            inStock: true,
-            sizes: [{ name: 'U', price: 39, inStock: true }]
+            inStock: false,
+            sizes: [{ name: 'U', price: 39, inStock: false }]
         },],
         onSale: false,
         discount: 0,
