@@ -31,7 +31,6 @@ export default function Select({ ops, onClick, text, val }) {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
-    
 
     return (
         <div className="select_container">
