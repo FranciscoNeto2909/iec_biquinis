@@ -180,7 +180,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                     </div>
                     {color.inStock && size.inStock ?
                         <div className="modal_info_buttons">
-                            <button type="button" title="adicionar ao carrinho" className="modal_info_button modal_info_button_cart" onClick={handleCartBtn}>Adicionar ao carrinho</button>
+                            <button type="button" title="adicionar ao carrinho" className="modal_info_button modal_info_button_cart" onClick={handleCartBtn}>Adicionar a sacola</button>
                             <a className="modal_info_button" title="finalizar" href={`https://wa.me/5585996585581?text=${text}`}>Finalizar pedido</a>
                         </div> :
                         <div className="modal_soldOff">
