@@ -2,10 +2,9 @@
 import { useState, useRef, useEffect } from "react"
 import "./select.css"
 
-export default function Select({ ops, onClick, text, val }) {
-    const [selected, setSelected] = useState(val ? val : ops[0])
+export default function Select({ ops, onClick, text, initial }) {
+    const [selected, setSelected] = useState(initial ? initial : ops[0])
     const [showOptions, setShowOptions] = useState(false)
-
     const dropdownRef = useRef(null);
 
     function handleShowOptions() {
@@ -31,6 +30,12 @@ export default function Select({ ops, onClick, text, val }) {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
+
+    useEffect(() => {
+        if (initial !== undefined) {
+            setSelected(initial)
+        }
+    }, [initial])
 
     return (
         <div className="select_container">
