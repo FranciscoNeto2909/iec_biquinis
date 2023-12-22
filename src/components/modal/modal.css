@@ -46,6 +46,18 @@
     color: #4A8996;
 }
 
+.modal_mobile_close {
+    width: 100%;
+    height: 33px;
+    margin-left: -12px;
+}
+
+.modal_mobile_close button {
+    border: none;
+    background-color: transparent;
+    color: #4A8996;
+}
+
 .modal_image {
     flex: 1;
     flex-shrink: 2;
@@ -55,7 +67,8 @@
 }
 
 .modal_info {
-    flex-shrink: 1;
+    width: 50%;
+    flex-shrink: 2;
     flex: 1;
     height: 100%;
     padding-top: 14px;
@@ -91,7 +104,7 @@
 }
 
 .modal_info_quant_buttons {
-    padding: 8px 0;
+    padding: 6px 0 8px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,11 +113,12 @@
 
 .modal_info_quant-btn1,
 .modal_info_quant-btn2 {
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     padding: 2px;
-    border-radius: 50%;
-    border: 1px outset #009474;
+    border-radius: 8px;
+    border: 1px solid #009474;
+    color: #007a60;
     background-color: transparent;
     cursor: pointer;
     display: flex;
@@ -128,6 +142,7 @@
 
 .modal_info_cupom {
     flex: 1;
+    max-width: 45%;
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -207,7 +222,7 @@
     justify-content: center;
 }
 
-.modal_soldOff_notice{
+.modal_soldOff_notice {
     text-align: center;
     color: #f00;
     margin-bottom: 4px;
@@ -272,16 +287,17 @@
         height: auto;
         max-height: 100%;
         overflow-y: scroll;
-        max-width: 100%;
+        overflow-x: hidden;
+        max-width: 375px;
         width: 100%;
         padding: 16px;
-        gap: 4px;
+        gap: 0;
         flex-direction: column;
     }
 
     .modal_image {
         flex: 1;
-        padding-top: 10px;
+        padding-top: 0;
         max-width: 100%;
     }
 
@@ -290,7 +306,29 @@
         flex-direction: column;
         gap: 12px;
         width: 100%;
-        padding: 0 24px;
+    }
+
+    .modal_info_selects {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .modal_info_quant_buttons {
+        padding: 5px 0 6px 0;
+    }
+
+    .modal_info_colors {
+        flex: 2;
+    }
+
+    .modal_info_sizes {
+        flex: 1;
+    }
+
+    .modal_info_cupom {
+        height: 33px;
+        max-width: 120px;
     }
 
     .modal_info_buttons {
@@ -323,13 +361,8 @@
 }
 
 @media (max-width: 525px) {
-    .modal_close {
-        top: 8px;
-        right: 12px;
-    }
-
     .modal_image {
-        margin-top: 6px;
+        margin-top: 0;
         max-height: 350px;
     }
 
@@ -338,29 +371,6 @@
         padding: 0;
         gap: 6px;
         padding-top: 10px;
-    }
-
-    .modal_info_selects {
-        display: flex;
-        flex-direction: row;
-        gap: 12px;
-    }
-
-    .modal_info_quant_buttons {
-        padding: 6px 0;
-    }
-
-    .modal_info_colors {
-        flex: 2;
-    }
-
-    .modal_info_sizes {
-        flex: 1;
-    }
-
-    .modal_info_cupom {
-        height: 33px;
-        max-width: 120px;
     }
 
     .modal_info_button {

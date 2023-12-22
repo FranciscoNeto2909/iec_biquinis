@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { AiOutlinePlus, AiOutlineMinus, AiOutlineClose } from "react-icons/ai"
+import { IoIosArrowBack } from "react-icons/io";
 import Select from "../Select/Select"
 import Carousel from "../carousel/Carousel"
 import "./modal.css"
@@ -8,8 +9,9 @@ import { addressAvailables } from "../../data/address"
 
 export default function Modal({ item, handleCloseModal, handleSetMsg }) {
 
-    const realPrice = item.colors[0].sizes[0].price
-    const percent = ((item.discount / 100).toFixed(2) * realPrice).toFixed(0)
+    const realPrice = useMemo(() => item.colors[0].sizes[0].price, [item.colors]);
+    const percent = useMemo(() => ((item.discount / 100).toFixed(2) * realPrice).toFixed(0), [item.discount, realPrice]);
+
 
     const [itemQuant, setItemQuant] = useState(1)
     const [color, setColor] = useState(item.colors.filter(item => (item.inStock === true))[0] || item.colors[0])
@@ -20,15 +22,15 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
     const [cupom, setCupom] = useState("")
     const cupoms = ["INDICAÇÃO5", "PRIMEIRACOMPRA", "ANIVERDEZEMBRO"]
 
-    const text = `------------------------------%0A%20%20%20%20*Novo%20Pedido*%0A------------------------------%0A%0A*${item.name}*%0A*Tamanho:*%20${size.name}%0A*Cor:*%20${color.name}%0A*Quantidade:*%20${itemQuant}%0A*Valor:*%20R$%20${price + address.price - 1 + ",90"}%0A%0A*Endereço:*%20R$%20${address.name}%0A*Frete:*%20R$%20${address.price === 0 ? "Grátis" : address.price}%0A%0A*Cupom:*%20${cupoms.filter(cup => cup === cupom.toUpperCase()).length > 0 ? cupom : "nenhum"}
+    const text = `------------------------------%0A%20%20%20%20*Novo%20Pedido*%0A------------------------------%0A%0A*${item.name}*%0A*Tamanho:*%20${size.name}%0A*Cor:*%20${color.name}%0A*Quantidade:*%20${itemQuant}%0A*Valor:*%20R$%20${price + address.price - 1 + ",90"}%0A%0A*Endereço:*%20${address.name}%0A*Frete:*%20${address.price === 0 ? "Grátis" : `R$%20${address.price}`}%0A%0A*Cupom:*%20${cupoms.filter(cup => cup === cupom.toUpperCase()).length > 0 ? cupom : "nenhum"}
     `
 
-    const soldOfftext = `------------------------------%0A%20%20%20%20*Nova%20Encomenda*%0A------------------------------%0A%0A*${item.name}*%0A*Tamanho:*%20${size.name}%0A*Cor:*%20${color.name}%0A*Quantidade:*%20${itemQuant}%0A*Valor:*%20R$%20${price + address.price - 1 + ",90"}%0A%0A*Endereço:*%20R$%20${address.name}%0A*Frete:*%20R$%20${address.price === 0 ? "Grátis" : address.price}%0A%0A*Cupom:*%20${cupoms.filter(cup => cup === cupom.toUpperCase()).length > 0 ? cupom : "nenhum"}
+    const soldOfftext = `------------------------------%0A%20%20%20%20*Nova%20Encomenda*%0A------------------------------%0A%0A*${item.name}*%0A*Tamanho:*%20${size.name}%0A*Cor:*%20${color.name}%0A*Quantidade:*%20${itemQuant}%0A*Valor:*%20R$%20${price + address.price - 1 + ",90"}%0A%0A*Endereço:*%20${address.name}%0A*Frete:*%20${address.price === 0 ? "Grátis" : `R$%20${address.price}`}%0A%0A*Cupom:*%20${cupoms.filter(cup => cup === cupom.toUpperCase()).length > 0 ? cupom : "nenhum"}
     `
 
 
     function handleIncreaseQuant() {
-        if (itemQuant < 100) {
+        if (itemQuant < 50) {
             setItemQuant(itemQuant + 1)
         }
     }
@@ -84,7 +86,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
         } else {
             setClosing(true)
             handleCloseModal()
-            handleSetMsg("Adicionado ao carrinho")
+            handleSetMsg("Adicionado a sacola")
             cart.push({
                 name: item.name,
                 size: size.name,
@@ -121,11 +123,18 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
     return (
         <div className={`modal_container ${closing && "close_modal"}`}>
             <div className={`modal`}>
-                <div className="modal_close">
-                    <button type="button" title="fechar" onClick={handleCloseBtn}>
-                        <AiOutlineClose size={22} />
-                    </button>
-                </div>
+                {window.innerWidth > 600 ?
+                    (<div className="modal_close">
+                        <button type="button" title="fechar" onClick={handleCloseBtn}>
+                            <AiOutlineClose size={22} />
+                        </button>
+                    </div>) :
+                    (<div className="modal_mobile_close">
+                        <button type="button" title="fechar" onClick={handleCloseBtn}>
+                            <IoIosArrowBack size={28} />
+                        </button>
+                    </div>)
+                }
                 <div className="modal_image">
                     <Carousel images={item.images} />
                 </div>

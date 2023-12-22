@@ -1,11 +1,9 @@
-/* eslint-disable react/prop-types */
-
-import { AiOutlineArrowRight } from "react-icons/ai"
-import "./cart.css"
 import { useEffect, useState } from "react";
 import CartCard from "../cartCard/CartCard";
 import { addressAvailables } from "../../data/address"
 import Select from "../Select/Select";
+import { IoIosArrowForward } from "react-icons/io";
+import "./cart.css"
 
 export default function Cart({ handleCloseCart, handleSetMsg }) {
     const [closing, setClosing] = useState(false)
@@ -16,11 +14,11 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
     const [price, setPrice] = useState(0)
 
     const items = cart.map(item => (
-        `*${item.name}*%0A*Tamanho:*%20${item.size}%0A*Cor:*%20${item.color}%0A*Quantidade:*%20${item.quant}%0A*Valor:*%20R$%20${item.price + address.price - 1 +",90"}`
+        `*${item.name}*%0A*Tamanho:*%20${item.size}%0A*Cor:*%20${item.color}%0A*Quantidade:*%20${item.quant}%0A*Valor:*%20R$%20${item.price - 1 + ",90"}`
     )).join("%0A%0A");
 
 
-    const text = `-----------------%0A%20%20%20%20*Novo%20Pedido*%0A-----------------%0A%0A${items}%0A%0A*Endereço:*%20${address.name}%0A*Frete:*%20R${address.price === 0 ? 'Grátis' : `$%20${address.price}`}%0A*Cupom:*%20${cupoms.filter(cup => cup === cupom.toUpperCase()).length > 0 ? cupom : "nenhum"}%0A*Total:*%20R$%20${price - 1 + address.price},90`
+    const text = `-----------------%0A%20%20%20%20*Novo%20Pedido*%0A-----------------%0A%0A${items}%0A%0A*Endereço:*%20${address.name}%0A*Frete:*%20 ${address.price === 0 ? 'Grátis' : `%20R$${address.price}`}%0A*Cupom:*%20${cupoms.filter(cup => cup === cupom.toUpperCase()).length > 0 ? cupom : "nenhum"}%0A*Total:*%20R$%20${price + address.price - 1},90`
 
     function handleCloseBtn() {
         setClosing(true)
@@ -90,7 +88,7 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
             <div className={`cart ${closing && "cart_close"}`}>
                 <div className="cart_header">
                     <button title="Fechar" type="button" className="cart_header_btn" onClick={handleCloseBtn}>
-                        <AiOutlineArrowRight size={20} />
+                        <IoIosArrowForward size={26} />
                     </button>
                 </div>
                 <div className="cart_body">
