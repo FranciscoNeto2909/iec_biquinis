@@ -3,12 +3,12 @@ import CartCard from "../cartCard/CartCard";
 import { addressAvailables } from "../../data/address"
 import Select from "../Select/Select";
 import { IoIosArrowForward } from "react-icons/io";
+import {cupoms} from "../../data/cupoms"
 import "./cart.css"
 
 export default function Cart({ handleCloseCart, handleSetMsg }) {
     const [closing, setClosing] = useState(false)
     const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || [])
-    const cupoms = ["INDICAÇÃO5", "PRIMEIRACOMPRA", "ANIVERDEZEMBRO"]
     const [address, setAddress] = useState(addressAvailables[0])
     const [cupom, setCupom] = useState("")
     const [price, setPrice] = useState(0)
@@ -112,7 +112,7 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
                                         </p>
                                     </div>
                                     <div className="cart_body_cupom">
-                                        <input value={cupom} onChange={e => setCupom(e.target.value.toUpperCase())} type="text" placeholder="cupom de desconto" autoComplete="none" />
+                                        <input value={cupom} onChange={e => setCupom(e.target.value.toUpperCase().trim())} type="text" placeholder="cupom de desconto" autoComplete="none" />
                                     </div>
                                     <a href={`https://wa.me/5585996585581?text=${text}`} className="cart_body_button" >Finalizar compra</a>
                                 </div>

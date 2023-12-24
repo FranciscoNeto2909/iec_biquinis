@@ -1,0 +1,1 @@
+export const cupoms = ["INDICAÇÃO5", "PRIMEIRACOMPRA", "ANIVERDEZEMBRO","NATAL10"]

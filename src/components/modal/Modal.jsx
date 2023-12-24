@@ -5,6 +5,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import Select from "../Select/Select"
 import Carousel from "../carousel/Carousel"
 import "./modal.css"
+import { cupoms } from "../../data/cupoms"
 import { addressAvailables } from "../../data/address"
 
 export default function Modal({ item, handleCloseModal, handleSetMsg }) {
@@ -20,7 +21,6 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
     const [closing, setClosing] = useState(false)
     const [address, setAddress] = useState(addressAvailables[0])
     const [cupom, setCupom] = useState("")
-    const cupoms = ["INDICAÇÃO5", "PRIMEIRACOMPRA", "ANIVERDEZEMBRO"]
 
     const text = `------------------------------%0A%20%20%20%20*Novo%20Pedido*%0A------------------------------%0A%0A*${item.name}*%0A*Tamanho:*%20${size.name}%0A*Cor:*%20${color.name}%0A*Quantidade:*%20${itemQuant}%0A*Valor:*%20R$%20${price + address.price - 1 + ",90"}%0A%0A*Endereço:*%20${address.name}%0A*Frete:*%20${address.price === 0 ? "Grátis" : `R$%20${address.price}`}%0A%0A*Cupom:*%20${cupoms.filter(cup => cup === cupom.toUpperCase()).length > 0 ? cupom : "nenhum"}
     `
@@ -166,7 +166,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                         </div>
                         <div className="modal_info_cupom">
                             <label htmlFor="cupom" className="modal_info_cupom_lbl">Cupom de desconto</label>
-                            <input type="text" value={cupom} onChange={e => setCupom(e.target.value.toUpperCase())} className="modal_info_cupom_inpt" name="cupom_input" id="cupom" placeholder="CUPOM" />
+                            <input type="text" value={cupom} onChange={e => setCupom(e.target.value.toUpperCase().trim())} className="modal_info_cupom_inpt" name="cupom_input" id="cupom" placeholder="CUPOM" />
                         </div>
                     </div>
                     <div className="modal_info_value">

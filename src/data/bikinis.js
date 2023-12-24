@@ -655,6 +655,69 @@ export const bikinis = [
         images: [coqueirinho1, coqueirinho2]
     },
     {
+        name: "Biquíni praia do amor",
+        colors: [{
+            name: "Rosa neon",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 77, inStock: false },
+                { name: 'M', price: 77, inStock: false },
+                { name: 'G', price: 77, inStock: false }
+            ]
+        }, {
+            name: "Azul Celeste",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 77, inStock: false },
+                { name: 'M', price: 77, inStock: false },
+                { name: 'G', price: 77, inStock: false }
+            ]
+        }, {
+            name: "Verde Àgua",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 77, inStock: false },
+                { name: 'M', price: 77, inStock: false },
+                { name: 'G', price: 77, inStock: false }
+            ]
+        }, {
+            name: "Preto",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 77, inStock: false },
+                { name: 'M', price: 77, inStock: false },
+                { name: 'G', price: 77, inStock: false }
+            ]
+        }, {
+            name: "Vermelho",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 77, inStock: false },
+                { name: 'M', price: 77, inStock: false },
+                { name: 'G', price: 77, inStock: false }
+            ]
+        }, {
+            name: "Lilás",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 77, inStock: false },
+                { name: 'M', price: 77, inStock: false },
+                { name: 'G', price: 77, inStock: false }
+            ]
+        }, {
+            name: "laranja",
+            inStock: false,
+            sizes: [
+                { name: 'P', price: 77, inStock: false },
+                { name: 'M', price: 77, inStock: false },
+                { name: 'G', price: 77, inStock: false }
+            ]
+        }],
+        onSale: false,
+        discount: 0,
+        images: [pamor1, pamor2, pamor3]
+    },
+    {
         name: "Biquíni Iracema",
         colors: [{
             name: "Preto",
@@ -728,69 +791,6 @@ export const bikinis = [
         onSale: false,
         discount: 0,
         images: [flecheiras1, flecheiras2]
-    },
-    {
-        name: "Biquíni praia do amor",
-        colors: [{
-            name: "Rosa neon",
-            inStock: false,
-            sizes: [
-                { name: 'P', price: 77, inStock: false },
-                { name: 'M', price: 77, inStock: false },
-                { name: 'G', price: 77, inStock: false }
-            ]
-        }, {
-            name: "Azul Celeste",
-            inStock: false,
-            sizes: [
-                { name: 'P', price: 77, inStock: false },
-                { name: 'M', price: 77, inStock: false },
-                { name: 'G', price: 77, inStock: false }
-            ]
-        }, {
-            name: "Verde Àgua",
-            inStock: false,
-            sizes: [
-                { name: 'P', price: 77, inStock: false },
-                { name: 'M', price: 77, inStock: false },
-                { name: 'G', price: 77, inStock: false }
-            ]
-        }, {
-            name: "Preto",
-            inStock: false,
-            sizes: [
-                { name: 'P', price: 77, inStock: false },
-                { name: 'M', price: 77, inStock: false },
-                { name: 'G', price: 77, inStock: false }
-            ]
-        }, {
-            name: "Vermelho",
-            inStock: false,
-            sizes: [
-                { name: 'P', price: 77, inStock: false },
-                { name: 'M', price: 77, inStock: false },
-                { name: 'G', price: 77, inStock: false }
-            ]
-        }, {
-            name: "Lilás",
-            inStock: false,
-            sizes: [
-                { name: 'P', price: 77, inStock: false },
-                { name: 'M', price: 77, inStock: false },
-                { name: 'G', price: 77, inStock: false }
-            ]
-        }, {
-            name: "laranja",
-            inStock: false,
-            sizes: [
-                { name: 'P', price: 77, inStock: false },
-                { name: 'M', price: 77, inStock: false },
-                { name: 'G', price: 77, inStock: false }
-            ]
-        }],
-        onSale: false,
-        discount: 0,
-        images: [pamor1, pamor2, pamor3]
     },
     {
         name: "Biquíni icaraizinho",
