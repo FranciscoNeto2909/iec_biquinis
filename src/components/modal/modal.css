@@ -222,13 +222,6 @@
     justify-content: center;
 }
 
-.modal_soldOff_notice {
-    text-align: center;
-    color: #f00;
-    margin-bottom: 4px;
-    font-size: 14px;
-}
-
 .modal_soldOff_button {
     text-align: center;
     display: block;

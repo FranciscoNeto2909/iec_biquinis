@@ -193,7 +193,6 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                             <a className="modal_info_button" title="finalizar" href={`https://wa.me/5585996585581?text=${text}`}>Finalizar pedido</a>
                         </div> :
                         <div className="modal_soldOff">
-                            <p className="modal_soldOff_notice">Item esgotado</p>
                             <a className="modal_soldOff_button" href={`https://wa.me/5585996585581?text=${soldOfftext}`}>Encomendar</a>
                         </div>
                     }
