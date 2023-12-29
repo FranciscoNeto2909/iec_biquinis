@@ -103,6 +103,7 @@
 @media (max-width : 425px) {
     .card {
         width: 49%;
+        height: auto;
     }
 
     .card_portion {
@@ -111,5 +112,6 @@
 
     .card_img{
         max-height: 200px;
+        aspect-ratio: 1/2;
     }
 }

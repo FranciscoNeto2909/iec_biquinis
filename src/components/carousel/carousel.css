@@ -10,12 +10,12 @@
 }
 
 .swiper-button-prev {
-    left: -2px !important;
+    left: 2px !important;
     transform: scale(0.8);
 }
 
 .swiper-button-next {
-    right: -2px !important;
+    right: 2px !important;
     transform: scale(0.8);
 }
 

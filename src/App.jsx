@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Search from "./components/search/Search"
 import Card from "./components/card/Card"
 import Cart from "./components/cart/Cart"
@@ -32,12 +32,13 @@ export default function App() {
   const [selectedCat, setSelectedCat] = useState(0)
   const [bikinisCategorie, setBikinisCategorie] = useState(onSaleBikinis)
   const [filteredBikinis, setFilteredBikinis] = useState(bikinisCategorie)
+  const bodyRef = useRef(document.body)
 
   function handleSearch(text) {
     if (text === "") {
       setFilteredBikinis(bikinisCategorie)
     } else {
-      setFilteredBikinis(bikinis.filter(bik => bik.name.toLowerCase().includes(text)))
+      setFilteredBikinis(bikinis.filter(bik => bik.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(text)))
     }
   }
 
@@ -70,26 +71,26 @@ export default function App() {
   function handleOpenModal(item) {
     setIsModalOpened(true)
     setModalItem(item)
-    document.body.style.overflow = 'hidden';
+    bodyRef.current.style.overflow = 'hidden';
   }
 
   function handleCloseModal() {
     setTimeout(() => {
       setIsModalOpened(false)
       setModalItem([])
-      document.body.style.overflow = 'auto';
+      bodyRef.current.style.overflow = 'auto';
     }, 850);
   }
 
   function handleOpenCart() {
     setIsCartOpened(true)
-    document.body.style.overflow = 'hidden';
+    bodyRef.current.style.overflow = 'hidden';
   }
 
   function handleCloseCart() {
     setTimeout(() => {
       setIsCartOpened(false)
-      document.body.style.overflow = 'auto';
+      bodyRef.current.style.overflow = 'auto';
     }, 1600);
   }
 
