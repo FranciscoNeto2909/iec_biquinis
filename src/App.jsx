@@ -108,6 +108,7 @@ export default function App() {
     if (cart === null) {
       localStorage.setItem('cart', JSON.stringify([]))
     }
+
   }, [])
 
   useEffect(() => {

@@ -1,8 +1,11 @@
+/* eslint-disable react/prop-types */
 import "./card.css"
 export default function Card({ bik, handleOpenModal }) {
-    
+
     const price = bik.colors[0].sizes[0].price - 1
     const percent = ((bik.discount / 100).toFixed(2) * price).toFixed(0)
+
+    const inStock = bik.colors.filter(col => col.inStock === true).length > 0
 
     function handleSetItem() {
         handleOpenModal(bik)
@@ -10,6 +13,11 @@ export default function Card({ bik, handleOpenModal }) {
 
     return (
         <div className="card" onClick={handleSetItem}>
+            {inStock &&
+                <div className="card_inStock">
+                    Pronta-entrega
+                </div>
+            }
             <div className="card_image">
                 <img src={bik.images[0]} alt="biquini" className="card_img" />
             </div>
