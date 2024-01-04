@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 import "./card.css"
+import icon from "../../assets/icon.png"
+
 export default function Card({ bik, handleOpenModal }) {
 
     const price = bik.colors[0].sizes[0].price - 1
@@ -14,8 +16,9 @@ export default function Card({ bik, handleOpenModal }) {
     return (
         <div className="card" onClick={handleSetItem}>
             {inStock &&
-                <div className="card_inStock">
-                    Pronta-entrega
+                <div className="card_inStock" style={{ backgroundImage:`url(${icon})` }}>
+                    <p>Pronta</p>
+                    <p>entrega</p>
                 </div>
             }
             <div className="card_image">

@@ -11,22 +11,30 @@
     box-shadow: 0 0 4px #ddd;
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.01);
     box-shadow: 0 0 12px #0003;
 }
 
 .card_inStock {
+    height: 50px;
+    width: 50px;
+    background-image: url('../../assets/icon.png');
+    background-size: cover;
+    font-weight: 600;
     position: absolute;
-    background-color: #ff5c36;
     color: #fff;
-    text-shadow: 0 0 1px #000;
-    font-weight: 500;
-    padding: 4px;
-    font-size: 12px;
-    border-radius: 6px;
+    background-color: transparent;
     top: 8px;
     right: 8px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card_inStock p:first-child{
+    margin-top: 10px;
 }
 
 .card_img {
@@ -122,6 +130,14 @@
     .card {
         width: 49%;
         height: auto;
+    }
+
+    .card_inStock {
+        height: 40px;
+        width: 40px;
+        font-size: 8px;
+        top: 3px;
+        right: 3px;
     }
 
     .card_portion {
