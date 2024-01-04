@@ -132,6 +132,11 @@
         height: auto;
     }
 
+    .card:hover {
+        transform: scale(1.0);
+        box-shadow: unset;
+    }
+
     .card_inStock {
         height: 40px;
         width: 40px;
