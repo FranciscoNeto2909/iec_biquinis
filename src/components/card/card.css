@@ -134,7 +134,12 @@
 
     .card:hover {
         transform: scale(1.0);
-        box-shadow: unset;
+        box-shadow: 0 0 4px #ddd;
+
+    }
+
+    .card_info {
+        padding: 4px 7px 10px;
     }
 
     .card_inStock {
@@ -153,5 +158,11 @@
         width: 100%;
         max-height: auto;
         height: auto;
+    }
+
+    .card_price_discount_value {
+        font-size: 11px;
+        color: #f00;
+        margin-left: 4px;
     }
 }
