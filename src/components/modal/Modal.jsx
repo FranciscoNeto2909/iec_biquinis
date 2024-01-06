@@ -67,11 +67,11 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
 
     function finalPrice() {
         if (address.price === 0) {
-            return `R$: ${item.onSale ? (price * itemQuant) : (price * itemQuant) - 1},90`
+            return `R$: ${item.onSale ? ((price - 1) * itemQuant) : (price * itemQuant) - 1},90`
         } else if (address.price === undefined) {
-            return `R$: ${item.onSale ? (price * itemQuant) : (price * itemQuant) - 1},90 + Frete`
+            return `R$: ${item.onSale ? ((price - 1) * itemQuant) : (price * itemQuant) - 1},90 + Frete`
         } else {
-            return `R$: ${item.onSale ? (price * itemQuant) : (price * itemQuant) - 1 + address.price},90`
+            return `R$: ${item.onSale ? ((price - 1) * itemQuant) : (price * itemQuant) - 1 + address.price},90`
         }
     }
 
@@ -173,7 +173,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                         <div className="modal_info_value_prod">
                             <p className="modal_info_value_text">
                                 Produto:
-                                <span className={`modal_info_value_price ${item.onSale && "discount_color"}`}> R$ {item.onSale ? price : (price * itemQuant) - 1},90</span>
+                                <span className={`modal_info_value_price ${item.onSale && "discount_color"}`}> R$ {item.onSale ? price - 1 : (price * itemQuant) - 1},90</span>
                             </p>
                             <p className="modal_info_value_text">
                                 Frete:

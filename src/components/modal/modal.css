@@ -281,7 +281,7 @@
         max-height: 100%;
         overflow-y: scroll;
         overflow-x: hidden;
-        max-width: 375px;
+        max-width: 500px;
         width: 100%;
         padding: 16px;
         padding-bottom: 10px;
@@ -357,7 +357,6 @@
 @media (max-width: 525px) {
     .modal_image {
         margin-top: 0;
-        max-height: 350px;
     }
 
     .modal_info {

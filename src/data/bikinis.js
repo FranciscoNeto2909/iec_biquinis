@@ -242,7 +242,7 @@ export const bikinis = [
             ]
         }],
         onSale: true,
-        discount: 15,
+        discount: 10,
         images: [mel1, mel2, mel3, mel4]
     },
     {
@@ -317,7 +317,7 @@ export const bikinis = [
             sizes: [{ name: 'M', price: 105, inStock: false }]
         },],
         onSale: true,
-        discount: 10,
+        discount: 15,
         images: [icarai1, icarai2, icarai3, icarai4]
     },
     {

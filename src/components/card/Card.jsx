@@ -35,7 +35,7 @@ export default function Card({ bik, handleOpenModal }) {
                                 </div>
                                 <span className="card_price card_onSale">{price},<span className="card_price_decimal">90</span>
                                 </span>
-                                <span className="card_price_discount_value">{bik.discount}%OFF</span>
+                                <span className="card_price_discount_value">{bik.discount}% OFF</span>
                             </div> :
                             <>
                                 <span>R$ {price},<span className="card_price_decimal">90</span></span>
