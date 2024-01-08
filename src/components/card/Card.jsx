@@ -1,16 +1,16 @@
-/* eslint-disable react/prop-types */
 import "./card.css"
 import icon from "../../assets/icon.png"
+import { useNavigate } from "react-router-dom"
 
 export default function Card({ bik, handleOpenModal }) {
 
     const price = bik.colors[0].sizes[0].price - 1
     const percent = ((bik.discount / 100).toFixed(2) * price).toFixed(0)
-
+    const navigate = useNavigate()
     const inStock = bik.colors.filter(col => col.inStock === true).length > 0
 
     function handleSetItem() {
-        handleOpenModal(bik)
+        navigate(`/produto/${bik.name}`)
     }
 
     return (
