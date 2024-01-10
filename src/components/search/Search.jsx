@@ -32,7 +32,6 @@ export default function Serach({ handleSearch }) {
     return (
         <div className="search">
             <input className="search_text" autoComplete="none" type="text" value={search} placeholder="Pesquisar" onChange={e => handleChangeText(e)} />
-
             {!searching ?
                 <button className="search_button" onClick={handleSearchBtn}>
                     <AiOutlineSearch className="search_icon" size={20} />

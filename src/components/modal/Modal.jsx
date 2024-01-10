@@ -7,6 +7,7 @@ import Carousel from "../carousel/Carousel"
 import "./modal.css"
 import { cupoms } from "../../data/cupoms"
 import { addressAvailables } from "../../data/address"
+import { Link } from "react-router-dom";
 
 export default function Modal({ item, handleCloseModal, handleSetMsg }) {
 
@@ -121,83 +122,76 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
     }, [handleCloseModal]);
 
     return (
-        <div className={`modal_container ${closing && "close_modal"}`}>
-            <div className={`modal`}>
-                {window.innerWidth > 600 ?
-                    (<div className="modal_close">
-                        <button type="button" title="fechar" onClick={handleCloseBtn}>
-                            <AiOutlineClose size={22} />
-                        </button>
-                    </div>) :
-                    (<div className="modal_mobile_close">
-                        <button type="button" title="fechar" onClick={handleCloseBtn}>
-                            <IoIosArrowBack size={28} />
-                        </button>
-                    </div>)
-                }
-                <div className="modal_image">
-                    <Carousel images={item.images} />
-                </div>
-                <div className="modal_info">
-                    <h2 className="modal_info_name">{item.name}</h2>
-                    <div className="modal_info_selects">
-                        <div className="modal_info_colors">
-                            <Select ops={item.colors} text={"Cores Disponiveis"} onClick={handleSetColor} initial={color} />
-                        </div>
-                        <div className="modal_info_sizes">
-                            <Select ops={color.sizes} text={"Tamanho"} onClick={handleSetSize} initial={size} />
-                        </div>
+            <div className="modal_container">
+                {
+                    window.innerWidth > 600 && 
+                    <div className="modal_routes">
+                        <Link to="/">Voltar</Link>
                     </div>
-                    <div className="modal_info_quantAndAddress">
-                        <div className="modal_info_quant">
-                            <span className="modal_info_quant_title">Quantidade </span>
-                            <div className="modal_info_quant_buttons">
-                                <button type="button" title="Remover" className="modal_info_quant-btn1" onClick={handleDecreaseQuant}>
-                                    <AiOutlineMinus size={20} />
-                                </button>
-                                <span className="modal_info_quant_num">{itemQuant}</span>
-                                <button type="button" title="Adicionar" className="modal_info_quant-btn2" onClick={handleIncreaseQuant}>
-                                    <AiOutlinePlus size={20} />
-                                </button>
+                }
+                <div className={`modal`}>
+                    <div className="modal_image">
+                        <Carousel images={item.images} />
+                    </div>
+                    <div className="modal_info">
+                        <h2 className="modal_info_name">{item.name}</h2>
+                        <div className="modal_info_selects">
+                            <div className="modal_info_colors">
+                                <Select ops={item.colors} text={"Cores Disponiveis"} onClick={handleSetColor} initial={color} />
+                            </div>
+                            <div className="modal_info_sizes">
+                                <Select ops={color.sizes} text={"Tamanho"} onClick={handleSetSize} initial={size} />
                             </div>
                         </div>
-                        <div className="modal_info_address">
-                            <Select ops={addressAvailables} text={"Endereço"} onClick={handleSetAddress} />
+                        <div className="modal_info_quantAndAddress">
+                            <div className="modal_info_quant">
+                                <span className="modal_info_quant_title">Quantidade </span>
+                                <div className="modal_info_quant_buttons">
+                                    <button type="button" title="Remover" className="modal_info_quant-btn1" onClick={handleDecreaseQuant}>
+                                        <AiOutlineMinus size={20} />
+                                    </button>
+                                    <span className="modal_info_quant_num">{itemQuant}</span>
+                                    <button type="button" title="Adicionar" className="modal_info_quant-btn2" onClick={handleIncreaseQuant}>
+                                        <AiOutlinePlus size={20} />
+                                    </button>
+                                </div>
+                            </div>
+                            <div className="modal_info_address">
+                                <Select ops={addressAvailables} text={"Endereço"} onClick={handleSetAddress} />
+                            </div>
+                            <div className="modal_info_cupom">
+                                <label htmlFor="cupom" className="modal_info_cupom_lbl">Cupom de desconto</label>
+                                <input type="text" value={cupom} onChange={e => setCupom(e.target.value.toUpperCase().trim())} className="modal_info_cupom_inpt" name="cupom_input" id="cupom" placeholder="CUPOM" />
+                            </div>
                         </div>
-                        <div className="modal_info_cupom">
-                            <label htmlFor="cupom" className="modal_info_cupom_lbl">Cupom de desconto</label>
-                            <input type="text" value={cupom} onChange={e => setCupom(e.target.value.toUpperCase().trim())} className="modal_info_cupom_inpt" name="cupom_input" id="cupom" placeholder="CUPOM" />
-                        </div>
-                    </div>
-                    <div className="modal_info_value">
-                        <div className="modal_info_value_prod">
-                            <p className="modal_info_value_text">
-                                Produto:
-                                <span className={`modal_info_value_price ${item.onSale && "discount_color"}`}> R$ {item.onSale ? price - 1 : (price * itemQuant) - 1},90</span>
+                        <div className="modal_info_value">
+                            <div className="modal_info_value_prod">
+                                <p className="modal_info_value_text">
+                                    Produto:
+                                    <span className={`modal_info_value_price ${item.onSale && "discount_color"}`}> R$ {item.onSale ? price - 1 : (price * itemQuant) - 1},90</span>
+                                </p>
+                                <p className="modal_info_value_text">
+                                    Frete:
+                                    <span className="modal_info_value_price"> {handleFreight()}</span>
+                                </p>
+                            </div>
+                            <p className="modal_info_value_finalPrice">
+                                Valor total:
+                                <span className={`modal_info_value_price ${item.onSale && "discount_color"}`}>{finalPrice()}</span>
+                                <span className="modal_info_value_portion">{item.onSale ? " Até 2x sem juros" : " Em até 3x sem juros"}</span>
                             </p>
-                            <p className="modal_info_value_text">
-                                Frete:
-                                <span className="modal_info_value_price"> {handleFreight()}</span>
-                            </p>
                         </div>
-
-                        <p className="modal_info_value_finalPrice">
-                            Valor total:
-                            <span className={`modal_info_value_price ${item.onSale && "discount_color"}`}>{finalPrice()}</span>
-                            <span className="modal_info_value_portion">{item.onSale ? " Até 2x sem juros" : " Em até 3x sem juros"}</span>
-                        </p>
+                        {color.inStock && size.inStock ?
+                            <div className="modal_info_buttons">
+                                <button type="button" title="adicionar ao carrinho" className="modal_info_button modal_info_button_cart" onClick={handleCartBtn}>Adicionar a sacola</button>
+                                <a className="modal_info_button" title="finalizar" href={`https://wa.me/5585996585581?text=${text}`}>Finalizar pedido</a>
+                            </div> :
+                            <div className="modal_soldOff">
+                                <a className="modal_soldOff_button" href={`https://wa.me/5585996585581?text=${soldOfftext}`}>Encomendar</a>
+                            </div>
+                        }
                     </div>
-                    {color.inStock && size.inStock ?
-                        <div className="modal_info_buttons">
-                            <button type="button" title="adicionar ao carrinho" className="modal_info_button modal_info_button_cart" onClick={handleCartBtn}>Adicionar a sacola</button>
-                            <a className="modal_info_button" title="finalizar" href={`https://wa.me/5585996585581?text=${text}`}>Finalizar pedido</a>
-                        </div> :
-                        <div className="modal_soldOff">
-                            <a className="modal_soldOff_button" href={`https://wa.me/5585996585581?text=${soldOfftext}`}>Encomendar</a>
-                        </div>
-                    }
                 </div>
             </div>
-        </div>
     )
 }

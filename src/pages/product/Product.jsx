@@ -12,7 +12,8 @@ export default function Product() {
     function handleCloseModal() {
         navigate("/")
     }
-    return(
+
+    return (
         <div className="product">
             {item.length > 0 ?
             <Modal item={item[0]} handleCloseModal={handleCloseModal}/> :
