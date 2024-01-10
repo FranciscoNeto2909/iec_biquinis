@@ -34,7 +34,7 @@ export default function Serach({ handleSearch }) {
             <input className="search_text" autoComplete="none" type="text" value={search} placeholder="Pesquisar" onChange={e => handleChangeText(e)} />
             {!searching ?
                 <button className="search_button" onClick={handleSearchBtn}>
-                    <AiOutlineSearch className="search_icon" size={20} />
+                    <AiOutlineSearch className="search_icon" size={24} />
                 </button> :
                 <button className="search_button" onClick={handleClearBtn}>
                     <AiOutlineClose className="search_icon" size={20} />

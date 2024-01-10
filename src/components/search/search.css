@@ -40,11 +40,10 @@
 
     .search_text {
         font-size: 18px;
-        padding: 6px;
     }
 
     .search_button {
-        height: 20px;
+        height: 22px;
         width: 40px;
         border: none;
         background-color: transparent;

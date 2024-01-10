@@ -9,8 +9,8 @@
 
 .header_container {
     height: 70px;
-    width: 100%;
-    max-width: 1128px;
+    width: 90%;
+    max-width: 1350px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -73,6 +73,7 @@
 
     .header_container {
         height: 100%;
+        width: 100%;
         padding: 0 16px;
         flex-direction: column;
     }
@@ -106,6 +107,5 @@
     }
     .header_search{
         width:100%;
-        padding-top: 12px;
     }
 }

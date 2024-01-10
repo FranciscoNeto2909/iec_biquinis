@@ -4,8 +4,8 @@
 }
 
 .modal {
-    height: 500px;
-    width: 80vw;
+    height: auto;
+    width: 90vw;
     max-width: 95%;
     position: relative;
     display: flex;
@@ -19,6 +19,10 @@
 .modal_routes{
     padding: 12px 0;
     font-size: 14px;
+}
+
+.modal_routes a {
+    color: #008285;
 }
 
 .modal_routes::after{

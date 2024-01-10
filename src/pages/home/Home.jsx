@@ -1,4 +1,4 @@
-    import { useState } from "react"
+    import { useEffect, useState } from "react"
     import Card from "../.././components/card/Card"
     import { bikinis } from "../.././data/bikinis"
     import banner from "../.././assets/banner.png"
@@ -35,8 +35,11 @@
             handleScrollTop();
           }
         }
-    
       }
+
+      useEffect(() => {
+        handleScrollTop()
+      },[])
     
       return (
         <div className="home">

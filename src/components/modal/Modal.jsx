@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useMemo, useState } from "react"
-import { AiOutlinePlus, AiOutlineMinus, AiOutlineClose } from "react-icons/ai"
-import { IoIosArrowBack } from "react-icons/io";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai"
 import Select from "../Select/Select"
 import Carousel from "../carousel/Carousel"
 import "./modal.css"
@@ -19,7 +18,6 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
     const [color, setColor] = useState(item.colors.filter(item => (item.inStock === true))[0] || item.colors[0])
     const [size, setSize] = useState(color.sizes.filter(item => (item.inStock === true))[0] || color.sizes[0])
     const [price, setPrice] = useState(item.onSale ? realPrice - percent : item.colors[0].sizes[0].price)
-    const [closing, setClosing] = useState(false)
     const [address, setAddress] = useState(addressAvailables[0])
     const [cupom, setCupom] = useState("")
 
@@ -68,11 +66,11 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
 
     function finalPrice() {
         if (address.price === 0) {
-            return `R$: ${item.onSale ? ((price - 1) * itemQuant) : (price * itemQuant) - 1},90`
+            return `R$: ${ (price * itemQuant) - 1},90`
         } else if (address.price === undefined) {
-            return `R$: ${item.onSale ? ((price - 1) * itemQuant) : (price * itemQuant) - 1},90 + Frete`
+            return `R$: ${(price * itemQuant) - 1},90 + Frete`
         } else {
-            return `R$: ${item.onSale ? ((price - 1) * itemQuant) : (price * itemQuant) - 1 + address.price},90`
+            return `R$: ${(price * itemQuant + address.price) - 1},90`
         }
     }
 
@@ -85,7 +83,6 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
         } else if (color.inStock === false || size.inStock === false) {
             handleSetMsg("Item esgotado!")
         } else {
-            setClosing(true)
             handleCloseModal()
             handleSetMsg("Adicionado a sacola")
             cart.push({
@@ -101,16 +98,10 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
         }
     }
 
-    function handleCloseBtn() {
-        handleCloseModal()
-        setClosing(true)
-    }
-
     useEffect(() => {
         const handleBackButton = (event) => {
             event.preventDefault();
             handleCloseModal();
-            setClosing(true)
         };
 
         window.history.pushState(null, null, window.location.href);
@@ -168,7 +159,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                             <div className="modal_info_value_prod">
                                 <p className="modal_info_value_text">
                                     Produto:
-                                    <span className={`modal_info_value_price ${item.onSale && "discount_color"}`}> R$ {item.onSale ? price - 1 : (price * itemQuant) - 1},90</span>
+                                    <span className={`modal_info_value_price ${item.onSale && "discount_color"}`}> R$ {item.onSale ? (price * itemQuant) - 1   : (price * itemQuant) - 1},90</span>
                                 </p>
                                 <p className="modal_info_value_text">
                                     Frete:
