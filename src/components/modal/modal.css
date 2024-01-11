@@ -100,6 +100,7 @@
     align-items: baseline;
     justify-content: space-between;
     gap: 12px;
+    flex: 1;
 }
 
 .modal_info_quant {
@@ -231,15 +232,28 @@
     justify-content: center;
 }
 
+.modal_soldOff_firsttext{
+    text-align: center;
+    margin-bottom: 12px;
+    color: #008285;
+}
+
 .modal_soldOff_button {
     text-align: center;
     display: block;
-    padding: 12px;
+    padding: 16px;
     border: none;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 600;
     border-radius: 8px;
-    background-color: #00ced1;
+    background-color: #ff8210;
     color: #fff;
+}
+.modal_soldOff_text{
+    margin-top: 8px;
+    font-weight: 500;
+    text-align: center;
+    color: #f00;
 }
 
 

@@ -313,8 +313,8 @@ export const bikinis = [
             sizes: [{ name: 'M', price: 105, inStock: true }]
         }, {
             name: "Preto e Branco",
-            inStock: false,
-            sizes: [{ name: 'M', price: 105, inStock: false }]
+            inStock: true,
+            sizes: [{ name: 'M', price: 105, inStock: true }]
         },],
         onSale: true,
         discount: 15,
@@ -324,10 +324,10 @@ export const bikinis = [
         name: "Sunga Uruaú",
         colors: [{
             name: "Azul Marinho",
-            inStock: true,
+            inStock: false,
             sizes: [
                 { name: 'P', price: 59, inStock: false },
-                { name: 'M', price: 59, inStock: true },
+                { name: 'M', price: 59, inStock: false },
                 { name: 'G', price: 59, inStock: false },
                 { name: 'GG', price: 59, inStock: false }]
         }, {
@@ -726,24 +726,16 @@ export const bikinis = [
                 { name: 'P', price: 99, inStock: true },
                 { name: 'M', price: 99, inStock: false },
                 { name: 'G', price: 99, inStock: false }]
-        }, {
+        },{
+            name: "Branco",
+            inStock: true,
+            sizes: [
+                { name: 'P', price: 99, inStock: true },
+                { name: 'M', price: 99, inStock: false },
+                { name: 'G', price: 99, inStock: false }]
+        }
+        , {
             name: "Laranja",
-            inStock: true,
-            sizes: [
-                { name: 'P', price: 99, inStock: false },
-                { name: 'M', price: 99, inStock: true },
-                { name: 'G', price: 99, inStock: false }
-            ]
-        }, {
-            name: "Roxo",
-            inStock: true,
-            sizes: [
-                { name: 'P', price: 99, inStock: false },
-                { name: 'M', price: 99, inStock: true },
-                { name: 'G', price: 99, inStock: false }
-            ]
-        }, {
-            name: "Rosa Neon",
             inStock: true,
             sizes: [
                 { name: 'P', price: 99, inStock: false },

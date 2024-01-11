@@ -6,11 +6,11 @@ import "./carousel.css"
 import { useEffect, useState } from "react";
 
 export default function Carousel({ images }) {
-    const [navigation, setNavigation] = useState(true)
+    const [navigation, setNavigation] = useState(false)
 
     function handleResize() {
-        if (window.innerWidth < 500) {
-            setNavigation(false)
+        if (window.innerWidth > 500) {
+            setNavigation(true)
         }
     }
 

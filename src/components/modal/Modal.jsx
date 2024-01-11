@@ -15,15 +15,17 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
 
     const [itemQuant, setItemQuant] = useState(1)
     const [color, setColor] = useState(item.colors.filter(item => (item.inStock === true))[0] || item.colors[0])
+    const [colors] = useState(item.colors.filter(color => color.inStock))
+    const [sizes, setSizes] = useState(color.sizes.filter(size => size.inStock))
     const [size, setSize] = useState(color.sizes.filter(item => (item.inStock === true))[0] || color.sizes[0])
     const [price, setPrice] = useState(item.onSale ? realPrice - percent : item.colors[0].sizes[0].price)
     const [address, setAddress] = useState(addressAvailables[0])
     const [cupom, setCupom] = useState("")
 
-    const text = `------------------------------%0A%20%20%20%20*Novo%20Pedido*%0A------------------------------%0A%0A*${item.name}*%0A*Tamanho:*%20${size.name}%0A*Cor:*%20${color.name}%0A*Quantidade:*%20${itemQuant}%0A*Valor:*%20R$%20${price + address.price - 1 + ",90"}%0A%0A*Endereço:*%20${address.name}%0A*Frete:*%20${address.price === 0 ? "Grátis" : `R$%20${address.price}`}%0A%0A*Cupom:*%20${cupoms.filter(cup => cup === cupom.toUpperCase()).length > 0 ? cupom : "nenhum"}
+    const text = `------------------------------%0A%20%20%20%20*Novo%20Pedido*%0A------------------------------%0A%0A*${item.name}*%0A*Tamanho:*%20${size.name}%0A*Cor:*%20${color.name}%0A*Quantidade:*%20${itemQuant}%0A*Valor:*%20R$%20${(price * itemQuant) + address.price - 1 + ",90"}%0A%0A*Endereço:*%20${address.name}%0A*Frete:*%20${address.price === 0 ? "Grátis" : `R$%20${address.price}`}%0A%0A*Cupom:*%20${cupoms.filter(cup => cup === cupom.toUpperCase()).length > 0 ? cupom : "nenhum"}
     `
 
-    const soldOfftext = `------------------------------%0A%20%20%20%20*Nova%20Encomenda*%0A------------------------------%0A%0A*${item.name}*%0A*Tamanho:*%20${size.name}%0A*Cor:*%20${color.name}%0A*Quantidade:*%20${itemQuant}%0A*Valor:*%20R$%20${price + address.price - 1 + ",90"}%0A%0A*Endereço:*%20${address.name}%0A*Frete:*%20${address.price === 0 ? "Grátis" : `R$%20${address.price}`}%0A%0A*Cupom:*%20${cupoms.filter(cup => cup === cupom.toUpperCase()).length > 0 ? cupom : "nenhum"}
+    const soldOfftext = `------------------------------%0A%20%20%20%20*Nova%20Encomenda*%0A------------------------------%0A%0AOlá%20gostaria%20de%20encomendar%20o%20produto%20*${item.name}*%0A
     `
 
 
@@ -42,6 +44,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
     function handleSetColor(op) {
         setColor(op)
         setSize(op.sizes.filter(item => (item.inStock === true))[0] || color.sizes[0])
+        setSizes(op.sizes.filter(size => size.inStock))
     }
 
     function handleSetSize(op) {
@@ -111,16 +114,16 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                     </div>
                     <div className="modal_info">
                         <h2 className="modal_info_name">{item.name}</h2>
+                        {color.inStock && size.inStock &&
+                        <>
                         <div className="modal_info_selects">
                             <div className="modal_info_colors">
-                                <Select ops={item.colors} text={"Cores Disponiveis"} onClick={handleSetColor} initial={color} />
+                                <Select ops={colors} text={"Cores Disponiveis"} onClick={handleSetColor} initial={color} />
                             </div>
                             <div className="modal_info_sizes">
-                                <Select ops={color.sizes} text={"Tamanho"} onClick={handleSetSize} initial={size} />
+                                <Select ops={sizes} text={"Tamanho"} onClick={handleSetSize} initial={sizes[0]} />
                             </div>
                         </div>
-
-                        {size.inStock && 
                         <div className="modal_info_containerAndcupom">
                             <div className="modal_info_quantAndAddress">
                                 <div className="modal_info_quant">
@@ -144,34 +147,40 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                                 <input type="text" value={cupom} onChange={e => setCupom(e.target.value.toUpperCase().trim())} className="modal_info_cupom_inpt" name="cupom_input" id="cupom" placeholder="CUPOM" />
                             </div>
                         </div>
+                        </>
                         }
-
                         <div className="modal_info_value">
                             <div className="modal_info_value_prod">
                                 <p className="modal_info_value_text">
                                     Produto:
                                     <span className={`modal_info_value_price ${item.onSale && "discount_color"}`}> R$ {item.onSale ? (price * itemQuant) - 1   : (price * itemQuant) - 1},90</span>
                                 </p>
+                                {color.inStock && size.inStock &&
                                 <p className="modal_info_value_text">
                                     Frete:
                                     <span className="modal_info_value_price"> {handleFreight()}</span>
                                 </p>
+                                }
                             </div>
+                            {color.inStock && size.inStock &&
                             <p className="modal_info_value_finalPrice">
                                 Valor total:
                                 <span className={`modal_info_value_price ${item.onSale && "discount_color"}`}>{finalPrice()}</span>
                                 <span className="modal_info_value_portion">{item.onSale ? " Até 2x sem juros" : " Em até 3x sem juros"}</span>
                             </p>
+                            }
                         </div>
-                        {color.inStock && size.inStock ?
+                        {color.inStock && size.inStock &&
                             <div className="modal_info_buttons">
                                 <button type="button" title="adicionar ao carrinho" className="modal_info_button modal_info_button_cart" onClick={handleCartBtn}>Adicionar a sacola</button>
                                 <a className="modal_info_button" title="finalizar" href={`https://wa.me/5585996585581?text=${text}`}>Finalizar pedido</a>
-                            </div> :
-                            <div className="modal_soldOff">
-                                <a className="modal_soldOff_button" href={`https://wa.me/5585996585581?text=${soldOfftext}`}>Encomendar</a>
                             </div>
-                        }
+                            }
+                            <div className="modal_soldOff">
+                                <p className="modal_soldOff_firsttext">Não achou o que queria ?</p>
+                                <a className="modal_soldOff_button" href={`https://wa.me/5585996585581?text=${soldOfftext}`}>Encomendar</a>
+                                <p className="modal_soldOff_text">Verificar disponibilidade de cor e tamanho</p>
+                            </div>
                     </div>
                 </div>
             </div>
