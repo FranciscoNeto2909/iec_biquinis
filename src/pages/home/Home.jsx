@@ -7,17 +7,8 @@
     import "./home.css"
     
     export default function Home({filteredBikinis,setBikinisCategorie}) {
-    
-      const [msg, setMsg] = useState("")
-      const [msgVisib, setMsgVisib] = useState(false)
+
       const [selectedCat, setSelectedCat] = useState(0)
-    
-      function handleScrollTop() {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      }
     
       function handleSetCategorie(text, i) {
         handleScrollTop()
@@ -38,7 +29,10 @@
       }
 
       useEffect(() => {
-        handleScrollTop()
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
       },[])
     
       return (

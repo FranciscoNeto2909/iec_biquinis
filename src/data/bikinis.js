@@ -399,9 +399,9 @@ export const bikinis = [
         name: "Biquíni Jeri",
         colors: [{
             name: "Fucsia e Laranja",
-            inStock: true,
+            inStock: false,
             sizes: [
-                { name: 'P', price: 79, inStock: true },
+                { name: 'P', price: 79, inStock: false },
                 { name: 'M', price: 79, inStock: false },
                 { name: 'G', price: 79, inStock: false }]
         }, {

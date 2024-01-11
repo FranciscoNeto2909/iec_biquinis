@@ -72,7 +72,7 @@
     width: 50%;
     flex-shrink: 2;
     flex: 1;
-    height: 100%;
+    height: auto;
     padding-top: 14px;
     display: flex;
     flex-direction: column;
@@ -88,6 +88,11 @@
     display: flex;
     flex-direction: column;
     gap: 14px;
+}
+
+.modal_info_containerAndcupom{
+    display: flex;
+    gap: 12px;
 }
 
 .modal_info_quantAndAddress {
@@ -152,6 +157,7 @@
 }
 
 .modal_info_cupom_lbl {
+    margin-top: 3px;
     font-size: 13px;
     font-weight: 500;
 }
@@ -274,6 +280,11 @@
         gap: 12px;
     }
 
+    .modal_info_containerAndcupom{
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .modal_info_quant_buttons {
         padding: 5px 0 6px 0;
     }
@@ -308,12 +319,14 @@
 
     .modal_image {
         margin-top: 0;
+        border-radius: 6px;
+        overflow: hidden;
     }
 
     .modal_info {
         flex: 1;
         padding: 0;
-        gap: 6px;
+        gap: 14px;
         padding-top: 10px;
     }
 
@@ -321,11 +334,60 @@
         font-size: 28px;
     }
 
+    .modal_info_selects{
+        gap: 24px;
+    }
+
+    .modal_info_sizes{
+        max-width: 100px;
+    }
+
+    .modal_info_quantAndAddress{
+        gap: 24px;
+    }
+
+    .modal_info_quant_title{
+        font-size: 15px;
+    }
+
+    .modal_info_quant_buttons{
+        margin-top: 4px;
+        gap: 4px;
+    }
+
+    .modal_info_quant-btn1, .modal_info_quant-btn2{
+        height: 35px;
+        width: 35px;
+    }
+    
+    .modal_info_quant_num{
+        font-size: 20px;
+    }
+    .modal_info_cupom{
+        max-width: 100%;
+    }
+
+    .modal_info_cupom_lbl{
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .modal_info_cupom_inpt{
+        max-width: 100%;
+        padding: 12px 8px;
+        font-size: 15px;
+    }
+
+    .modal_info_buttons {
+        margin-top: 8px;
+        flex-direction: column;
+    }
+
     .modal_info_button {
         text-wrap: nowrap;
         flex: 1;
-        padding: 12px 10px;
-        font-size: 16px;
+        padding: 16px 10px;
+        font-size: 18px;
     }
 
     .modal_soldOff_card {
@@ -334,6 +396,15 @@
 
     .modal_soldOff {
         margin-top: 0;
+    }
+
+    .modal_info_value_text{
+        font-size: 18px;
+    }
+
+    .modal_info_value_finalPrice{
+        margin-top: 8px;
+        font-size: 18px;
     }
 }
 

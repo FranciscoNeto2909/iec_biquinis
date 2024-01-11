@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Product from "./pages/product/Product";
 import Cart from "./pages/cart/Cart";
@@ -17,13 +17,15 @@ export default function App() {
     if (!aHasOffer && bHasOffer) return 1;
     return 0;
   });
-
+  const navigate = useNavigate();
+  
   const [bikinisCategorie, setBikinisCategorie] = useState(onSaleBikinis)
   const [filteredBikinis, setFilteredBikinis] = useState(bikinisCategorie)
   const [msg, setMsg] = useState("")
   const [msgVisib, setMsgVisib] = useState(false)
 
   function handleSearch(text) {
+      navigate("/")
     if (text === "") {
       setFilteredBikinis(bikinisCategorie)
     } else {

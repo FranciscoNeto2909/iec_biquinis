@@ -13,7 +13,6 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
     const realPrice = useMemo(() => item.colors[0].sizes[0].price, [item.colors]);
     const percent = useMemo(() => ((item.discount / 100).toFixed(2) * realPrice).toFixed(0), [item.discount, realPrice]);
 
-
     const [itemQuant, setItemQuant] = useState(1)
     const [color, setColor] = useState(item.colors.filter(item => (item.inStock === true))[0] || item.colors[0])
     const [size, setSize] = useState(color.sizes.filter(item => (item.inStock === true))[0] || color.sizes[0])
@@ -98,20 +97,6 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
         }
     }
 
-    useEffect(() => {
-        const handleBackButton = (event) => {
-            event.preventDefault();
-            handleCloseModal();
-        };
-
-        window.history.pushState(null, null, window.location.href);
-        window.addEventListener('popstate', handleBackButton);
-
-        return () => {
-            window.removeEventListener('popstate', handleBackButton);
-        };
-    }, [handleCloseModal]);
-
     return (
             <div className="modal_container">
                 {
@@ -134,27 +119,33 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                                 <Select ops={color.sizes} text={"Tamanho"} onClick={handleSetSize} initial={size} />
                             </div>
                         </div>
-                        <div className="modal_info_quantAndAddress">
-                            <div className="modal_info_quant">
-                                <span className="modal_info_quant_title">Quantidade </span>
-                                <div className="modal_info_quant_buttons">
-                                    <button type="button" title="Remover" className="modal_info_quant-btn1" onClick={handleDecreaseQuant}>
-                                        <AiOutlineMinus size={20} />
-                                    </button>
-                                    <span className="modal_info_quant_num">{itemQuant}</span>
-                                    <button type="button" title="Adicionar" className="modal_info_quant-btn2" onClick={handleIncreaseQuant}>
-                                        <AiOutlinePlus size={20} />
-                                    </button>
+
+                        {size.inStock && 
+                        <div className="modal_info_containerAndcupom">
+                            <div className="modal_info_quantAndAddress">
+                                <div className="modal_info_quant">
+                                    <span className="modal_info_quant_title">Quantidade</span>
+                                    <div className="modal_info_quant_buttons">
+                                        <button type="button" title="Remover" className="modal_info_quant-btn1" onClick={handleDecreaseQuant}>
+                                            <AiOutlineMinus size={20} />
+                                        </button>
+                                        <span className="modal_info_quant_num">{itemQuant}</span>
+                                        <button type="button" title="Adicionar" className="modal_info_quant-btn2" onClick={handleIncreaseQuant}>
+                                            <AiOutlinePlus size={20} />
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="modal_info_address">
-                                <Select ops={addressAvailables} text={"Endereço"} onClick={handleSetAddress} />
+                                <div className="modal_info_address">
+                                    <Select ops={addressAvailables} text={"Endereço"} onClick={handleSetAddress} />
+                                </div>
                             </div>
                             <div className="modal_info_cupom">
                                 <label htmlFor="cupom" className="modal_info_cupom_lbl">Cupom de desconto</label>
                                 <input type="text" value={cupom} onChange={e => setCupom(e.target.value.toUpperCase().trim())} className="modal_info_cupom_inpt" name="cupom_input" id="cupom" placeholder="CUPOM" />
                             </div>
                         </div>
+                        }
+
                         <div className="modal_info_value">
                             <div className="modal_info_value_prod">
                                 <p className="modal_info_value_text">

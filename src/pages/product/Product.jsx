@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom"
 import {bikinis} from "../../data/bikinis"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Modal from "../../components/modal/Modal"
 import "./product.css"
 
@@ -12,6 +12,13 @@ export default function Product() {
     function handleCloseModal() {
         navigate("/")
     }
+
+    useEffect(() => {
+        window.scrollTo({
+          top: 0,
+        });
+      },[])
+    
 
     return (
         <div className="product">
