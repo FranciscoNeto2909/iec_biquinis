@@ -5,6 +5,7 @@
     import bannerDesk from "../.././assets/bannerDesk.png"
     import { categoriasMap, categories } from "../.././data/categories"
     import "./home.css"
+import BuyInfos from "../../components/buyInfos/BuyInfos"
     
     export default function Home({filteredBikinis,setBikinisCategorie}) {
 
@@ -36,42 +37,27 @@
       },[])
     
       return (
-        <div className="home">
-          {window.innerWidth < 525 &&
-            <>
+          <div className="home">
               <div className="home_banner">
-                <img src={banner} alt="" className="home_banner_img" />
+                {window.innerWidth < 525 ? 
+                  <img src={banner} alt="" className="home_banner_img" /> :
+                  <img src={bannerDesk} style={{ height: "auto", width: "100vw" }} alt="" className="home_banner_img" />
+                }
               </div>
+              <BuyInfos/>
               <div className="home_header_categories">
                 {categories.map((cat, i) => (
                   <button className={`home_header_categories_button ${i === selectedCat && "categories_button_selected"}`} onClick={() => handleSetCategorie(cat, i)} key={i}>{cat.toUpperCase()}
                   </button>
                 ))}
-              </div>
-            </>
-          }
-          {window.innerWidth > 525 &&
-            <>
-              <section className="home_banner">
-                <img src={bannerDesk} style={{ height: "auto", width: "100vw" }} alt="" className="home_banner_img" />
-              </section>
-              <section className="home_categories">
-                <div className="home_header_categories">
-                  {categories.map((cat, i) => (
-                    <button className={`home_header_categories_button ${i === selectedCat && "categories_button_selected"}`} onClick={() => handleSetCategorie(cat, i)} key={i}>{cat.toUpperCase()}
-                    </button>
-                  ))}
-                </div>
-              </section>
-            </>
-          }
-          <section className="home_container">
-            {
-              filteredBikinis.map((bik, i) => (
-                <Card bik={bik} key={i} />
-              ))
-            }
-          </section>
-        </div>
+            </div>
+            <section className="home_container">
+              {
+                filteredBikinis.map((bik, i) => (
+                  <Card bik={bik} key={i} />
+                ))
+              }
+            </section>
+          </div>
       )
     }

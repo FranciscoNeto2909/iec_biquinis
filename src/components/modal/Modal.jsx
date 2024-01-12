@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useMemo, useState } from "react"
+import { useMemo, useState } from "react"
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai"
+import { IoIosArrowBack } from "react-icons/io";
 import Select from "../Select/Select"
 import Carousel from "../carousel/Carousel"
 import "./modal.css"
@@ -103,12 +104,19 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
     return (
             <div className="modal_container">
                 {
-                    window.innerWidth > 600 && 
+                    window.innerWidth > 600 &&
                     <div className="modal_routes">
                         <Link to="/">Voltar</Link>
                     </div>
                 }
                 <div className={`modal`}>
+                    { window.innerWidth < 500 &&
+                        <div className="modal_mobile_close">
+                            <button className="" onClick={() => handleCloseModal()}>
+                                <IoIosArrowBack size={36} />
+                            </button>
+                        </div>
+                    }
                     <div className="modal_image">
                         <Carousel images={item.images} />
                     </div>
@@ -152,7 +160,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                         <div className="modal_info_value">
                             <div className="modal_info_value_prod">
                                 <p className="modal_info_value_text">
-                                    Produto:
+                                    Valor:
                                     <span className={`modal_info_value_price ${item.onSale && "discount_color"}`}> R$ {item.onSale ? (price * itemQuant) - 1   : (price * itemQuant) - 1},90</span>
                                 </p>
                                 {color.inStock && size.inStock &&
@@ -178,7 +186,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                             }
                             <div className="modal_soldOff">
                                 <p className="modal_soldOff_firsttext">Não achou o que queria ?</p>
-                                <a className="modal_soldOff_button" href={`https://wa.me/5585996585581?text=${soldOfftext}`}>Encomendar</a>
+                                <a className="modal_soldOff_button" href={`https://wa.me/5585996585581?text=${soldOfftext}`}>Avise-me</a>
                                 <p className="modal_soldOff_text">Verificar disponibilidade de cor e tamanho</p>
                             </div>
                     </div>

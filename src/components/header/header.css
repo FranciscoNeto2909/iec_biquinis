@@ -3,8 +3,8 @@
     background-color: #fff;
     display: flex;
     padding-top: 8px;
-    box-shadow: 0 0 8px #ddd;
     justify-content: center;
+    border-bottom: 1px solid #eee;
 }
 
 .header_container {
@@ -67,8 +67,6 @@
     .header {
         height: auto;
         padding: 12px 0;
-        box-shadow: 0 0 2px #ddd;
-        border-bottom: 1px solid #ddd;
     }
 
     .header_container {

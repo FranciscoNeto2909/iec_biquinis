@@ -3,24 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css/effect-fade';
 import "./carousel.css"
-import { useEffect, useState } from "react";
 
 export default function Carousel({ images }) {
-    const [navigation, setNavigation] = useState(false)
-
-    function handleResize() {
-        if (window.innerWidth > 500) {
-            setNavigation(true)
-        }
-    }
-
-    useEffect(() => {
-        window.addEventListener("resize", handleResize())
-        return () => {
-            window.removeEventListener("resize", handleResize())
-        }
-    }, [navigation])
-
 
     return (
         <Swiper
@@ -28,7 +12,7 @@ export default function Carousel({ images }) {
             pagination={{
                 dynamicBullets: true,
             }}
-            navigation={navigation ? true : false}
+            navigation={true}
             modules={[Pagination, Navigation]}
         >
             {images.map((img, i) => (

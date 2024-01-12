@@ -25,22 +25,14 @@ export default function App() {
   const [msgVisib, setMsgVisib] = useState(false)
 
   function handleSearch(text) {
-      navigate("/")
     if (text === "") {
       setFilteredBikinis(bikinisCategorie)
     } else {
+      navigate("/")
       setFilteredBikinis(bikinis.filter(bik => bik.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(text)))
     }
   }
 
-  function handleSetMsg(text) {
-    setMsgVisib(true)
-    setMsg(text)
-    setTimeout(() => {
-      setMsgVisib(false)
-      setMsg("")
-    }, 1200);
-  }
 
   useEffect(() => {
     const cart = localStorage.getItem('cart')

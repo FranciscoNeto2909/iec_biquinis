@@ -43,6 +43,7 @@
     font-size: 24px;
     font-weight: bold;
     overflow-x: hidden;
+    z-index: 1;
 }
 
 .home_banner_img {
@@ -63,6 +64,8 @@
 
 .home_header_categories {
     max-width: 1128px;
+    margin: 0 auto;
+    margin-top: 12px;
     width: 100%;
     background-color: #FFF;
     box-shadow: 0 0 2px #0003;
