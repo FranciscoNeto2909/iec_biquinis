@@ -108,13 +108,6 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                     </div>
                 }
                 <div className={`modal`}>
-                    { window.innerWidth < 500 &&
-                        <div className="modal_mobile_close">
-                            <button className="" onClick={() => handleCloseModal()}>
-                                <IoIosArrowBack size={36} />
-                            </button>
-                        </div>
-                    }
                     <div className="modal_image">
                         <Carousel images={item.images} />
                     </div>

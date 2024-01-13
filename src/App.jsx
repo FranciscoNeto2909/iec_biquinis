@@ -24,6 +24,7 @@ export default function App() {
   const [msg, setMsg] = useState("")
   const [msgVisib, setMsgVisib] = useState(false)
   const [isCartOpened, setIsCartOpened] = useState(false)
+  const [productOpened, setproductOpened] = useState(false)
 
   function handleSearch(text) {
     if (text === "") {
@@ -38,6 +39,17 @@ export default function App() {
     setIsCartOpened(!isCartOpened)
   }
 
+  function handleOpenedProduct(){
+    if(window.innerWidth < 500){
+      setproductOpened(true)
+    }
+  }
+
+  function handleBackButton(){
+    navigate("/")
+    setproductOpened(false)
+  }
+
   function handleSetMsg(text) {
     setMsgVisib(true)
     setMsg(text)
@@ -46,26 +58,32 @@ export default function App() {
       setMsg("")
     }, 2000);
   }
+  
+  useEffect(() => {
+    setFilteredBikinis(bikinisCategorie)
+  }, [bikinisCategorie])
 
   useEffect(() => {
     const cart = localStorage.getItem('cart')
     if (cart === null) {
       localStorage.setItem('cart', JSON.stringify([]))
     }
-
   }, [])
 
   useEffect(() => {
-    setFilteredBikinis(bikinisCategorie)
-  }, [bikinisCategorie])
+    window.addEventListener('popstate', () => setproductOpened(false));
+    return () => {
+      window.removeEventListener('popstate', () => setproductOpened(false));
+    };
+  }, []);
 
   return(
     <div className="app">
-      <Header handleSearch={handleSearch} handleOpenCart={handleToggleCart}/>
+      <Header handleSearch={handleSearch} handleOpenCart={handleToggleCart} productOpened={productOpened} handleBackButton={handleBackButton}/>
       {msgVisib && <Message msg={msg}/>}
       <Routes>
         <Route path="/" element={<Home bikinisCategorie={bikinisCategorie} setBikinisCategorie={setBikinisCategorie} filteredBikinis={filteredBikinis} setFilteredBikinis={setFilteredBikinis}/>}/>
-        <Route path="/produto/:productName" element={<Product handleSetMsg={handleSetMsg}/>}/>
+        <Route path="/produto/:productName" element={<Product handleSetMsg={handleSetMsg} handleOpenedProduct={handleOpenedProduct}/>}/>
       </Routes>
         {isCartOpened && <Cart handleCloseCart={handleToggleCart} handleSetMsg={handleSetMsg}/>}
       <Footer />

@@ -12,7 +12,6 @@ import BuyInfos from "../../components/buyInfos/BuyInfos"
       const [selectedCat, setSelectedCat] = useState(0)
     
       function handleSetCategorie(text, i) {
-        handleScrollTop()
         if (selectedCat === i) {
           setSelectedCat(0);
           setBikinisCategorie(bikinis);
@@ -24,17 +23,9 @@ import BuyInfos from "../../components/buyInfos/BuyInfos"
           } else {
             const filteredBikinis = categoriasMap[text.toLowerCase()](bikinis);
             setBikinisCategorie(filteredBikinis);
-            handleScrollTop();
           }
         }
       }
-
-      useEffect(() => {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      },[])
     
       return (
           <div className="home">

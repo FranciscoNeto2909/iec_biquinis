@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import Modal from "../../components/modal/Modal"
 import "./product.css"
 
-export default function Product({handleSetMsg}) {
+export default function Product({handleSetMsg, handleOpenedProduct}) {
     const {productName} = useParams()
     const [item, setItem] = useState(bikinis.filter(bik => bik.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(productName.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase())))
     const navigate = useNavigate()
@@ -17,6 +17,7 @@ export default function Product({handleSetMsg}) {
         window.scrollTo({
           top: 0,
         });
+        handleOpenedProduct()
       },[])
     
 

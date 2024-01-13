@@ -69,10 +69,18 @@
         padding: 12px 0;
     }
 
+    .header_back_button {
+        border: none;
+        margin-top: 6px;
+        margin-left: -10px;
+        background-color: transparent;
+        color: #4A8996;
+    }
+
     .header_container {
-        height: 100%;
+        height: auto;
         width: 100%;
-        padding: 0 16px;
+        padding: 0 10px;
         flex-direction: column;
     }
 
@@ -86,7 +94,7 @@
     .header_search {
         display: flex;
         align-items: center;
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
         margin-top: 75px;
     }
@@ -98,12 +106,19 @@
         display: flex;
         justify-content: flex-end;
     }
+
     .header_logoAndSearch{
         width:100%;
         padding-left: 0;
         gap: 0;
     }
+
+    .header_search_mobile{
+        margin-top: 0;
+    }
+
     .header_search{
+        
         width:100%;
     }
 }

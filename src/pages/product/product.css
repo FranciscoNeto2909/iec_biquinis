@@ -1,9 +1,9 @@
 .product{
-    height: 100vh;
+    height: auto;
     max-width: 100vw;
     display: flex;
     justify-content: center;
-    padding-top: 24px;
+    padding: 24px 0;
     background-color: #efe;
 }
 .product_notfound{
@@ -28,6 +28,6 @@
 @media (max-width:500px) {
     .product{
         height: auto;
-      padding-top: 0;
+        padding: 0;
     }
 }
