@@ -10,7 +10,6 @@ import { addressAvailables } from "../../data/address"
 import { Link } from "react-router-dom";
 
 export default function Modal({ item, handleCloseModal, handleSetMsg }) {
-
     const realPrice = useMemo(() => item.colors[0].sizes[0].price, [item.colors]);
     const percent = useMemo(() => ((item.discount / 100).toFixed(2) * realPrice).toFixed(0), [item.discount, realPrice]);
 
@@ -86,7 +85,6 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
         } else if (color.inStock === false || size.inStock === false) {
             handleSetMsg("Item esgotado!")
         } else {
-            handleCloseModal()
             handleSetMsg("Adicionado a sacola")
             cart.push({
                 name: item.name,
@@ -96,8 +94,8 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                 quant: itemQuant,
                 price
             });
-
             localStorage.setItem('cart', JSON.stringify(cart));
+            handleCloseModal()
         }
     }
 

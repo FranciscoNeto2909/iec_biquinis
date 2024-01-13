@@ -2,7 +2,7 @@ import "./card.css"
 import icon from "../../assets/icon.png"
 import { useNavigate } from "react-router-dom"
 
-export default function Card({ bik, handleOpenModal }) {
+export default function Card({ bik }) {
 
     const price = bik.colors[0].sizes[0].price - 1
     const percent = ((bik.discount / 100).toFixed(2) * price).toFixed(0)

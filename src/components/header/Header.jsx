@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Search from "../.././components/search/Search"
 import "./header.css"
 
-export default function Header({ handleSearch}) {
+export default function Header({ handleSearch, handleOpenCart}) {
     const cart = JSON.parse(localStorage.getItem('cart')) || []
 
     return (
@@ -12,10 +12,10 @@ export default function Header({ handleSearch}) {
         <div className="header_container">
           <div className="header_cart">
               <div className="header_cartbtn" >
-                <Link to="/cart" name="cart_btn" title="carrinho">
+                <button onClick={() => handleOpenCart()} name="cart_btn" title="carrinho">
                   {cart.length > 0 && <span>{cart.length}</span>}
                   <BiShoppingBag size={32} style={{ color: "#00CED1" }} />
-                </Link>
+                </button>
               </div>
           </div>
             <div className="header_logoAndSearch">

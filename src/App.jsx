@@ -1,7 +1,7 @@
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Product from "./pages/product/Product";
-import Cart from "./pages/cart/Cart";
+import Cart from "./components/cart/Cart";
 import Header from "./components/header/Header";
 import { useEffect, useState } from "react";
 import { bikinis } from "./data/bikinis";
@@ -23,6 +23,7 @@ export default function App() {
   const [filteredBikinis, setFilteredBikinis] = useState(bikinisCategorie)
   const [msg, setMsg] = useState("")
   const [msgVisib, setMsgVisib] = useState(false)
+  const [isCartOpened, setIsCartOpened] = useState(false)
 
   function handleSearch(text) {
     if (text === "") {
@@ -33,6 +34,18 @@ export default function App() {
     }
   }
 
+  function handleToggleCart() {
+    setIsCartOpened(!isCartOpened)
+  }
+
+  function handleSetMsg(text) {
+    setMsgVisib(true)
+    setMsg(text)
+    setTimeout(() => {
+      setMsgVisib(false)
+      setMsg("")
+    }, 2000);
+  }
 
   useEffect(() => {
     const cart = localStorage.getItem('cart')
@@ -48,13 +61,13 @@ export default function App() {
 
   return(
     <div className="app">
-      <Header handleSearch={handleSearch}/>
+      <Header handleSearch={handleSearch} handleOpenCart={handleToggleCart}/>
       {msgVisib && <Message msg={msg}/>}
       <Routes>
         <Route path="/" element={<Home bikinisCategorie={bikinisCategorie} setBikinisCategorie={setBikinisCategorie} filteredBikinis={filteredBikinis} setFilteredBikinis={setFilteredBikinis}/>}/>
-        <Route path="/produto/:productName" element={<Product/>}/>
-        <Route path="/cart" element={<Cart/>}/>
+        <Route path="/produto/:productName" element={<Product handleSetMsg={handleSetMsg}/>}/>
       </Routes>
+        {isCartOpened && <Cart handleCloseCart={handleToggleCart} handleSetMsg={handleSetMsg}/>}
       <Footer />
     </div>
   )

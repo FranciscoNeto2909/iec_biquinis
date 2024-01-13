@@ -22,7 +22,9 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
 
     function handleCloseBtn() {
         setClosing(true)
-        handleCloseCart()
+        setTimeout(() => {
+            handleCloseCart()
+        }, 1400);
     }
 
 
@@ -33,7 +35,9 @@ export default function Cart({ handleCloseCart, handleSetMsg }) {
         handleSetMsg("Item removido")
         if (cart.length === 1) {
             setClosing(true)
-            handleCloseCart()
+            setTimeout(() => {
+                handleCloseCart()
+            }, 1400);
         }
     }
 
