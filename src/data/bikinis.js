@@ -124,8 +124,8 @@ export const bikinis = [
             inStock: false,
             sizes: [{ name: 'U', price: 39, inStock: false }]
         },],
-        onSale: true,
-        discount:10,
+        onSale: false,
+        discount:0,
         images: [dunas1, dunas2, dunas3]
     }, {
         name: "Bolsa Verão",
@@ -363,8 +363,8 @@ export const bikinis = [
                 { name: 'G', price: 59, inStock: false },
                 { name: 'GG', price: 59, inStock: false }]
         }],
-        onSale: true,
-        discount: 10,
+        onSale: false,
+        discount: 0,
         images: [sunga1, sunga2]
     },
     {
@@ -391,8 +391,8 @@ export const bikinis = [
                 { name: 'M', price: 70, inStock: false },
                 { name: 'G', price: 70, inStock: false }]
         }],
-        onSale: true,
-        discount: 10,
+        onSale: false,
+        discount: 0,
         images: [prainha1, prainha2, prainha3, prainha4]
     },
     {
@@ -426,8 +426,8 @@ export const bikinis = [
                 { name: 'M', price: 79, inStock: false },
                 { name: 'G', price: 79, inStock: false }]
         }],
-        onSale: true,
-        discount: 20,
+        onSale: false,
+        discount: 0,
         images: [jeri1, jeri2, jeri3, jeri4]
     },
     {
@@ -583,8 +583,8 @@ export const bikinis = [
                 { name: 'M', price: 76, inStock: false }
             ]
         }],
-        onSale: true,
-        discount: 5,
+        onSale: false,
+        discount: 0,
         images: [uruau1, uruau2, uruau3]
     },
     {
@@ -637,8 +637,8 @@ export const bikinis = [
             inStock: false,
             sizes: [{ name: 'M', price: 79, inStock: false }]
         }],
-        onSale: true,
-        discount: 15,
+        onSale: false,
+        discount: 0,
         images: [mb1, mb2, mb3, mb4, mb5, mb6]
     },
     {
@@ -650,8 +650,8 @@ export const bikinis = [
                 { name: 'P', price: 88, inStock: true },
                 { name: 'GG', price: 88, inStock: false }]
         },],
-        onSale: true,
-        discount: 20,
+        onSale: false,
+        discount: 0,
         images: [coqueirinho1, coqueirinho2]
     },
     {
@@ -751,8 +751,8 @@ export const bikinis = [
                 { name: 'G', price: 99, inStock: true }
             ]
         }],
-        onSale: true,
-        discount: 15,
+        onSale: false,
+        discount: 0,
         images: [iracema1, iracema2, iracema3, iracema4, iracema5, iracema6]
     },
     {
@@ -765,8 +765,8 @@ export const bikinis = [
                 { name: 'GG', price: 99, inStock: false }
             ]
         },],
-        onSale: true,
-        discount: 15,
+        onSale: false,
+        discount: 0,
         images: [pipa1, pipa2, pipa3, pipa4]
     },
     {
@@ -780,8 +780,8 @@ export const bikinis = [
                 { name: 'G', price: 80, inStock: false }
             ]
         }],
-        onSale: true,
-        discount: 20,
+        onSale: false,
+        discount: 0,
         images: [flecheiras1, flecheiras2]
     },
     {
