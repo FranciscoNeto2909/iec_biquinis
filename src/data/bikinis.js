@@ -83,6 +83,22 @@ import mel1 from "../assets/maio_mel/mel1.jpg"
 import mel2 from "../assets/maio_mel/mel2.jpg"
 import mel3 from "../assets/maio_mel/mel3.jpg"
 import mel4 from "../assets/maio_mel/mel4.jpg"
+import sun1 from "../assets/sun/sun1.jpg"
+import sun2 from "../assets/sun/sun2.jpg"
+import sun3 from "../assets/sun/sun3.jpg"
+import sun4 from "../assets/sun/sun4.jpg"
+import cbrisa1 from "../assets/cangaBrisa/brisa1.jpg"
+import cbrisa2 from "../assets/cangaBrisa/brisa2.jpg"
+import cbrisa3 from "../assets/cangaBrisa/brisa3.jpg"
+import solEmar1 from "../assets/solemar/solemar1.jpg"
+import solEmar2 from "../assets/solemar/solemar2.jpg"
+import solEmar3 from "../assets/solemar/solemar3.jpg"
+import solEmar4 from "../assets/solemar/solemar4.jpg"
+import trop1 from "../assets/tropicaliente/trop1.jpg"
+import trop2 from "../assets/tropicaliente/trop2.jpg"
+import mistica1 from "../assets/mistica/mistica1.jpg"
+import mistica2 from "../assets/mistica/mistica2.jpg"
+import mistica3 from "../assets/mistica/mistica3.jpg"
 
 export const bikinis = [
     {
@@ -171,6 +187,50 @@ export const bikinis = [
         onSale: false,
         discount: 0,
         images: [cafune1, cafune2, cafune3]
+    },
+    {
+        name: "Canga brisa",
+        colors: [{
+            name: "Estampado",
+            inStock: true,
+            sizes: [{ name: 'U', price: 70, inStock: true }]
+        }],
+        onSale: false,
+        discount: 0,
+        images: [cbrisa1, cbrisa2, cbrisa3]
+    },
+    {
+        name: "Canga Sol e Mar",
+        colors: [{
+            name: "Estampado",
+            inStock: true,
+            sizes: [{ name: 'U', price: 70, inStock: true }]
+        }],
+        onSale: false,
+        discount: 0,
+        images: [solEmar1,solEmar2,solEmar3,solEmar4]
+    },
+    {
+        name: "Canga Tropicaliente",
+        colors: [{
+            name: "Estampado",
+            inStock: true,
+            sizes: [{ name: 'U', price: 70, inStock: true }]
+        }],
+        onSale: false,
+        discount: 0,
+        images: [trop1,trop2]
+    },
+    {
+        name: "Canga Mística",
+        colors: [{
+            name: "Estampado",
+            inStock: true,
+            sizes: [{ name: 'U', price: 70, inStock: true }]
+        }],
+        onSale: false,
+        discount: 0,
+        images: [mistica1,mistica2,mistica3]
     },
     {
         name: "Saia Brisa",
@@ -366,6 +426,38 @@ export const bikinis = [
         onSale: false,
         discount: 0,
         images: [sunga1, sunga2]
+    },
+    {
+        name: "Biquíni Sun",
+        colors: [{
+            name: "Amarelo neon",
+            inStock: true,
+            sizes: [
+                { name: 'P', price: 80, inStock: true }]
+        }, {
+            name: "Champanhe",
+            inStock: true,
+            sizes: [
+                { name: 'M', price: 80, inStock: true },
+            ]
+        }, {
+            name: "Azul Royal",
+            inStock: true,
+            sizes: [
+                { name: 'G', price: 80, inStock: true }
+            ]
+        },  
+        {
+            name: "Marrom",
+            inStock: true,
+            sizes: [
+                { name: 'M', price: 80, inStock: true }
+            ]
+        }],
+        onSale: false,
+        discount: 0,
+        images: [sun1,sun2,sun3,sun4]
+
     },
     {
         name: "Biquíni Prainha",
