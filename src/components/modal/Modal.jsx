@@ -114,7 +114,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                     <div className="modal_info">
                             <h2 className="modal_info_name">{item.name}</h2>
                             {!color.inStock && !size.inStock && 
-                            <span className="modal_info_name_soldoff">Item indisponível</span>
+                            <span className="modal_info_name_soldoff">Item esgotado</span>
                             }
                         {color.inStock && size.inStock &&
                         <>
