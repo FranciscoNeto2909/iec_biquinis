@@ -112,7 +112,10 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                         <Carousel images={item.images} />
                     </div>
                     <div className="modal_info">
-                        <h2 className="modal_info_name">{item.name}</h2>
+                            <h2 className="modal_info_name">{item.name}</h2>
+                            {!color.inStock && !size.inStock && 
+                            <span className="modal_info_name_soldoff">Item indisponível</span>
+                            }
                         {color.inStock && size.inStock &&
                         <>
                         <div className="modal_info_selects">
@@ -177,7 +180,7 @@ export default function Modal({ item, handleCloseModal, handleSetMsg }) {
                             }
                             <div className="modal_soldOff">
                                 <p className="modal_soldOff_firsttext">Não achou o que queria ?</p>
-                                <a className="modal_soldOff_button" href={`https://wa.me/5585996585581?text=${soldOfftext}`}>Avise-me</a>
+                                <a className="modal_soldOff_button" href={`https://wa.me/5585996585581?text=${soldOfftext}`}>Avise-me quando chegar</a>
                                 <p className="modal_soldOff_text">Verificar disponibilidade de cor e tamanho</p>
                             </div>
                     </div>

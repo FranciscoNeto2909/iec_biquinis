@@ -87,6 +87,7 @@ import sun1 from "../assets/sun/sun1.jpg"
 import sun2 from "../assets/sun/sun2.jpg"
 import sun3 from "../assets/sun/sun3.jpg"
 import sun4 from "../assets/sun/sun4.jpg"
+import sun5 from "../assets/sun/sun5.jpg"
 import cbrisa1 from "../assets/cangaBrisa/brisa1.jpg"
 import cbrisa2 from "../assets/cangaBrisa/brisa2.jpg"
 import cbrisa3 from "../assets/cangaBrisa/brisa3.jpg"
@@ -96,6 +97,7 @@ import solEmar3 from "../assets/solemar/solemar3.jpg"
 import solEmar4 from "../assets/solemar/solemar4.jpg"
 import trop1 from "../assets/tropicaliente/trop1.jpg"
 import trop2 from "../assets/tropicaliente/trop2.jpg"
+import trop3 from "../assets/tropicaliente/trop3.jpg"
 import mistica1 from "../assets/mistica/mistica1.jpg"
 import mistica2 from "../assets/mistica/mistica2.jpg"
 import mistica3 from "../assets/mistica/mistica3.jpg"
@@ -219,7 +221,7 @@ export const bikinis = [
         }],
         onSale: false,
         discount: 0,
-        images: [trop1,trop2]
+        images: [trop1,trop2,trop3]
     },
     {
         name: "Canga Mística",
@@ -456,7 +458,7 @@ export const bikinis = [
         }],
         onSale: false,
         discount: 0,
-        images: [sun1,sun2,sun3,sun4]
+        images: [sun1,sun2,sun3,sun4,sun5]
 
     },
     {
@@ -820,18 +822,18 @@ export const bikinis = [
                 { name: 'G', price: 99, inStock: false }]
         },{
             name: "Branco",
-            inStock: true,
+            inStock: false,
             sizes: [
-                { name: 'P', price: 99, inStock: true },
+                { name: 'P', price: 99, inStock: false },
                 { name: 'M', price: 99, inStock: false },
                 { name: 'G', price: 99, inStock: false }]
         }
         , {
             name: "Laranja",
-            inStock: true,
+            inStock: false,
             sizes: [
                 { name: 'P', price: 99, inStock: false },
-                { name: 'M', price: 99, inStock: true },
+                { name: 'M', price: 99, inStock: false },
                 { name: 'G', price: 99, inStock: false }
             ]
         }, {

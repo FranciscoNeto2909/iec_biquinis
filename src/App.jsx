@@ -9,14 +9,27 @@ import Footer from "./components/footer/Footer";
 import Message from "./components/message/Message";
 
 export default function App() {
-  const onSaleBikinis = bikinis.sort((a, b) => {
-    const aHasOffer = a.onSale === true || a.colors.filter(col => col.inStock).length > 0;
-    const bHasOffer = b.onSale === true || b.colors.filter(col => col.inStock).length > 0;
+
+  const inStockBikinis = bikinis.sort((a, b) => {
+    const aHasOffer = a.colors.filter(col => col.inStock).length > 0;
+    const bHasOffer = b.colors.filter(col => col.inStock).length > 0;
 
     if (aHasOffer && !bHasOffer) return -1;
     if (!aHasOffer && bHasOffer) return 1;
     return 0;
   });
+
+
+  const onSaleBikinis = inStockBikinis.sort((a, b) => {
+    const aHasOffer = a.onSale === true;
+    const bHasOffer = b.onSale === true;
+
+    if (aHasOffer && !bHasOffer) return -1;
+    if (!aHasOffer && bHasOffer) return 1;
+    return 0;
+  });
+
+
   const navigate = useNavigate();
   
   const [bikinisCategorie, setBikinisCategorie] = useState(onSaleBikinis)

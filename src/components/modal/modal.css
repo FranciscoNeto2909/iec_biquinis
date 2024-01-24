@@ -68,9 +68,20 @@
     gap: 18px;
 }
 
+.modal_info_name_container{
+    display: flex;
+    gap: 4px;
+    align-items: baseline;
+}
+
 .modal_info_name {
     text-transform: capitalize;
     color: #008285;
+}
+
+.modal_info_name_soldoff{
+    color: #f00;
+    font-weight: 500;
 }
 
 .modal_info_selects {
