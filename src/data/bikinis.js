@@ -227,8 +227,8 @@ export const bikinis = [
         name: "Canga Mística",
         colors: [{
             name: "Estampado",
-            inStock: true,
-            sizes: [{ name: 'U', price: 70, inStock: true }]
+            inStock: false,
+            sizes: [{ name: 'U', price: 70, inStock: false }]
         }],
         onSale: false,
         discount: 0,
@@ -371,8 +371,8 @@ export const bikinis = [
         name: "Maiô Icaraí",
         colors: [{
             name: "Rosa e Preto",
-            inStock: true,
-            sizes: [{ name: 'M', price: 105, inStock: true }]
+            inStock: false,
+            sizes: [{ name: 'M', price: 105, inStock: false }]
         }, {
             name: "Preto e Branco",
             inStock: true,
