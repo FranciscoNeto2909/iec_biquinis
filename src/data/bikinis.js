@@ -194,8 +194,8 @@ export const bikinis = [
         name: "Canga brisa",
         colors: [{
             name: "Estampado",
-            inStock: true,
-            sizes: [{ name: 'U', price: 70, inStock: true }]
+            inStock: false,
+            sizes: [{ name: 'U', price: 70, inStock: false }]
         }],
         onSale: false,
         discount: 0,
